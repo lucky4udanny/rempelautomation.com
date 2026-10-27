@@ -20,6 +20,8 @@ The git repo was empty aside from the workspace file. Case study copy already li
 
 Official Vue TypeScript setup uses `@vue/tsconfig` and project references. FarmWork still has many `.js` SFCs; this marketing site must not copy that. Vite will not catch type errors unless `vue-tsc` runs.
 
+TypeScript 6 deprecates `baseUrl`. For `@/*` aliases, keep `paths` as `./src/*` (relative to `tsconfig.app.json`) and omit `baseUrl`. Do not set `ignoreDeprecations` to hide that warning. Vite still needs its own `resolve.alias` for `@`.
+
 `vite-ssg` 28 matches Vite 8 and Vue Router 5. Pin `@unhead/vue` to v2 because vite-ssg still depends on Unhead 2, not 3. Use `ssgOptions.dirStyle: 'nested'` so Cloudflare Pages serves `/services/index.html` for `/services/`. Copy `404/index.html` to `404.html` after prerender.
 
 Contact is a Pages Function at `functions/api/contact.ts`, not part of `dist`. Secrets stay in the Cloudflare dashboard. Locally the form fails honestly unless you mock `/api/contact` (Playwright does).

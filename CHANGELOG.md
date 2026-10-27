@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Dropped deprecated `compilerOptions.baseUrl` from `tsconfig.app.json` (TypeScript 6 no longer needs it for `paths`).
+
 ### Added
 
 - Prerendered Vue 3.5 marketing site: home, services, unnamed FarmWork and FarmBridge case studies, about, contact, privacy.
