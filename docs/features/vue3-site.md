@@ -22,6 +22,8 @@ Official Vue TypeScript setup uses `@vue/tsconfig` and project references. FarmW
 
 TypeScript 6 deprecates `baseUrl`. For `@/*` aliases, keep `paths` as `./src/*` (relative to `tsconfig.app.json`) and omit `baseUrl`. Do not set `ignoreDeprecations` to hide that warning. Vite still needs its own `resolve.alias` for `@`.
 
+Cursor defaults `json.schemaDownload.enable` to false. The TypeScript extension still maps `tsconfig.*.json` to `https://www.schemastore.org/tsconfig`, so the editor reports a schema-load error until that setting is on in workspace settings. This is editor config, not a TypeScript compiler option. It only fetches well-known HTTPS schemas (SchemaStore). Do not point `$schema` at that URL as a substitute: the extension mapping still needs the download setting.
+
 `vite-ssg` 28 matches Vite 8 and Vue Router 5. Pin `@unhead/vue` to v2 because vite-ssg still depends on Unhead 2, not 3. Use `ssgOptions.dirStyle: 'nested'` so Cloudflare Pages serves `/services/index.html` for `/services/`. Copy `404/index.html` to `404.html` after prerender.
 
 Contact is a Pages Function at `functions/api/contact.ts`, not part of `dist`. Secrets stay in the Cloudflare dashboard. Locally the form fails honestly unless you mock `/api/contact` (Playwright does).

@@ -5,6 +5,7 @@
 ### Fixed
 
 - Dropped deprecated `compilerOptions.baseUrl` from `tsconfig.app.json` (TypeScript 6 no longer needs it for `paths`).
+- Allowed JSON schema download in workspace settings so `tsconfig.*.json` can load the SchemaStore schema (Cursor defaults this off).
 
 ### Added
 
