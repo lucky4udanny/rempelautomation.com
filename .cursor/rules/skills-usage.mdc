@@ -1,0 +1,15 @@
+---
+description: When to load this repo's Vue 3 marketing and component-reuse skills
+alwaysApply: true
+---
+
+# Skills for this site
+
+Read the skill before writing Vue, CSS, routes, or copy. Do not skip them for "small" page tweaks; those are how look-and-feel drifts.
+
+| Skill | Use when |
+|---|---|
+| `.cursor/skills/vue3-marketing-site/SKILL.md` | Scaffolding, pages, routing, prerender/SEO, Tailwind 4, TypeScript/`vue-tsc`, forms, deploy, or Vue 3.5 patterns |
+| `.cursor/skills/vue3-component-reuse/SKILL.md` | Any new or changed UI: buttons, sections, layout, cards, CTAs |
+
+Do not load FarmBridge/FarmWork app skills (DaisyUI lists, Pinia auth, Laravel) on this site. This is a static marketing site, not an operations app.

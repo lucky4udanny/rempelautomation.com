@@ -1,0 +1,53 @@
+---
+description: Vue 3.5+ Composition API with TypeScript (official current APIs)
+globs: "**/*.{vue,ts}"
+alwaysApply: false
+---
+
+# Vue 3.5+ (TypeScript)
+
+Current Vue 3.5 APIs in `<script setup lang="ts">`. No Vue 2, Options API, mixins, or `this.`. Follow `typescript.mdc`.
+
+```vue
+<script setup lang="ts">
+import { computed, useId, useTemplateRef, watch } from 'vue'
+
+interface Props {
+  title: string
+  kicker?: string
+}
+
+const { title, kicker = '' } = defineProps<Props>()
+const model = defineModel<string>()
+const headingId = useId()
+const formEl = useTemplateRef('contact-form')
+const isReady = computed(() => title.length > 0)
+
+watch(() => title, () => {
+  /* getter required for destructured props */
+})
+</script>
+
+<template>
+  <section :aria-labelledby="headingId">
+    <h2 :id="headingId">{{ title }}</h2>
+  </section>
+</template>
+```
+
+- Type-based macros only: `defineProps<T>()`, `defineEmits<{ change: [id: string] }>()`, `defineModel<T>()`.
+- Prop defaults: native destructure (Vue 3.5 reactive props destructure). Do not use `withDefaults` unless a rare case forbids destructure.
+- `useTemplateRef('name')` (not `ref(null)` string matching). `useId()` for labels; never inside `computed`.
+- `ref<T>()` / `computed(() => …)` let inference work; add a generic when the initial value is not enough.
+- Generic lists: `<script setup lang="ts" generic="T">` on the primitive, not a `any[]` prop.
+- Boolean names: `is` / `has` / `can`. Named exports in `.ts`. PascalCase multi-word components (`HeroSection`). Directories kebab-case.
+- Client-only APIs behind `onMounted` or `import.meta.env.SSR`.
+- Local state. No Pinia unless two distant trees must share it. VueUse only when it replaces non-trivial code.
+
+## Do not
+
+```vue
+<script>
+export default { props: { title: String }, data() { return {} } }
+</script>
+```

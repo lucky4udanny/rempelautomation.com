@@ -1,0 +1,37 @@
+---
+description: Shared visual tokens and section chrome for a consistent modern B2B look
+globs: "**/*.{vue,css}"
+alwaysApply: false
+---
+
+# Look and feel
+
+One system. Pages do not pick their own colors, type, or spacing.
+
+## Tokens
+
+Define brand, type, space, and radius once in `src/styles/main.css` using Tailwind 4 `@theme`. Components use those tokens (`bg-surface`, `text-ink`, `font-display`), never raw hex after tokens exist.
+
+Direction: quiet industrial B2B. Light surfaces, dark ink, one accent. Generous whitespace. Strong headings, short body. No playful display fonts, neon gradients, glassmorphism, or app-chrome (DaisyUI).
+
+## Chrome
+
+- Every page: `SiteHeader` + `SiteFooter` via `PageShell`.
+- One max-width container (`AppContainer`). Do not nest extra centered wrappers.
+- Section vertical rhythm from a shared scale (e.g. `py-16 md:py-24`), not one-off padding.
+- Type scale shared: eyebrow, h1, h2, body, caption. Headings through `AppHeading`.
+- Buttons only through `AppButton`: `primary`, `secondary`, `ghost`. One size scale.
+- Links that are buttons use `AppButton`; text links use `AppLink` (Vue Router, same URL shape as canonicals).
+
+## Motion and media
+
+- Subtle transitions. Honor `prefers-reduced-motion`.
+- Images: real operations photography, explicit width/height, lazy below the fold, modern formats (WebP/AVIF). No unlabeled stock.
+
+## Responsive
+
+Mobile-first Tailwind. Header, hero, and footer must work at a phone width and a desktop width. Verify both when layout changes.
+
+## Accessibility
+
+Semantic landmarks (`header`, `main`, `footer`, `nav`). Visible focus rings (do not `outline-none` without a replacement). Contrast that meets WCAG AA. Do not ship `v-html` of untrusted strings.

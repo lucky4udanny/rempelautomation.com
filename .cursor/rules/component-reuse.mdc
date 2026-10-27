@@ -1,0 +1,41 @@
+---
+description: Reuse layout, primitives, and sections before creating new Vue components
+alwaysApply: true
+---
+
+# Reuse before create
+
+Look and feel stays consistent because pages are assemblies, not one-off markup.
+
+## Before a new `.vue` file
+
+1. Search `src/components/` for a primitive, section, or layout that is close.
+2. If close: add a prop, slot, or variant. Do not copy the file.
+3. If missing: add it to the right catalog folder with a reusable name. Wire the first page through that component, not through page-local HTML.
+4. Never restyle a second hero, card, button, or footer in a page.
+
+## Catalog (create here, do not invent parallel names)
+
+| Folder | Owns | Examples |
+|---|---|---|
+| `src/components/layout/` | Chrome on every page | `PageShell`, `SiteHeader`, `SiteFooter` |
+| `src/components/primitives/` | Small repeating controls | `AppButton`, `AppLink`, `AppContainer`, `AppHeading` |
+| `src/components/sections/` | Page bands | `HeroSection`, `ProofBar`, `FeatureGrid`, `CaseStudyCard`, `CtaBand`, `ContactForm` |
+| `src/pages/` | Routes only | Compose layout + sections. Almost no raw section markup. |
+| `src/content/` | Copy and case-study data | Typed modules (`satisfies` a shared interface). Pages do not hard-code long copy. |
+| `src/types/` | Shared interfaces | Section props, page content, public route meta |
+
+## Page rule
+
+A page imports `PageShell` and section components, then passes content props. If two pages need the same band, that band is already a section.
+
+```vue
+<template>
+  <PageShell>
+    <HeroSection :title="page.hero.title" :leads="page.hero.leads" />
+    <CtaBand :title="page.cta.title" to="/contact/" />
+  </PageShell>
+</template>
+```
+
+Variants: props (`tone="light" | "dark"`, `size="sm" | "lg"`), not a second component. Full workflow: `.cursor/skills/vue3-component-reuse/SKILL.md`.

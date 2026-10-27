@@ -1,0 +1,30 @@
+---
+description: Static SSG host plus optional function for forms; no app server
+alwaysApply: true
+---
+
+# Serverless
+
+The site is static files from a prerendered Vue build. A request is HTML/CSS/JS from a CDN, or one short-lived function for a form.
+
+## Allowed
+
+- `vite` / `vite-ssg build` (or equivalent prerender) → `dist/`
+- Cloudflare Pages (preferred), Netlify, or similar static host
+- One Worker/function for contact (or a reputable form endpoint)
+- Public env only via `VITE_` for non-secrets (site URL, analytics id)
+
+## Forbidden
+
+- Laravel, PHP, Forge app servers, Express/Fastify that stay running
+- Databases, sessions, or auth on this site
+- Secrets in the repo or in any `VITE_` variable (those ship to the browser)
+- Client-only empty `index.html` for pages that should rank (home, services, case studies, contact)
+
+## Forms
+
+POST to the function or form service. Validate and rate-limit on the server. Never trust the browser. Do not echo raw input into HTML email. Honeypot plus rate limit. Confirm success/failure in the UI honestly.
+
+## SEO output
+
+Every public route emits real HTML at build time: title, description, canonical, Open Graph, and visible body copy. Sitemap and robots come from the same route list as the router. Pick one URL shape (trailing slash or not) and use it in links, canonicals, and the sitemap.

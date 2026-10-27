@@ -1,0 +1,29 @@
+---
+description: B2B marketing voice, honesty, and SEO for public pages
+alwaysApply: true
+---
+
+# B2B marketing
+
+This site is for operations leads, not shoppers. Copy is specific and honest. Layout is section-based so every page feels like the same company.
+
+## Voice
+
+- Name the job: receiving, payroll, shipping, floor scans. Not "unlock synergy."
+- Evidence over slogans. Case studies carry proof; the hero states who it is for and what changes.
+- No fake metrics, unnamed logos as implied customers, or "we will" for work that is not offered.
+- Punctuation: no em dash or en dash in UI copy, meta, or markdown the visitor reads. Comma, colon, or a new sentence. Hyphen only for true compounds.
+
+## Pages
+
+Public routes (home, services, case studies, about, contact) share header, footer, and CTA patterns. A new page is a new `src/pages/` file plus `src/content/` entry, then the same sections.
+
+Route metadata (title, description, canonical, OG) lives with the route list. The prerender, sitemap, and `<head>` all read that list. Do not hand-edit three copies.
+
+## Honesty
+
+Labels match behavior. A "Send" button that fails must say it failed. A case study that omits the customer name must not imply a logo or quote that identifies them. If a form is the only next step, the CTA goes to that form.
+
+## SEO and share cards
+
+Unique title and description per public URL. Canonical matches the live URL shape. Body copy is in the prerendered HTML, not only in client JS.

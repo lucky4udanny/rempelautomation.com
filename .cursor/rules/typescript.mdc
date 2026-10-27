@@ -1,0 +1,39 @@
+---
+description: TypeScript-first Vue 3.5 site; official @vue/tsconfig and vue-tsc
+alwaysApply: true
+---
+
+# TypeScript
+
+This site is TypeScript only. App source is `.ts`, `.mts`, or `.vue` with `lang="ts"`. Do not add `.js` / `.jsx` application files (FarmWork/FarmBridge `.js` is not a template here).
+
+## Tooling (official Vue)
+
+- Extend **`@vue/tsconfig`** (`tsconfig.dom.json` for app code). Requires TypeScript **5.8+**; use the latest stable TS that `@vue/tsconfig` supports.
+- `create-vue` layout: root `tsconfig.json` with **project references**; `tsconfig.app.json` for `src/`; `tsconfig.node.json` for Vite config.
+- Mirror Vite `@` alias in `compilerOptions.paths`.
+- Vite **transpiles only**. Typecheck with **`vue-tsc --noEmit`** (CI and before calling a change done). Do not rely on `tsc` alone (it misses SFCs). Do not use Vue CLI or `ts-loader`.
+
+## Language
+
+- `"strict": true`. No `any`. Use `unknown` and narrow. ESLint `@typescript-eslint/no-explicit-any` is **error**.
+- `import type` for type-only imports (`verbatimModuleSyntax` from `@vue/tsconfig`).
+- Prefer `interface` for object shapes. Unions/const maps instead of `enum`.
+- `satisfies` for content objects so literals stay checked without widening.
+- Type DOM handlers: `event: Event`, then `event.target as HTMLInputElement` when needed.
+- Shared shapes live in `src/types/`. Content modules import those types; they do not use untyped objects.
+
+```ts
+import type { HeroContent } from '@/types/content'
+
+export const homeHero = {
+  title: '…',
+  leads: ['…'],
+} satisfies HeroContent
+```
+
+## Vue macros (type-based)
+
+Type-based `defineProps` / `defineEmits` / `defineModel` only. No runtime `defineProps({ foo: String })`. Vue 3.5 defaults: destructure, not `withDefaults`. Watch a destructured prop with `() => title`, not `watch(title)`.
+
+Cloudflare/Worker form handlers are TypeScript too.
