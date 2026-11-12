@@ -26,6 +26,30 @@ function close(): void {
   isOpen.value = false
 }
 
+function isCurrent(path: string): boolean {
+  if (path === '/') {
+    return route.path === '/'
+  }
+  return route.path === path || route.path.startsWith(path)
+}
+
+function navLinkClass(path: string, tone: 'desktop' | 'mobile'): string {
+  const current = isCurrent(path)
+  if (tone === 'mobile') {
+    return current
+      ? 'border-l-4 border-accent pl-3 text-accent-strong'
+      : 'border-l-4 border-transparent pl-3 text-ink'
+  }
+  if (current) {
+    return isSolid.value
+      ? 'text-accent-strong after:bg-accent'
+      : 'text-accent after:bg-accent'
+  }
+  return isSolid.value
+    ? 'text-ink hover:text-accent-strong after:bg-transparent'
+    : 'text-surface-raised hover:text-accent after:bg-transparent'
+}
+
 function updateSolid(): void {
   if (!photoHeroPaths.has(route.path)) {
     isSolid.value = true
@@ -84,8 +108,8 @@ watch(
           v-for="item in items"
           :key="item.path"
           :to="item.path"
-          class="text-sm font-medium hover:text-accent"
-          :class="isSolid ? 'text-ink hover:text-accent-strong' : 'text-surface-raised'"
+          class="relative pb-1 text-sm font-medium transition-colors after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:content-['']"
+          :class="navLinkClass(item.path, 'desktop')"
         >
           {{ item.navLabel }}
         </RouterLink>
@@ -111,7 +135,8 @@ watch(
           v-for="item in items"
           :key="item.path"
           :to="item.path"
-          class="text-base font-medium text-ink"
+          class="text-base font-medium transition-colors"
+          :class="navLinkClass(item.path, 'mobile')"
           @click="close"
         >
           {{ item.navLabel }}

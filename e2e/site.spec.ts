@@ -32,6 +32,9 @@ test('products page marks Conduit as in development', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Systems you can run')
   await expect(page.getByRole('main')).toContainText('In development')
   await expect(page.getByRole('main')).toContainText('Conduit Suite')
+  await expect(
+    page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Products' }),
+  ).toHaveAttribute('aria-current', 'page')
 })
 
 test('contact form reports success when the function accepts the message', async ({ page }) => {

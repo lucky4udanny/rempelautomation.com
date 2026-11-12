@@ -11,6 +11,10 @@
 - Products page for FarmWork, FarmBridge (FVI-owned, linked to froveg.ca), and Conduit Suite marked In development.
 - Case studies: FarmWork, FarmBridge, unnamed field jobs, unnamed plant time.
 
+### Changed
+
+- Primary nav marks the current page in accent green with a light underline (desktop) or a green side bar (mobile).
+
 ### Fixed
 
 - Home hero supporting line reworked so “go-live” is not a one-word widow.
