@@ -1,7 +1,7 @@
 import type { CtaContent, HeroContent, ProductGridContent } from '@/types/content'
 import {
   deskCodeAPhoto,
-  farmbridgeLotsAngled,
+  farmbridgeLotsFlat,
   farmworkIpadAngled,
   opsScalePhoto,
 } from '@/content/media'
@@ -11,7 +11,7 @@ export const productsHero = {
   title: 'FarmWork, FarmBridge, and Conduit.',
   leads: [
     'These are products we implement and support. Case studies are separate: they describe the operations that drove the work.',
-    'FarmWork and FarmBridge grew out of problems at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver.',
+    'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver.',
   ],
   image: opsScalePhoto,
   tone: 'photo',
@@ -51,7 +51,7 @@ export const productsGrid = {
       hrefLabel: 'FarmBridge on froveg.ca',
       to: '/case-studies/farmbridge/',
       toLabel: 'See the FVI case study',
-      image: farmbridgeLotsAngled,
+      image: farmbridgeLotsFlat,
     },
     {
       name: 'Conduit',

@@ -105,11 +105,11 @@ export const servicesOutcomes = {
   items: [
     {
       title: 'Productivity',
-      body: 'Speed the process, remove re-keying, and give visibility for better decisions.',
+      body: 'Speed the process on the floor and in the office. Machines and sensors in the workflow, less re-keying, better visibility.',
     },
     {
       title: 'Quality',
-      body: 'Hold tolerances consistently. Shrink the recall envelope with traceability.',
+      body: 'Hold tolerances consistently. Help prevent recalls, and shrink the envelope when one still happens.',
     },
     {
       title: 'Safety',

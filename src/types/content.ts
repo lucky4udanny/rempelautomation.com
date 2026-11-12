@@ -47,6 +47,8 @@ export interface ProcessPath {
 export interface ProcessStage {
   id: string
   title: string
+  /** Short label on the ring (Audit, Design). Prefer a word over a number. */
+  ringLabel: string
   summary: string
   body: string[]
   paths?: ProcessPath[]

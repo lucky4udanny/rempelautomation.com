@@ -6,6 +6,7 @@ import MediaSlider from '@/components/sections/MediaSlider.vue'
 import ProductGrid from '@/components/sections/ProductGrid.vue'
 import {
   farmbridgeLotsAngled,
+  farmbridgeLotsFlat,
   farmworkIpadAngled,
   farmworkPhoneAngled,
 } from '@/content/media'
@@ -14,7 +15,7 @@ import { usePageHead } from '@/composables/usePageHead'
 
 usePageHead('/products/')
 
-const productScreens = [farmworkIpadAngled, farmworkPhoneAngled, farmbridgeLotsAngled]
+const productScreens = [farmworkIpadAngled, farmworkPhoneAngled, farmbridgeLotsFlat, farmbridgeLotsAngled]
 </script>
 
 <template>

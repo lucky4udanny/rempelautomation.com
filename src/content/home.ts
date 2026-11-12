@@ -9,7 +9,7 @@ import { caseStudyCards } from '@/content/caseStudies'
 import { homeProcessLoop } from '@/content/process'
 import {
   deskCodeBPhoto,
-  farmbridgeLotsAngled,
+  farmbridgeLotsFlat,
   farmworkIpadAngled,
   opsWhiteboardPhoto,
 } from '@/content/media'
@@ -19,7 +19,7 @@ export const homeHero = {
   title: 'People, process, then software and machines.',
   leads: [
     'We start with the people who do the work and the process they run. Software, controllers, sensors, machines, and robots come after that, and only for what the assessment shows you need.',
-    'Most businesses treat equipment, office work, and people as separate worlds. We connect them so information moves once, instead of being re-typed.',
+    'Most businesses treat equipment, office work, and people as separate worlds. We connect them so the same information moves with the work: through paperwork and software, and as scales, sensors, and machines run.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
   secondaryAction: { label: 'How we work', to: '/process/', variant: 'outline-light' },
@@ -39,9 +39,10 @@ export const homeAdvantage = {
         'We built that for a packing operation. The office and the dock now read the same numbers.',
     },
     {
-      title: 'We fit what you already own',
-      body: 'We connect your time clock, ERP, accounting package, CRM, and handhelds instead of asking you to replace them.',
-      detail: 'Your staff keep the tools they know. The re-keying between them goes away.',
+      title: 'Connect when it fits. Replace when it pays.',
+      body: 'We connect your time clock, ERP, accounting package, CRM, and handhelds when that is the better path. When replacing software improves ROI, we say so.',
+      detail:
+        'Staff comfort and training load sit in that ROI math. Keep, connect, or replace is a decision for each system, not a slogan.',
     },
     {
       title: 'AI that helps your people work',
@@ -63,23 +64,26 @@ export const homeAlternatives = {
   title: 'What the usual alternatives give you, and where they fall short.',
   rows: [
     {
-      alternative: 'Off-the-shelf software',
+      alternative: 'Off-the-shelf software alone',
       gets: 'Fast start, low price.',
-      shortfall: 'Assumes one pay type, one site, good Wi-Fi, and no hardware.',
-      instead: 'Model your real rules. Add scanners, scales, and printers to the same record.',
+      shortfall: 'Assumes one process shape, good Wi-Fi, and no floor hardware in the same workflow.',
+      instead:
+        'Software that matches your rules, plus scanners, scales, printers, and controllers on the same record. Conduit for onboarding and day-to-day help.',
     },
     {
-      alternative: 'Large integrator',
-      gets: 'Scale and credentials.',
-      shortfall: 'Priced and paced for much larger budgets.',
-      instead: 'Phased work sized to a small or mid-sized operation, starting with the piece that pays back first.',
+      alternative: 'Large automation integrator',
+      gets: 'Scale, credentials, and machine experience.',
+      shortfall: 'Priced and paced for much larger budgets. Office software is often a separate project.',
+      instead:
+        'Phased software and hardware sized to a small or mid-sized operation, starting with the piece that pays back first. AI helper included where it earns its keep.',
     },
     {
       alternative: 'Build it yourself with AI tools',
       gets: 'Cheap prototype, full control.',
       shortfall:
-        'Someone still has to make it reliable, train the crew, and answer the phone in harvest or peak season.',
-      instead: 'We take ownership of reliability, training, and support.',
+        'Someone still has to make software and machines reliable, train the crew, and answer the phone in harvest or peak season.',
+      instead:
+        'We own reliability across office software, floor automation, and Conduit, including training and support.',
     },
   ],
 } satisfies ComparisonTableContent
@@ -91,15 +95,15 @@ export const homeOutcomes = {
   items: [
     {
       title: 'Productivity',
-      body: 'Automation speeds the process, removes steps such as data input and re-keying, and gives visibility so people make better decisions.',
+      body: 'Automation speeds the process on the floor and in the office: machines and sensors in the workflow, fewer re-keying steps, and visibility so people make better decisions.',
       detail:
-        'Clients come to us when the same numbers are re-keyed every pay run, process, or load, or when the owner is the bottleneck in their own company.',
+        'We are useful when office work and machine work still live in separate worlds. Clients come when the same numbers are re-keyed every pay run or load, the line is slow for unknown reasons, or the owner is the bottleneck.',
     },
     {
       title: 'Quality',
       body: 'Software and machines do not get tired or lose focus. They can be tuned to hold a set of tolerances more consistently.',
       detail:
-        'When recalls happen, traceability shrinks the recall envelope. Scale weights and timestamped photos settle disputes without relying on memory.',
+        'Identity and checks on the lot help prevent recalls. When a recall still happens, traceability shrinks the envelope. Scale weights and timestamped photos settle disputes without relying on memory.',
     },
     {
       title: 'Safety',
@@ -139,7 +143,7 @@ export const homeIndustries = {
 export const homeProducts = {
   kicker: 'Products',
   title: 'Three products we implement and support.',
-  body: 'FarmWork and FarmBridge grew out of problems at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver. Case studies are separate.',
+  body: 'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver. Case studies are separate.',
   items: [
     {
       name: 'FarmWork',
@@ -161,7 +165,7 @@ export const homeProducts = {
       href: 'https://froveg.ca/farmbridge.html',
       to: '/products/',
       toLabel: 'Products',
-      image: farmbridgeLotsAngled,
+      image: farmbridgeLotsFlat,
     },
     {
       name: 'Conduit',

@@ -26,7 +26,7 @@ export const caseStudyCards = [
     title: 'Froese Vegetables Inc.',
     subtitle: 'Seasonal workforce time, piecework, and payroll.',
     problem:
-      'Complex pay rules (conditional bonuses, program deductions, hourly plus piecework on the same task) and double-entry of hours and production. Off-the-shelf tools did not deliver.',
+      'Complex pay rules (conditional bonuses, program deductions, hourly plus piecework on the same task) and double-entry of hours and production. Generic time clocks and HR tools could not model that pay.',
     built:
       'FarmWork was built so time and production are collected once in the field or packing area, pay rules run in the system, and payroll reviews a clean file.',
     changed: 'Payroll reviews exceptions and exports. Supervisors still own the clock and the count where the work happens.',
@@ -47,7 +47,7 @@ export const caseStudyCards = [
     title: 'Roofing company',
     subtitle: 'Crew time, job cost, and accounting.',
     problem:
-      'The quote does not survive contact with the roof. Extra work, crew time, and trailer stock live in texts and memory.',
+      'Once the roof is open, the job changes. Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     built:
       'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting.',
   },
@@ -77,7 +77,7 @@ export const farmWorkStudy = {
     'Payroll had to reconstruct the week by hand: who was on which task, how many pieces, who shared a row, which program deduction applied, and which bonus rule fired.',
     'Re-keying the same adjustments every pay run created delay and quiet errors.',
     'Supervisors needed to clock a crew and enter counts where the work was happening. A browser that only works on Wi-Fi is not a field tool.',
-    'Off-the-shelf time clocks assume one pay type, one worksite, and a reliable network.',
+    'Generic time clocks and HR tools assume one pay type, one worksite, and a reliable network.',
   ],
   builtIntro:
     'FarmWork is the product that came out of that problem: one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Rempel Automation implements, customizes, trains, and supports it.',
@@ -200,9 +200,9 @@ export const fieldJobsStudy = {
   operation: [
     'A roofing contractor. Quotes go out from an estimating tool the crew already knows. Jobs change once the roof is open. Crews work across sites. Trailer stock and equipment service matter to margin.',
   ],
-  problemIntro: 'The quote does not survive contact with the roof.',
+  problemIntro: 'Once the roof is open, the job changes.',
   problem: [
-    'Extra work, crew time, trailer stock, and equipment service live in texts and memory.',
+    'Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     'The books get the numbers late, so job cost arrives after the crew has moved on.',
     'The owner cannot see open jobs, unpaid invoices, or field issues while away.',
   ],

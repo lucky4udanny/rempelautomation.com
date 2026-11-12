@@ -20,6 +20,7 @@ export const processLoop = {
     {
       id: 'audit',
       title: 'Audit and document',
+      ringLabel: 'Audit',
       summary: 'Walk the work. Map what exists, including the spreadsheets people hesitate to mention.',
       body: [
         'We walk the floor, the field, and the office, and talk with the people who do the work.',
@@ -30,6 +31,7 @@ export const processLoop = {
     {
       id: 'design',
       title: 'Process design',
+      ringLabel: 'Design',
       summary: 'Keep and tidy, redesign, or build new. Change as little as will do the job.',
       body: [
         'When the process is sound, we remove re-keying and add checks. When steps are duplicated or depend on one person, we simplify or automate them.',
@@ -57,6 +59,7 @@ export const processLoop = {
     {
       id: 'implementation',
       title: 'Implementation',
+      ringLabel: 'Build',
       summary: 'Prove the smallest useful piece, then roll out in phases.',
       body: [
         'We start with the piece that has the least effort and the most value.',
@@ -67,6 +70,7 @@ export const processLoop = {
     {
       id: 'onboarding',
       title: 'Onboarding',
+      ringLabel: 'Onboard',
       summary: 'Accounts, permissions, and a staged start.',
       body: [
         'We set up accounts and permissions that match who may see pay or move inventory.',
@@ -77,6 +81,7 @@ export const processLoop = {
     {
       id: 'training',
       title: 'Training',
+      ringLabel: 'Train',
       summary: 'Train the client’s trainers. Keep a path for people who will not scan.',
       body: [
         'We train your trainers so the knowledge stays with the operation.',
@@ -87,6 +92,7 @@ export const processLoop = {
     {
       id: 'support',
       title: 'Support',
+      ringLabel: 'Support',
       summary: 'A named contact, upgrades, and help when the season cannot wait.',
       body: [
         'Support is part of the engagement, not an add-on afterthought.',
@@ -97,6 +103,7 @@ export const processLoop = {
     {
       id: 'intelligence',
       title: 'Business intelligence',
+      ringLabel: 'Measure',
       summary: 'Shared numbers that send us back to the next audit.',
       body: [
         'Reports the floor and the office share, including cycle time and exceptions.',

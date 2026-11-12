@@ -4,6 +4,7 @@
 
 ### Changed
 
+- Home copy pass: hero and productivity cover office and machine automation; connect-or-replace advantage; alternatives table names hardware and Conduit; quality includes preventing recalls; “opportunities” wording; clearer roofing and FarmWork card problems; FarmBridge teaser uses the flat screen; process ring shows stage names instead of 1–7 and drops the duplicate summary under the ring.
 - Full substance rewrite from Marketing Foundations, Capabilities, and Conduit docs. Plain voice. No slogan deck.
 - Automation order: people, then process, then software with controllers, sensors, machines, and robots. Office work counts as automation.
 - What automation is for: productivity, quality, and safety (safety stated without inventing a case study).

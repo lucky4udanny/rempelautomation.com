@@ -20,8 +20,8 @@ const chapterElements = ref<HTMLElement[]>([])
 const activeStage = computed(() => content.stages[activeIndex.value] ?? content.stages[0])
 const displayIndex = computed(() => hoverIndex.value ?? activeIndex.value)
 const nodeCount = computed(() => content.stages.length)
-const radius = 120
-const center = 150
+const radius = 118
+const center = 170
 
 const nodes = computed(() =>
   content.stages.map((stage, index) => {
@@ -132,7 +132,7 @@ watch(
         @keydown="onKey"
       >
         <div class="lg:sticky lg:top-28 lg:self-start">
-          <svg viewBox="0 0 300 300" class="mx-auto h-64 w-64" aria-hidden="true">
+          <svg viewBox="0 0 340 340" class="mx-auto h-72 w-72" aria-hidden="true">
             <circle
               :cx="center"
               :cy="center"
@@ -151,7 +151,7 @@ watch(
               stroke-linecap="round"
               :stroke-dasharray="2 * Math.PI * radius"
               :stroke-dashoffset="dashOffset"
-              transform="rotate(-90 150 150)"
+              :transform="`rotate(-90 ${center} ${center})`"
             />
             <g v-for="node in nodes" :key="node.stage.id">
               <circle
@@ -167,16 +167,16 @@ watch(
               />
               <text
                 :x="node.x"
-                :y="node.y + 34"
+                :y="node.y + 28"
                 text-anchor="middle"
-                class="fill-ink text-[11px] font-semibold"
+                class="fill-ink text-[10px] font-semibold"
               >
-                {{ node.index + 1 }}
+                {{ node.stage.ringLabel }}
               </text>
             </g>
           </svg>
 
-          <div class="mt-4 flex items-center justify-center gap-3 lg:hidden">
+          <div class="mt-2 flex items-center justify-center gap-3 lg:hidden">
             <button
               type="button"
               class="rounded-md border border-line px-3 py-2 text-sm font-medium"
@@ -193,10 +193,6 @@ watch(
               Next
             </button>
           </div>
-
-          <p class="mt-4 text-center text-sm text-ink-muted lg:text-left">
-            {{ content.stages[displayIndex]?.summary }}
-          </p>
 
           <div v-if="content.moreTo" class="mt-6 hidden lg:block">
             <AppButton :to="content.moreTo" variant="secondary">{{ content.moreLabel }}</AppButton>
