@@ -49,6 +49,8 @@ Public build variables:
 
 Without `RESEND_API_KEY`, the form tells the visitor it did not send and points them to `info@rempelautomation.com`. That is intentional.
 
+After the key is set, a failed send returns JSON `{"ok":false,"error":"send_failed"}` (HTTP 500). Common cause: domain not verified in Resend, or `CONTACT_FROM` uses an address Resend will not send from. Verify `rempelautomation.com` in Resend and match DNS records in Cloudflare before testing the form.
+
 Turnstile: create a widget in Cloudflare, then set the site key (public) and secret (server). Local and tests skip Turnstile when the site key is empty.
 
 ## Photos

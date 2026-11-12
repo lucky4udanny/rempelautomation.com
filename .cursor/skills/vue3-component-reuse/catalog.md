@@ -35,7 +35,7 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | `CaseStudyCard` | One engagement: problem, solution, optional result, link |
 | `CaseStudyList` | Optional kicker/title plus grid of `CaseStudyCard` |
 | `CtaBand` | End-of-page ask (contact) |
-| `ContactForm` | Name, operation, email, topic, visit, message; posts to the function |
+| `ContactForm` | Name, company name, email, what you want to improve; posts to the function |
 | `FaqList` | Optional Q&A |
 | `BeforeAfterTable` | Honest before/after rows for live case studies |
 | `CaseStudyDetail` | Case-study body: operation, problem, solution, optional table, screens |

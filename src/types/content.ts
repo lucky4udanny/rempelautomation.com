@@ -179,22 +179,10 @@ export interface PublicPageMeta {
   noindex?: boolean
 }
 
-export type ContactTopic =
-  | 'time-payroll'
-  | 'receiving-shipping'
-  | 'floor-equipment'
-  | 'existing-systems'
-  | 'other'
-
-/** @deprecated Use ContactTopic */
-export type JobThatHurts = ContactTopic
-
 export interface ContactPayload {
   name: string
   operation: string
   email: string
-  jobThatHurts: ContactTopic
-  visitWanted: boolean
   message: string
   honeypot: string
   turnstileToken: string

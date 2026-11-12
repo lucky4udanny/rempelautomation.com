@@ -28,6 +28,8 @@ Cursor defaults `json.schemaDownload.enable` to false. The TypeScript extension 
 
 Contact is a Pages Function at `functions/api/contact.ts`, not part of `dist`. Secrets stay in the Cloudflare dashboard. Locally the form fails honestly unless you mock `/api/contact` (Playwright does).
 
+Do not return HTTP 502 from that function for application errors. Cloudflare replaces Worker/Pages Function 502 responses with its generic Bad Gateway page, so the JSON body never reaches the browser. Use 500 (or 503) for Resend failures. A live Bad Gateway on POST after `RESEND_API_KEY` is set almost always means Resend rejected the send (domain not verified, `from` not allowed, or bad key). Check Resend → Domains and the function’s real-time logs.
+
 Import only IBM Plex Sans latin weights. The default `400.css` pull ships Greek, Cyrillic, and Vietnamese files you do not need on this site.
 
 Production SVG green is `#22B573`. The print legend `#27B574` is close but not what the lockups use. Primary buttons are ink on light, not white on brand green: white on `#22B573` fails WCAG AA for small text.

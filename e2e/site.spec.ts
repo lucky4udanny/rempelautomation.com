@@ -49,11 +49,10 @@ test('contact form reports success when the function accepts the message', async
     })
   })
   await page.goto('/contact/')
-  await page.getByLabel('Name').fill('Alex Rivera')
-  await page.getByLabel('Operation').fill('Example Packing Co')
+  await page.getByLabel('Name', { exact: true }).fill('Alex Rivera')
+  await page.getByLabel('Company name').fill('Example Packing Co')
   await page.getByLabel('Email').fill('alex@example.com')
-  await page.getByLabel('What do you want to improve?').selectOption('time-payroll')
-  await page.getByLabel('Message').fill('Payroll still lives in a spreadsheet.')
+  await page.getByLabel('What do you want to improve?').fill('Payroll still lives in a spreadsheet.')
   await page.getByRole('button', { name: 'Send' }).click()
   await expect(page.getByRole('status')).toContainText('We received it. We will reply to alex@example.com.')
 })
@@ -61,17 +60,18 @@ test('contact form reports success when the function accepts the message', async
 test('contact form reports failure honestly when the function fails', async ({ page }) => {
   await page.route('**/api/contact', async (route) => {
     await route.fulfill({
-      status: 502,
+      status: 500,
       contentType: 'application/json',
       body: JSON.stringify({ ok: false, error: 'send_failed' }),
     })
   })
   await page.goto('/contact/')
-  await page.getByLabel('Name').fill('Alex Rivera')
-  await page.getByLabel('Operation').fill('Example Packing Co')
+  await page.getByLabel('Name', { exact: true }).fill('Alex Rivera')
+  await page.getByLabel('Company name').fill('Example Packing Co')
   await page.getByLabel('Email').fill('alex@example.com')
-  await page.getByLabel('What do you want to improve?').selectOption('receiving-shipping')
-  await page.getByLabel('Message').fill('Shipping paperwork does not match the cooler.')
+  await page
+    .getByLabel('What do you want to improve?')
+    .fill('Shipping paperwork does not match the cooler.')
   await page.getByRole('button', { name: 'Send' }).click()
   await expect(page.getByRole('status')).toContainText('It did not send.')
   await expect(page.getByRole('status').getByRole('link', { name: 'info@rempelautomation.com' })).toBeVisible()

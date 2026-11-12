@@ -4,6 +4,5 @@ export interface ContactFieldErrors {
   name?: string
   operation?: string
   email?: string
-  jobThatHurts?: string
   message?: string
 }

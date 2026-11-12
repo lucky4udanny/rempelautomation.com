@@ -19,7 +19,7 @@ export const homeHero = {
   title: 'People, process, then software and machines.',
   leads: [
     'We start with the people who do the work and the process they run. Software, controllers, sensors, machines, and robots come after that, and only for what the assessment shows you need.',
-    'Most businesses treat equipment, office work, and people as separate worlds. We connect them so the same information moves with the work. That includes paperwork and software, and it includes scales, sensors, and machines as they run.',
+    'Most businesses fragment equipment, office work, and people in separate worlds. We connect them so the same information moves with the work. That includes paperwork and software, and it includes scales, sensors, and machines.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
   secondaryAction: { label: 'How we work', to: '/process/', variant: 'outline-light' },

@@ -3,10 +3,9 @@ import { onMounted, ref, useId, useTemplateRef } from 'vue'
 import AppButton from '@/components/primitives/AppButton.vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
-import { contactEndpoint, jobOptions } from '@/content/contact'
+import { contactEndpoint } from '@/content/contact'
 import { contactEmail } from '@/content/site'
 import type { ContactFieldErrors, FormStatus } from '@/types/forms'
-import type { ContactTopic } from '@/types/content'
 
 interface TurnstileApi {
   render: (el: HTMLElement, options: { sitekey: string; callback: (token: string) => void }) => void
@@ -21,9 +20,7 @@ declare global {
 const nameId = useId()
 const operationId = useId()
 const emailId = useId()
-const jobId = useId()
 const messageId = useId()
-const visitId = useId()
 const honeypotId = useId()
 const statusId = useId()
 const turnstileHost = useTemplateRef<HTMLDivElement>('turnstile-host')
@@ -31,8 +28,6 @@ const turnstileHost = useTemplateRef<HTMLDivElement>('turnstile-host')
 const name = ref('')
 const operation = ref('')
 const email = ref('')
-const jobThatHurts = ref<ContactTopic | ''>('')
-const visitWanted = ref(false)
 const message = ref('')
 const honeypot = ref('')
 const turnstileToken = ref('')
@@ -50,13 +45,10 @@ function validate(): boolean {
     next.name = 'Enter your name.'
   }
   if (!operation.value.trim()) {
-    next.operation = 'Enter the operation or company.'
+    next.operation = 'Enter the company name.'
   }
   if (!email.value.trim() || !isEmail(email.value.trim())) {
     next.email = 'Enter a working email address.'
-  }
-  if (!jobThatHurts.value) {
-    next.jobThatHurts = 'Choose a topic.'
   }
   if (!message.value.trim()) {
     next.message = 'Tell us a little about what you want to improve.'
@@ -102,8 +94,6 @@ async function onSubmit(event: Event): Promise<void> {
         name: name.value.trim(),
         operation: operation.value.trim(),
         email: email.value.trim(),
-        jobThatHurts: jobThatHurts.value,
-        visitWanted: visitWanted.value,
         message: message.value.trim(),
         honeypot: honeypot.value,
         turnstileToken: turnstileToken.value,
@@ -159,7 +149,7 @@ async function onSubmit(event: Event): Promise<void> {
             <p v-if="errors.name" class="mt-1 text-sm text-ink-muted">{{ errors.name }}</p>
           </div>
           <div>
-            <label :for="operationId" class="block text-sm font-semibold">Operation</label>
+            <label :for="operationId" class="block text-sm font-semibold">Company name</label>
             <input
               :id="operationId"
               v-model="operation"
@@ -187,28 +177,7 @@ async function onSubmit(event: Event): Promise<void> {
             <p v-if="errors.email" class="mt-1 text-sm text-ink-muted">{{ errors.email }}</p>
           </div>
           <div>
-            <label :for="jobId" class="block text-sm font-semibold">What do you want to improve?</label>
-            <select
-              :id="jobId"
-              v-model="jobThatHurts"
-              name="jobThatHurts"
-              required
-              class="mt-1 w-full rounded-md border border-line bg-surface-raised px-3 py-2"
-              :aria-invalid="Boolean(errors.jobThatHurts)"
-            >
-              <option value="" disabled>Choose one</option>
-              <option v-for="option in jobOptions" :key="option.value" :value="option.value">
-                {{ option.label }}
-              </option>
-            </select>
-            <p v-if="errors.jobThatHurts" class="mt-1 text-sm text-ink-muted">{{ errors.jobThatHurts }}</p>
-          </div>
-          <div class="flex items-start gap-2">
-            <input :id="visitId" v-model="visitWanted" type="checkbox" name="visitWanted" class="mt-1" />
-            <label :for="visitId" class="text-sm">I would like a site visit.</label>
-          </div>
-          <div>
-            <label :for="messageId" class="block text-sm font-semibold">Message</label>
+            <label :for="messageId" class="block text-sm font-semibold">What do you want to improve?</label>
             <textarea
               :id="messageId"
               v-model="message"
@@ -236,10 +205,6 @@ async function onSubmit(event: Event): Promise<void> {
           <a class="font-medium text-accent-strong hover:underline" :href="`mailto:${contactEmail}`">
             {{ contactEmail }}
           </a>
-        </p>
-        <p class="mt-6">
-          Say who you are, what the operation does, and what you want to improve. If you want us on
-          site, say that too.
         </p>
       </aside>
     </AppContainer>

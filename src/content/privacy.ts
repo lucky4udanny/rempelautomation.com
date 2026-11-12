@@ -10,7 +10,7 @@ export const privacyHero = {
 } satisfies HeroContent
 
 export const privacyParagraphs: string[] = [
-  `The form asks for your name, the operation, your email, what you want to improve, whether you want a site visit, and a message. We send that to ${contactEmail} so we can answer you.`,
+  `The form asks for your name, company name, email, and what you want to improve. We send that to ${contactEmail} so we can answer you.`,
   'A hidden field is there to catch bots. Cloudflare Turnstile may run so we can tell people from automated spam. We do not use the form to build a marketing list.',
   'We keep the message long enough to reply and to remember the conversation. We do not put your words into a public case study.',
   `If you want the message deleted after we reply, email ${contactEmail} and say so.`,

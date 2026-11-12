@@ -11,8 +11,6 @@ interface ContactBody {
   name?: unknown
   operation?: unknown
   email?: unknown
-  jobThatHurts?: unknown
-  visitWanted?: unknown
   message?: unknown
   honeypot?: unknown
   turnstileToken?: unknown
@@ -20,13 +18,6 @@ interface ContactBody {
 
 const WINDOW_MS = 10 * 60 * 1000
 const MAX_HITS = 5
-const allowedJobs = new Set([
-  'time-payroll',
-  'receiving-shipping',
-  'floor-equipment',
-  'existing-systems',
-  'other',
-])
 const hits = new Map<string, number[]>()
 
 function json(data: { ok: boolean; error?: string }, status: number): Response {
@@ -101,12 +92,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const name = asText(payload.name, 120)
   const operation = asText(payload.operation, 160)
   const email = asText(payload.email, 160)
-  const jobThatHurts = asText(payload.jobThatHurts, 40)
   const message = asText(payload.message, 4000)
-  const visitWanted = payload.visitWanted === true
   const token = asText(payload.turnstileToken, 2048)
 
-  if (!name || !operation || !isEmail(email) || !allowedJobs.has(jobThatHurts) || !message) {
+  if (!name || !operation || !isEmail(email) || !message) {
     return json({ ok: false, error: 'invalid' }, 400)
   }
 
@@ -127,31 +116,39 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const from = context.env.CONTACT_FROM ?? 'Rempel Automation <info@rempelautomation.com>'
   const text = [
     `Name: ${name}`,
-    `Operation: ${operation}`,
+    `Company: ${operation}`,
     `Email: ${email}`,
-    `Job: ${jobThatHurts}`,
-    `Visit wanted: ${visitWanted ? 'yes' : 'no'}`,
     '',
     message,
   ].join('\n')
 
-  const send = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: email,
-      subject: `Contact form: ${operation}`,
-      text,
-    }),
-  })
+  // Do not return HTTP 502 for app failures. Cloudflare replaces Worker 502
+  // responses with its generic Bad Gateway page, which hides our JSON body.
+  let send: Response
+  try {
+    send = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from,
+        to: [to],
+        reply_to: email,
+        subject: `Contact form: ${operation}`,
+        text,
+      }),
+    })
+  } catch (error) {
+    console.error('contact resend fetch failed', error)
+    return json({ ok: false, error: 'send_failed' }, 500)
+  }
 
   if (!send.ok) {
-    return json({ ok: false, error: 'send_failed' }, 502)
+    const detail = await send.text().catch(() => '')
+    console.error('contact resend rejected', send.status, detail.slice(0, 500))
+    return json({ ok: false, error: 'send_failed' }, 500)
   }
 
   return json({ ok: true }, 200)

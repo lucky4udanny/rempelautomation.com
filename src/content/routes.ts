@@ -108,8 +108,7 @@ export const publicPages: PublicPageMeta[] = [
     path: '/contact/',
     name: 'contact',
     title: `Contact | ${companyName}`,
-    description:
-      'Tell us about the operation and what you want to improve. We will reply, and we can visit.',
+    description: 'Tell us about the company and what you want to improve. We will reply.',
     navLabel: 'Contact',
     navOrder: 6,
     footerLabel: 'Contact',

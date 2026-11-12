@@ -4,6 +4,7 @@
 
 ### Changed
 
+- Contact form: “Company name” instead of “Operation”; free-text “What do you want to improve?” instead of a topic dropdown; removed site-visit checkbox.
 - Writing rule: ban trailing elaborations after a colon or dash (same sentence shape the em-dash ban was meant to stop). Site-wide content sweep rewrote those sentence tails into full sentences.
 - Home copy pass: software and hardware automation as one practice; connect-or-replace covers both; alternatives contrast software-alone vs hardware-alone vendors; industry details are integration-led; trades breadth; FarmBridge uses lot-details / contracts / organizations screens; process ring uses stage names.
 - Full substance rewrite from Marketing Foundations, Capabilities, and Conduit docs. Plain voice. No slogan deck.
@@ -14,10 +15,9 @@
 - Home: alternatives comparison table; products teaser vs case-study teaser without duplicated copy.
 - Images match subject (whiteboard/process, controllers/scale, product screens, code photo for Conduit).
 - Full-bleed photo heroes, process loop, `text-balance` headings, accent nav underline.
-- Contact topics stay job-named (time and payroll, receiving and shipping, and so on).
-
 ### Fixed
 
+- Contact function: Resend failures now return HTTP 500 with JSON `send_failed` instead of 502 (Cloudflare was replacing Worker 502 bodies with its Bad Gateway page).
 - Home hero supporting line reworked so “go-live” is not a one-word widow.
 - Feature card expand: square the seam, drop the card bottom border, and pull the detail out by 1px so it matches the card width (absolute children sit inside the border).
 - Removed floating FarmWork / FarmBridge screen garnish from photo heroes (home and products).

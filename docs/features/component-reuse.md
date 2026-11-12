@@ -6,7 +6,7 @@ Look and feel stays consistent when every page is the same chrome plus content p
 
 1. **Layout** (`PageShell`, header, footer): once per page. Header overlays photo heroes, then turns solid on scroll.
 2. **Primitives** (button, link, heading, container): used by sections, not rebuilt in pages.
-3. **Sections** (full-bleed hero, feature grid, process loop, product grid, case study, CTA, contact form): the bands visitors see.
+3. **Sections** (full-bleed hero, feature grid, process loop, product grid, case study, CTA, contact form): the bands visitors see. Contact form fields are name, company name, email, and a free-text “what do you want to improve?” (no topic dropdown or site-visit checkbox).
 4. **Content modules**: titles and body, not structure.
 
 Agents must search the catalog and extend with **typed** props before adding a new component. Names live in `.cursor/skills/vue3-component-reuse/catalog.md`. Prop shapes belong in `src/types/` when more than one file uses them.
