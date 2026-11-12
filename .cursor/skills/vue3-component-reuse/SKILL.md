@@ -51,10 +51,10 @@ Two components that only differ by color or heading level are a failed reuse.
 
 ## Primitives stay dumb
 
-`AppButton` / `AppLink` / `AppHeading` / `AppContainer` have no page knowledge. Sections use primitives. Pages use sections. Do not import primitives into a page to rebuild a section that already exists.
+`AppButton` / `AppLink` / `AppHeading` / `AppContainer` / `AppSection` have no page knowledge. Sections use primitives. Pages use sections. Do not import primitives into a page to rebuild a section that already exists.
 
 ## After you add a component
 
 - Export usage in [catalog.md](catalog.md) (one row).
 - Use it on the first page immediately (no "we'll switch later").
-- Match existing section padding and heading styles. If they feel wrong, change the **section**, not one page.
+- Match heading styles and wrap bands in `AppSection`. If spacing feels wrong, change `AppSection`, not one page.

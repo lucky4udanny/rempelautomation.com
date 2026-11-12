@@ -1,21 +1,20 @@
-import type { HeroContent, JobThatHurts } from '@/types/content'
+import type { ContactTopic, HeroContent } from '@/types/content'
 import { contactEmail } from '@/content/site'
 
 export const contactHero = {
   kicker: 'Contact',
-  title: 'Tell us about the operation and the job that hurts.',
+  title: 'Tell us about the operation and what you want to improve.',
   leads: [
-    `Use the form, or email ${contactEmail}. We will reply. If you want a visit in southwestern Ontario, say so.`,
-    'Ask for the operation, the job (payroll, receiving, shipping, floor paper), and whether you want us on site.',
+    `Use the form, or email ${contactEmail}. We will reply. If you want a site visit, say so.`,
   ],
 } satisfies HeroContent
 
-export const jobOptions: { value: JobThatHurts; label: string }[] = [
-  { value: 'payroll', label: 'Payroll and workforce' },
-  { value: 'receiving', label: 'Receiving' },
-  { value: 'shipping', label: 'Shipping' },
-  { value: 'floor-paper', label: 'Floor paper and scans' },
-  { value: 'other', label: 'Other' },
+export const jobOptions: { value: ContactTopic; label: string }[] = [
+  { value: 'time-payroll', label: 'Time and payroll' },
+  { value: 'receiving-shipping', label: 'Receiving and shipping' },
+  { value: 'floor-equipment', label: 'Floor and equipment' },
+  { value: 'existing-systems', label: 'Systems you already run' },
+  { value: 'other', label: 'Something else' },
 ]
 
 export const contactEndpoint = '/api/contact'

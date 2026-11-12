@@ -7,7 +7,7 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | Component | Role |
 |---|---|
 | `PageShell` | Skip link, `SiteHeader`, `<main>`, `SiteFooter` |
-| `SiteHeader` | Logo, primary nav, one header CTA |
+| `SiteHeader` | Overlay header on photo heroes; solid on scroll; logo, nav, contact CTA |
 | `SiteFooter` | Compact nav, contact, legal |
 
 ## Primitives (`src/components/primitives/`)
@@ -15,28 +15,30 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | Component | Role |
 |---|---|
 | `AppContainer` | Shared max-width + horizontal padding |
-| `AppHeading` | Eyebrow / h1 / h2 / h3 type scale |
-| `AppButton` | `primary` / `secondary` / `ghost`; `to` for internal links |
-| `AppLink` | Text links through Vue Router |
-| `AppImage` | Width/height, alt, lazy, modern format |
+| `AppHeading` | Eyebrow / h1 / h2 / h3; `tone="inverse"` on photo and ink bands |
+| `AppButton` | `primary` / `secondary` / `ghost` / `outline-light`; `to` or external `href` |
+| `AppLink` | Internal RouterLink or external `href` with `noopener` |
+| `AppImage` | Width/height, alt, lazy; optional caption |
+| `AppSection` | Shared band padding and tone (`default` / `raised` / `ink`; `compact` size) |
 
 ## Sections (`src/components/sections/`)
 
 | Component | Role |
 |---|---|
-| `HeroSection` | Page opening: kicker, title, leads, primary/secondary actions |
-| `ProofBar` | Short trust line or logo row (honest: no fake customers) |
-| `FeatureGrid` | Three to six capabilities with heading + short body |
-| `ProcessSteps` | Numbered "how we work" |
-| `CaseStudyCard` | One engagement: problem, result, link |
-| `CaseStudyList` | Grid/list of `CaseStudyCard` |
-| `QuoteBlock` | Optional quote; only if attributed without identifying a hidden customer |
+| `HeroSection` | Full-bleed photo opening with desktop parallax (no floating screen garnish) |
+| `FeatureGrid` | Capability cards; optional `detail` expands on hover, focus, or tap |
+| `ProcessLoop` | Interactive continuous-improvement ring; compact on home, full on process |
+| `ProductGrid` | Product cards with owner, status, points, links |
+| `PeopleList` | Leadership bios |
+| `MediaSlider` | Angled or flat product screens with previous/next, no autoplay |
+| `CaseStudyCard` | One engagement: problem, solution, optional result, link |
+| `CaseStudyList` | Grid of `CaseStudyCard` |
 | `CtaBand` | End-of-page ask (contact) |
-| `ContactForm` | Name, operation, email, job that hurts, visit, message; posts to the function |
+| `ContactForm` | Name, operation, email, topic, visit, message; posts to the function |
 | `FaqList` | Optional Q&A |
-| `BeforeAfterTable` | Honest before/after rows for case studies |
-| `CaseStudyDetail` | Unnamed case-study body: operation, problem, built, table |
-| `MediaBand` | One operations photo with license caption |
+| `BeforeAfterTable` | Honest before/after rows for live case studies |
+| `CaseStudyDetail` | Case-study body: operation, problem, solution, optional table, screens |
+| `MediaBand` | One operations photo |
 | `ProseSection` | Short page copy (privacy) |
 
 ## Content modules (`src/content/`) and types (`src/types/`)

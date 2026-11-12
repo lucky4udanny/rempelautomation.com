@@ -5,9 +5,9 @@ export const publicPages = [
   {
     path: '/',
     name: 'home',
-    title: `${companyName} | Floor and office on one record`,
+    title: `${companyName} | Software, hardware, and AI`,
     description:
-      'We help growers, packers, shippers, and similar operations replace clipboards and re-keying with one record from the floor to payroll and shipping.',
+      'Rempel Automation designs, connects, and supports systems for agriculture, manufacturing, and trades. One accountable team for software, hardware, and AI.',
     navLabel: 'Home',
     navOrder: 0,
     footerLabel: 'Home',
@@ -16,64 +16,104 @@ export const publicPages = [
   {
     path: '/services/',
     name: 'services',
-    title: `Services | ${companyName}`,
+    title: `What we do | ${companyName}`,
     description:
-      'Map the real job, build a system of record, put tools on the floor, automate the sequence, integrate payroll and shipping, and host it like pay data matters.',
-    navLabel: 'Services',
+      'Custom software, integration, automation and hardware, AI enablement, process advisory, and ongoing support for small and mid-sized operations.',
+    navLabel: 'What we do',
     navOrder: 1,
-    footerLabel: 'Services',
+    footerLabel: 'What we do',
     footerOrder: 1,
+  },
+  {
+    path: '/process/',
+    name: 'process',
+    title: `Process | ${companyName}`,
+    description:
+      'How we work: audit, design, implement, onboard, train, support, and improve. A continuous loop, not a one-time project.',
+    navLabel: 'Process',
+    navOrder: 2,
+    footerLabel: 'Process',
+    footerOrder: 2,
+  },
+  {
+    path: '/products/',
+    name: 'products',
+    title: `Products | ${companyName}`,
+    description:
+      'FarmWork and FarmBridge for agricultural operations, plus Conduit Suite for AI-enabled onboarding, training, support, and reporting.',
+    navLabel: 'Products',
+    navOrder: 3,
+    footerLabel: 'Products',
+    footerOrder: 3,
   },
   {
     path: '/case-studies/',
     name: 'case-studies',
     title: `Case studies | ${companyName}`,
     description:
-      'Unnamed case studies of workforce payroll and packing-shed operations software. The customers are not named.',
+      'FarmWork, FarmBridge, and unnamed engagements in trades and manufacturing. Problem, solution, and what changed where the work is live.',
     navLabel: 'Case studies',
-    navOrder: 2,
+    navOrder: 4,
     footerLabel: 'Case studies',
-    footerOrder: 2,
+    footerOrder: 4,
   },
   {
     path: '/case-studies/farmwork/',
     name: 'farmwork',
-    title: `FarmWork: workforce time and payroll | ${companyName}`,
+    title: `FarmWork | ${companyName}`,
     description:
-      'How we built one record from clock-in through the pay file for a seasonal agricultural employer. The customer is not named.',
+      'One record from clock-in through the pay file for a seasonal agricultural employer: mixed pay, offline field capture, and payroll export.',
     footerLabel: 'FarmWork',
-    footerOrder: 6,
+    footerOrder: 8,
   },
   {
     path: '/case-studies/farmbridge/',
     name: 'farmbridge',
-    title: `FarmBridge: receiving through shipping | ${companyName}`,
+    title: `FarmBridge | ${companyName}`,
     description:
-      'How we connected lots, coolers, dock hardware, and shipping into one trail a packing operation can trust. The customer is not named.',
+      'Receiving through shipping on one lot trail, with dock hardware and floor sequences the operation can publish.',
     footerLabel: 'FarmBridge',
-    footerOrder: 7,
+    footerOrder: 9,
+  },
+  {
+    path: '/case-studies/field-jobs/',
+    name: 'field-jobs',
+    title: `Field jobs | ${companyName}`,
+    description:
+      'How we connect crew time, job cost, field issues, and accounting for a trades contractor. The client is not named.',
+    footerLabel: 'Field jobs',
+    footerOrder: 10,
+  },
+  {
+    path: '/case-studies/plant-time/',
+    name: 'plant-time',
+    title: `Plant time | ${companyName}`,
+    description:
+      'How we connect a time clock to an ERP and replace spreadsheet benefits tracking for a manufacturer. The client is not named.',
+    footerLabel: 'Plant time',
+    footerOrder: 11,
   },
   {
     path: '/about/',
     name: 'about',
     title: `About | ${companyName}`,
     description:
-      'Three brothers in southwestern Ontario building a solutions company. We sit with the operation, recommend what is right, and stay after go-live.',
+      'Three partners based in southwestern Ontario, with clients in Canada, Mexico, and Belize. Values that change how we work.',
     navLabel: 'About',
-    navOrder: 3,
+    navOrder: 5,
     footerLabel: 'About',
-    footerOrder: 3,
+    footerOrder: 5,
   },
   {
     path: '/contact/',
     name: 'contact',
     title: `Contact | ${companyName}`,
     description:
-      'Tell us about the operation and the job that hurts: payroll, receiving, shipping, or floor paper. We will reply, and we can visit.',
+      'Tell us about the operation and what you want to improve. We will reply, and we can visit.',
     navLabel: 'Contact',
-    navOrder: 4,
+    navOrder: 6,
     footerLabel: 'Contact',
-    footerOrder: 4,
+    footerOrder: 6,
   },
   {
     path: '/privacy/',
@@ -82,7 +122,7 @@ export const publicPages = [
     description:
       'What the contact form collects, who sees it, and that we do not sell your information.',
     footerLabel: 'Privacy',
-    footerOrder: 5,
+    footerOrder: 7,
   },
 ] satisfies PublicPageMeta[]
 

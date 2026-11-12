@@ -12,7 +12,7 @@ import SiteHeader from '@/components/layout/SiteHeader.vue'
       Skip to content
     </a>
     <SiteHeader />
-    <main id="main" class="flex-1">
+    <main id="main" class="flex-1 pt-[4.75rem]">
       <slot />
     </main>
     <SiteFooter />

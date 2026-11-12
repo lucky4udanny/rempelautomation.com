@@ -20,7 +20,13 @@ interface ContactBody {
 
 const WINDOW_MS = 10 * 60 * 1000
 const MAX_HITS = 5
-const allowedJobs = new Set(['payroll', 'receiving', 'shipping', 'floor-paper', 'other'])
+const allowedJobs = new Set([
+  'time-payroll',
+  'receiving-shipping',
+  'floor-equipment',
+  'existing-systems',
+  'other',
+])
 const hits = new Map<string, number[]>()
 
 function json(data: { ok: boolean; error?: string }, status: number): Response {

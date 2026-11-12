@@ -1,4 +1,4 @@
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost'
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline-light'
 
 export interface HeroAction {
   label: string
@@ -11,11 +11,7 @@ export interface MediaImage {
   alt: string
   width: number
   height: number
-  caption: string
-  credit: string
-  sourceUrl: string
-  license: string
-  licenseUrl: string
+  caption?: string
 }
 
 export interface HeroContent {
@@ -25,11 +21,13 @@ export interface HeroContent {
   primaryAction?: HeroAction
   secondaryAction?: HeroAction
   image?: MediaImage
+  tone?: 'light' | 'photo'
 }
 
 export interface FeatureItem {
   title: string
   body: string
+  detail?: string
 }
 
 export interface FeatureGridContent {
@@ -37,18 +35,31 @@ export interface FeatureGridContent {
   title: string
   body?: string
   items: FeatureItem[]
+  tone?: 'default' | 'raised' | 'ink'
 }
 
-export interface ProcessStep {
+export interface ProcessPath {
   title: string
+  when: string
   body: string
 }
 
-export interface ProcessStepsContent {
+export interface ProcessStage {
+  id: string
+  title: string
+  summary: string
+  body: string[]
+  paths?: ProcessPath[]
+}
+
+export interface ProcessLoopContent {
   kicker?: string
   title: string
   body?: string
-  steps: ProcessStep[]
+  stages: ProcessStage[]
+  compact?: boolean
+  moreTo?: string
+  moreLabel?: string
 }
 
 export interface ProofItem {
@@ -70,7 +81,8 @@ export interface CaseStudyCardContent {
   subtitle: string
   problem: string
   built: string
-  changed: string
+  changed?: string
+  statusNote?: string
 }
 
 export interface BeforeAfterRow {
@@ -87,14 +99,48 @@ export interface CaseStudyPageContent {
   slug: string
   title: string
   subtitle: string
-  unnamedNotice: string
+  unnamedNotice?: string
+  statusNote?: string
   operation: string[]
   problemIntro: string
   problem: string[]
   builtIntro: string
   built: CaseStudyBuiltBlock[]
-  changedRows: BeforeAfterRow[]
+  changedRows?: BeforeAfterRow[]
   closer: string
+  externalProduct?: { label: string; href: string }
+  screens?: MediaImage[]
+}
+
+export interface ProductCardContent {
+  name: string
+  status?: string
+  owner: string
+  summary: string
+  points: string[]
+  href?: string
+  to?: string
+  image?: MediaImage
+}
+
+export interface ProductGridContent {
+  kicker?: string
+  title: string
+  body?: string
+  items: ProductCardContent[]
+}
+
+export interface PersonBio {
+  name: string
+  role: string
+  paragraphs: string[]
+}
+
+export interface PeopleListContent {
+  kicker?: string
+  title: string
+  body?: string
+  people: PersonBio[]
 }
 
 export interface FaqItem {
@@ -115,13 +161,21 @@ export interface PublicPageMeta {
   noindex?: boolean
 }
 
-export type JobThatHurts = 'payroll' | 'receiving' | 'shipping' | 'floor-paper' | 'other'
+export type ContactTopic =
+  | 'time-payroll'
+  | 'receiving-shipping'
+  | 'floor-equipment'
+  | 'existing-systems'
+  | 'other'
+
+/** @deprecated Use ContactTopic */
+export type JobThatHurts = ContactTopic
 
 export interface ContactPayload {
   name: string
   operation: string
   email: string
-  jobThatHurts: JobThatHurts
+  jobThatHurts: ContactTopic
   visitWanted: boolean
   message: string
   honeypot: string

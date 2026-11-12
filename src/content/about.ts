@@ -1,64 +1,128 @@
-import type { CtaContent, FaqItem, FeatureGridContent, HeroContent } from '@/types/content'
-import { forkliftFloorPhoto } from '@/content/media'
+import type {
+  CtaContent,
+  FaqItem,
+  FeatureGridContent,
+  HeroContent,
+  PeopleListContent,
+} from '@/types/content'
+import { deskCodeAPhoto } from '@/content/media'
 
 export const aboutHero = {
   kicker: 'About',
-  title: 'Three brothers. A solutions company. On the ground in southwestern Ontario.',
+  title: 'Three partners. A solutions company.',
   leads: [
-    'Dan, Dave, and James Rempel. We sit with an operation, map the real job, then connect people, systems, machines, and process so the office and the floor share the same numbers.',
-    'Rempel Automation is a new corporation. The brothers have already shipped operations software for seasonal employers and packing sheds. We stay after go-live: training, support, and the next change.',
+    'It started with a pattern, not an industry. On a packing floor, in a manufacturing plant, on a roofing crew, capable people spent their days moving information between systems that do not talk to each other.',
+    'We are based in southwestern Ontario. Our clients include operations in Canada, Mexico, and Belize. Rempel Automation is a new corporation. The brothers have already shipped operations software for seasonal employers and packing sheds. We stay after go-live.',
   ],
-  image: forkliftFloorPhoto,
+  image: deskCodeAPhoto,
+  tone: 'photo',
 } satisfies HeroContent
 
-export const aboutWho = {
-  kicker: 'Who we are',
-  title: 'Clients, not transactions.',
+export const aboutValues = {
+  kicker: 'Values',
+  title: 'What we do differently because we believe this.',
   items: [
     {
-      title: 'Solutions, not a software shop',
-      body: 'Software is being commoditized. We do not lead with “we write apps.” Durable value is the relationship plus hands-on support: hardware, software, and being the people they call when it breaks.',
+      title: 'Integrity',
+      body: 'We do what we say we will do.',
+      detail:
+        'We do not hide problems, shift blame, or trade our integrity for a longer-term gain. If a simple digital process solves the problem, we say AI is not needed.',
     },
     {
-      title: 'Recommend what is right',
-      body: 'We do what we say. We admit when we are wrong. We will not hide problems or shift blame. We recommend what is right for the operation, not what we can sell.',
+      title: 'Trust',
+      body: 'We aim for no surprises.',
+      detail:
+        'We show our work before we talk numbers. We answer the hard question about continuity before you ask it, and we include your IT person in every decision.',
     },
     {
-      title: 'Present when it matters',
-      body: 'We work in southwestern Ontario. Agriculture and a live shift do not wait for a scheduled remote visit. We work with your IT. We do not displace them.',
+      title: 'Accountability',
+      body: 'We call you a client.',
+      detail:
+        'Not a customer (too transactional) and not a partner (we do not share ownership of your business). One party answers the phone.',
+    },
+    {
+      title: 'Curiosity',
+      body: 'We start by listening.',
+      detail:
+        'We interview the supervisors, counters, and bookkeepers who do the work, not only management. A first visit is to learn, not to pitch.',
+    },
+    {
+      title: 'Excellence',
+      body: 'A digital version has to be at least as careful as the paper it replaces.',
+      detail:
+        'If your paper file catches a wrong supplier invoice, our version catches it too.',
+    },
+    {
+      title: 'Innovation',
+      body: 'We adopt new technology only when it gives you a significant advantage.',
+      detail:
+        'We turn it down when it would break your commitments or our ethics. We will make our own work obsolete before a competitor does.',
+    },
+    {
+      title: 'Continuous improvement',
+      body: 'We measure before and after.',
+      detail:
+        'A station that got faster or slower after a change shows up in real numbers. We use the same discipline on our own work.',
     },
   ],
 } satisfies FeatureGridContent
 
+export const aboutPeople = {
+  kicker: 'Leadership',
+  title: 'David, Dan, and James Rempel.',
+  people: [
+    {
+      name: 'David Rempel',
+      role: 'Co-Founder',
+      paragraphs: [
+        'David co-founded a technology company and served as its chief operating officer for 15 years, growing the team to 35 and delivering integrated software to healthcare organizations across Canada. The work covered business development, technology integration, change management, and turning what senior leaders needed into systems people could run.',
+        'At Rempel Automation he leads new business and solutions design: understand the operation first, then choose the technology. He was born in Mexico, raised in Canada, and is working toward fluency in Spanish.',
+      ],
+    },
+    {
+      name: 'Dan Rempel',
+      role: 'Co-Founder',
+      paragraphs: [
+        'Dan led the development arm of Tenzing Communications for 18 years. He is the primary architect of FarmWork and FarmBridge for Froese Vegetables Inc. He founded Key Design, which is merging into Rempel Automation in 2027.',
+        'At Rempel Automation he leads software architecture and automation process design.',
+      ],
+    },
+    {
+      name: 'James Rempel',
+      role: 'Founder',
+      paragraphs: [
+        'James was among the first employees of Research In Motion, where he led development teams. He founded Rempel Automation.',
+        'He leads hardware communication, controllers, and protocol interfaces, and he works with the controls vendors a site already uses.',
+      ],
+    },
+  ],
+} satisfies PeopleListContent
+
 export const aboutAi = {
-  kicker: 'How we use new tools',
-  title: 'AI is a method. A person stays accountable.',
+  kicker: 'How we use AI',
+  title: 'A method. A person stays accountable.',
   items: [
     {
-      title: 'Work people cannot do, or do not like to do',
-      body: 'We adopt new technology when it helps the client. We reject it when it breaks their commitments or our ethics.',
+      title: 'Work people cannot do, or do not want to do',
+      body: 'Reading a stack of invoices, matching them line by line, flagging the exceptions.',
     },
     {
       title: 'Never the only contact',
-      body: 'AI should never be the only contact for a client, and never the creative element of the solution. Judgment stays with people.',
-    },
-    {
-      title: 'Data stays architected to be safe',
-      body: 'Per-client install. Local or on-prem when that is the point. Client data is not training fuel for someone else’s model.',
+      body: 'AI is never the only contact for a client, and never the creative element of the solution. Judgment stays with people.',
     },
   ],
 } satisfies FeatureGridContent
 
 export const aboutFaqs: FaqItem[] = [
   {
-    question: 'What happens to our system if you fold?',
+    question: 'What happens to our system if you are gone?',
     answer:
-      'Each operation gets its own install, not a shared pile we take with us. We document the system, train your people, and work with your IT. Ask us about continuity when we scope the work. We do not claim a legal escrow unless that is written into the engagement.',
+      'Each operation gets its own installation, not a shared pile we take with us. We document the system, train your people, and work with your IT. Ask us about continuity when we scope the work. We do not claim a legal escrow unless that is written into the engagement.',
   },
   {
     question: 'Do we have to buy FarmWork or FarmBridge?',
     answer:
-      'No. Those names are evidence of the practice. We map your job and build the record you need, including fitting the systems you already run.',
+      'No. Those products are evidence of the practice. We map your job and build or connect the record you need, including fitting the systems you already run.',
   },
   {
     question: 'Will you replace our IT provider?',

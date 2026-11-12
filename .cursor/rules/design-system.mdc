@@ -12,21 +12,23 @@ One system. Pages do not pick their own colors, type, or spacing.
 
 Define brand, type, space, and radius once in `src/styles/main.css` using Tailwind 4 `@theme`. Components use those tokens (`bg-surface`, `text-ink`, `font-display`), never raw hex after tokens exist.
 
-Direction: quiet industrial B2B. Light surfaces, dark ink, one accent. Generous whitespace. Strong headings, short body. No playful display fonts, neon gradients, glassmorphism, or app-chrome (DaisyUI).
+Direction: quiet industrial B2B with a dynamic opening. Light surfaces, dark ink, one accent. Strong headings, short body. Full-bleed photo heroes with type on a dark scrim. No playful display fonts, neon gradients, glassmorphism, or app-chrome (DaisyUI).
 
 ## Chrome
 
 - Every page: `SiteHeader` + `SiteFooter` via `PageShell`.
-- One max-width container (`AppContainer`). Do not nest extra centered wrappers.
-- Section vertical rhythm from a shared scale (e.g. `py-16 md:py-24`), not one-off padding.
-- Type scale shared: eyebrow, h1, h2, body, caption. Headings through `AppHeading`.
-- Buttons only through `AppButton`: `primary`, `secondary`, `ghost`. One size scale.
-- Links that are buttons use `AppButton`; text links use `AppLink` (Vue Router, same URL shape as canonicals).
+- Header overlays photo heroes (white logo), then turns solid on scroll. One max-width container (`AppContainer`).
+- Section vertical rhythm from `AppSection` (`py-12 md:py-16`, compact `py-8 md:py-12`). Do not put one-off `py-*` on a page band. Adjacent same-tone bands collapse the second top pad so padding does not double.
+- Type scale shared: eyebrow, h1, h2, body, caption. Headings through `AppHeading` (`tone="inverse"` on photo and ink).
+- Buttons only through `AppButton`: `primary`, `secondary`, `ghost`, `outline-light` (on photo heroes). One size scale.
+- Links that are buttons use `AppButton`; text links use `AppLink` (internal or external with `noopener`).
 
 ## Motion and media
 
-- Subtle transitions. Honor `prefers-reduced-motion`.
-- Images: real operations photography, explicit width/height, lazy below the fold, modern formats (WebP/AVIF). No unlabeled stock.
+- Allowed: desktop parallax on photo heroes, one-shot section arrival, interactive process loop, hover/tap detail on feature cards, media sliders without autoplay.
+- Honor `prefers-reduced-motion`: turn parallax and fades off; keep loop and slider usable.
+- One full-bleed hero per page (`HeroSection`). Do not invent a second hero component.
+- Images: real operations photography and perspective-warped product screens, explicit width/height, lazy below the fold, WebP. No unlabeled stock.
 
 ## Responsive
 

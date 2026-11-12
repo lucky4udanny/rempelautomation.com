@@ -1,14 +1,23 @@
 import type { CaseStudyCardContent, CaseStudyPageContent, CtaContent, HeroContent } from '@/types/content'
-import { warehouseForkliftsPhoto } from '@/content/media'
+import {
+  farmbridgeLotsAngled,
+  farmbridgeLotsFlat,
+  farmworkIpadAngled,
+  farmworkIpadFlat,
+  farmworkPhoneAngled,
+  opsGraderPhoto,
+  opsScalePhoto,
+  opsWhiteboardPhoto,
+} from '@/content/media'
 
 export const caseStudiesHero = {
   kicker: 'Case studies',
-  title: 'Two operations. Two records they can trust.',
+  title: 'Four engagements. Two named products. Two clients who stay unnamed.',
   leads: [
-    'The customers are not named. Details that would identify them are left out. What remains is the operational problem, the software, and the result.',
-    'FarmWork and FarmBridge are evidence of the practice. They are not a catalog you have to buy as-is.',
+    'FarmWork and FarmBridge are live agricultural systems. The trades and manufacturing studies describe the problem and the solution we are designing. Those clients are not named.',
   ],
-  image: warehouseForkliftsPhoto,
+  image: opsScalePhoto,
+  tone: 'photo',
 } satisfies HeroContent
 
 export const caseStudyCards = [
@@ -19,19 +28,39 @@ export const caseStudyCards = [
     problem:
       'Hours, piece counts, and shared production lived in separate lists. Payroll reconstructed the week by hand.',
     built:
-      'Office web app plus a native field app with offline sync. One record from clock-in through a Sage-shaped pay file.',
+      'Office web app plus a native field app with offline sync. One record from clock-in through the pay file.',
     changed: 'Payroll reviews exceptions and exports. The floor still owns the clock and the count.',
   },
   {
     slug: 'farmbridge',
     title: 'FarmBridge',
-    subtitle: 'Receiving, inventory, processing, shipping, and floor automation for a packing operation.',
+    subtitle: 'Receiving through shipping for a packing and shipping operation.',
     problem:
-      'Clipboards from intake to load-out. “Where is that bin?” was a walk-around. Hardware was not part of the record.',
+      'Clipboards from intake to load-out. Dock hardware sat beside the paperwork.',
     built:
       'One lot trail from receiving through shipping, handheld scan, dock hardware, and flows the shed can author.',
     changed:
       'Location, age, and quantity on screen. Load-out is a move plus an allocation on the same trail.',
+  },
+  {
+    slug: 'field-jobs',
+    title: 'Field jobs',
+    subtitle: 'Crew time, job cost, and accounting for a trades contractor.',
+    problem:
+      'The quote does not survive contact with the roof. Extra work, crew time, and trailer stock live in texts and memory.',
+    built:
+      'Keep the estimating tool. Add crew time, job cost, field issues with photos, trailer inventory, equipment service, and an accounting sync.',
+    statusNote: 'Engagement in design. Problem and solution, not a finished result.',
+  },
+  {
+    slug: 'plant-time',
+    title: 'Plant time',
+    subtitle: 'Time clock, ERP, and benefits for a manufacturer.',
+    problem:
+      'Hours are re-keyed from the time clock into the ERP on payroll day. Benefits live in spreadsheets.',
+    built:
+      'Keep the clock and the ERP. Reviewed hours post on a schedule. Benefits get a review step instead of a spreadsheet.',
+    statusNote: 'Engagement in design. Problem and solution, not a finished result.',
   },
 ] as const satisfies readonly CaseStudyCardContent[]
 
@@ -39,48 +68,43 @@ export const farmWorkStudy = {
   slug: 'farmwork',
   title: 'FarmWork',
   subtitle: 'Workforce time, piecework, and payroll for a seasonal agricultural employer.',
-  unnamedNotice:
-    'The customer is not named. Details that would identify them are left out. What remains is the operational problem, the software, and the result.',
   operation: [
     'A commercial vegetable grower and packing operation with a large seasonal workforce. People are paid in more than one way: hourly, piecework, piecework plus hourly, or the better of the two. Production is often shared across several workers on the same task.',
     'The employer hires through foreign and seasonal worker programs, including the Seasonal Agricultural Worker Program (SAWP), which brings program deductions and paperwork that a generic time clock does not understand.',
-    'Supervisors work in fields and packing areas where the network drops. The office has to close a pay period, apply bonuses and deductions, and send a clean file into Sage.',
+    'Supervisors work in fields and packing areas where the network drops. The office has to close a pay period, apply bonuses and deductions, and send a clean file into accounting.',
   ],
   problemIntro: 'Time and production did not live in one place.',
   problem: [
     'Hours lived in one process. Piece counts lived in another. Shared production lived in a third conversation, often a spreadsheet.',
-    'Payroll had to reconstruct the week by hand: who was on which task, how many pieces, who shared a row, which SAWP lunch or program deduction applied, and which bonus rule fired.',
-    'Re-keying the same adjustments every pay run created delay and quiet errors. A missed deduction or a double-counted row is not a small mistake when it hits a worker’s pay.',
+    'Payroll had to reconstruct the week by hand: who was on which task, how many pieces, who shared a row, which program deduction applied, and which bonus rule fired.',
+    'Re-keying the same adjustments every pay run created delay and quiet errors.',
     'Supervisors needed to clock a crew and enter counts where the work was happening. A browser that only works on Wi-Fi is not a field tool.',
-    'Office staff could not see whether clocks were still open, whether counts looked off, or whether a worker had excessive hours until it was too late to fix on the floor.',
-    'Off-the-shelf time clocks assume one pay type, one worksite, and a reliable network. They do not model shared piecework, program deductions, or a supervisor scanning a crew at the edge of a field.',
+    'Off-the-shelf time clocks assume one pay type, one worksite, and a reliable network.',
   ],
   builtIntro:
-    'FarmWork: one system for time on the clock and production in the field, with payroll that matches agricultural pay rules.',
+    'FarmWork: one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Owned by Froese Vegetables Inc. We implement, customize, train, and support it.',
   built: [
     {
       heading: 'Office (web)',
       items: [
-        'Employee records, tasks, rates, crews, and permission-based access so a bookkeeper, a supervisor, and a worker do not share one god-mode login.',
-        'Pay configuration: pay period, overtime, holiday premium, bonuses, and deductions, including time-based and monetary deductions with limits.',
-        'Shared production: when several workers produced together, payout follows hours on that task in that period. It does not guess from a crew roster.',
-        'Pay-period review: open clocks, unusual hours, and pieces-per-hour flags before the file goes to accounting.',
-        'Export shaped for Sage, so the bookkeeper is not retyping earnings.',
+        'Employee records, tasks, rates, crews, and permission-based access.',
+        'Pay configuration: pay period, overtime, holiday premium, bonuses, and deductions, including program rules.',
+        'Shared production payout that follows hours on the task in that period.',
+        'Pay-period review before the file goes to accounting.',
       ],
     },
     {
       heading: 'Field (native mobile, including offline)',
       items: [
         'Supervisors clock a crew in or out against a task and location, or scan workers as they arrive.',
-        'Piece counts can be entered on the job, with a daily history so the person counting can see what they already recorded.',
-        'Workers can clock themselves where that is allowed.',
-        'The iPad or phone app keeps essential field work available when the network is gone, then syncs when it returns. Field work is not blocked because a login token expired in a dead zone.',
+        'Piece counts on the job, with a daily history.',
+        'Essential field work stays available when the network is gone, then syncs when it returns.',
       ],
     },
     {
       heading: 'Hosting',
       items: [
-        'Each client gets their own installation, in the country they choose, or on their own premises. Workforce and payroll data are not dumped into a shared multi-tenant pile.',
+        'Each client gets their own installation, in the country they choose, or on their own premises.',
       ],
     },
   ],
@@ -90,7 +114,7 @@ export const farmWorkStudy = {
       after: 'One record from clock-in through the pay file',
     },
     {
-      before: 'SAWP and bonus adjustments re-keyed every run',
+      before: 'Program and bonus adjustments re-keyed every run',
       after: 'Rules applied in the pay calculation, then reviewed',
     },
     {
@@ -101,72 +125,50 @@ export const farmWorkStudy = {
       before: 'Payroll reconstructed the week',
       after: 'Payroll reviews exceptions and exports',
     },
-    {
-      before: 'Generic time clock that ignored ag pay',
-      after: 'Hourly, piecework, mixed, and better-of rules in one product',
-    },
   ],
   closer:
     'The office still owns the pay period. The floor still owns the clock and the count. They finally share the same numbers.',
+  externalProduct: { label: 'FarmWork on froveg.ca', href: 'https://froveg.ca/farmwork.html' },
+  screens: [farmworkIpadAngled, farmworkPhoneAngled, farmworkIpadFlat],
 } satisfies CaseStudyPageContent
 
 export const farmBridgeStudy = {
   slug: 'farmbridge',
   title: 'FarmBridge',
   subtitle: 'Receiving, inventory, processing, shipping, and floor automation for a packing and shipping operation.',
-  unnamedNotice:
-    'The customer is not named. Details that would identify them are left out. What remains is the operational problem, the software, and the result.',
   operation: [
-    'A grower, grader, and shipper handling inbound lots from fields and other growers, then inventory, processing, and outbound loads. Settlement with growers, position with customers, and what is actually sitting in a cooler have to agree.',
-    'Buyers and inspectors ask one-step-back and one-step-forward questions. The dock has scales, cameras, and label printers. Forklift operators move marked containers. The office needs live quantity, age, and location, not a week-old spreadsheet.',
-    'An earlier load-tracking tool already existed for outbound paperwork. It did not cover receiving through inventory, it was not built as a secure modern platform, and it could not let the operation change floor process without another software project.',
+    'A grower, grader, and shipper handling inbound lots from fields and other growers, then inventory, processing, and outbound loads.',
+    'Buyers and inspectors ask one-step-back and one-step-forward questions. The dock has scales, cameras, and label printers. The office needs live quantity, age, and location.',
   ],
   problemIntro: 'The product trail was a stack of clipboards.',
   problem: [
     'Intake captured weight, container counts, grower, and quality in ways that did not stay with the lot once it left the scale.',
-    'Inventory was a walk-around. “Where is that bin?” meant asking whoever last saw it.',
-    'Processing steps (grading, packing, and other handling) broke the identity of what went into a load.',
-    'Shipping paperwork and the cooler did not share a source of truth. Underload, overload, and which cargo is on this trailer were tribal knowledge.',
-    'Grower settlement used numbers that might not match what receiving stored. Customer position used numbers that might not match what shipped.',
-    'Floor hardware (scale, camera, printer) was not part of the same workflow as the record. Photos for a dispute lived on a phone. Labels were a separate job.',
-    'When the packing shed changed how a job ran, the answer was a custom code change. There was no way for the operation to author “scan the cooler first, then scan bins” without calling a developer for every sequence.',
+    'Inventory was a walk-around. Shipping paperwork and the cooler did not share a source of truth.',
+    'Floor hardware was not part of the same workflow as the record.',
+    'When the packing shed changed how a job ran, the answer was a custom code change.',
   ],
   builtIntro:
-    'FarmBridge: one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs.',
+    'FarmBridge: one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs. Owned by Froese Vegetables Inc. We implement, customize, train, and support it.',
   built: [
     {
-      heading: 'Core operations (web)',
+      heading: 'Core operations',
       items: [
-        'Organizations, products, contracts, plantings, lots, facilities, and containers as first-class records.',
-        'Receiving that captures who it came from, how much (weight, volume, or container count), and timestamped photos when cameras are in the flow.',
-        'Inventory as facility location: a container’s place is the cooler, dock, or line it is in. Nested containers stay a hierarchy, not a guess.',
-        'Processing that keeps identity with the product so a load can still answer what went in.',
-        'Shipping from the same trail: allocate containers to a load, move them, and keep the ledger so reports and traceability match the floor.',
-        'Grower payments from stored lot measures, not from a side spreadsheet.',
-        'Live reporting: floor and office share quantity, age, and location.',
+        'Receiving, inventory, processing, shipping, grower settlement, and live reporting on one trail.',
+        'Identity stays with the product so a load can still answer what went in.',
       ],
     },
     {
       heading: 'Floor and hardware',
       items: [
-        'Handheld scanner app and QR short links so an operator starts at the destination (scan the dock or the cooler first), then scans each container.',
-        'Connected equipment: scales, cameras, printers, and room to attach other devices through an on-site gateway.',
-        'Labels and lot photos attached to the same lot the office sees.',
+        'Handheld scanning with destination-first flows.',
+        'Scales, cameras, and printers attached to the same lot the office sees.',
       ],
     },
     {
-      heading: 'Automation (so the software does not go stale)',
+      heading: 'Automation',
       items: [
-        'The operation (or we, during commissioning) authors flows: receiving intake, location moves, load-out, unload, print, notify.',
-        'Operators see the screen the designer authored. When the shed changes how a job runs, the flow is edited and published. That is configuration, not a rewrite of the core product.',
-        'Logic that is policy (tare, expected range, yield) lives in helpers the client owns. Core software stores measures and displays what was stored. It does not silently apply one farm’s formula to every farm.',
-      ],
-    },
-    {
-      heading: 'Platform shape',
-      items: [
-        'Permission-gated web app, with a path to replace the older load-tracking surface over time rather than a risky overnight cutover.',
-        'Companion Android scanner. Each client gets their own installation, hosted in the country they choose, or on-prem. Floor capture can still run on site.',
+        'Floor sequences authored and published without a rewrite of the core product.',
+        'Site rules such as tare and yield stay with the site.',
       ],
     },
   ],
@@ -176,37 +178,99 @@ export const farmBridgeStudy = {
       after: 'One lot record from intake through shipping',
     },
     {
-      before: '“Where is that bin?” as a walk-around',
-      after: 'Location, age, and quantity on screen',
-    },
-    {
       before: 'Disputes from memory and phone photos',
       after: 'Scale weights and timestamped photos on the lot',
-    },
-    {
-      before: 'Shipping and inventory as two stories',
-      after: 'Load-out is a move plus an allocation on the same trail',
     },
     {
       before: 'Every SOP change needed custom code',
       after: 'Floor sequences authored in automation, then published',
     },
-    {
-      before: 'Traceability assembled after the fact',
-      after: 'One-step-back and one-step-forward from the product trail',
-    },
   ],
   closer:
     'Operators still drive forklifts. The office still settles growers and customers. They are no longer reconciling three versions of the truth.',
+  externalProduct: { label: 'FarmBridge on froveg.ca', href: 'https://froveg.ca/farmbridge.html' },
+  screens: [farmbridgeLotsAngled, farmbridgeLotsFlat],
+} satisfies CaseStudyPageContent
+
+export const fieldJobsStudy = {
+  slug: 'field-jobs',
+  title: 'Field jobs',
+  subtitle: 'Crew time, job cost, field issues, and accounting for a trades contractor.',
+  unnamedNotice:
+    'The client is not named. What remains is the operational problem and the solution we are designing.',
+  statusNote: 'This engagement is in design. The page describes the problem and the solution, not a finished result.',
+  operation: [
+    'A roofing contractor. Quotes go out from an estimating tool the crew already knows. Jobs change once the roof is open. Crews work across sites. Trailer stock and equipment service matter to margin.',
+  ],
+  problemIntro: 'The quote does not survive contact with the roof.',
+  problem: [
+    'Extra work, crew time, trailer stock, and equipment service live in texts and memory.',
+    'The books get the numbers late, so job cost arrives after the crew has moved on.',
+    'The owner cannot see open jobs, unpaid invoices, or field issues while away.',
+  ],
+  builtIntro:
+    'Keep the estimating tool. Connect the rest of the job so the office and the field share one view.',
+  built: [
+    {
+      heading: 'Solution',
+      items: [
+        'Crew time against the job, with a mobile path for supervisors.',
+        'Job cost that combines labour and material as the work happens.',
+        'Field issues with photos, instead of group texts.',
+        'Trailer inventory and equipment service logs.',
+        'An accounting sync so invoices are not re-typed.',
+        'One owner view of open work, receivables, and exceptions.',
+      ],
+    },
+  ],
+  closer:
+    'We are designing this with the contractor now. Ask us how a similar pattern would fit your crews.',
+} satisfies CaseStudyPageContent
+
+export const plantTimeStudy = {
+  slug: 'plant-time',
+  title: 'Plant time',
+  subtitle: 'Time clock, ERP, and benefits for a manufacturer.',
+  unnamedNotice:
+    'The client is not named. What remains is the operational problem and the solution we are designing.',
+  statusNote: 'This engagement is in design. The page describes the problem and the solution, not a finished result.',
+  operation: [
+    'A manufacturer with a time clock for attendance and an ERP for payroll and job records. Office staff close payroll on a fixed cycle. Benefits and allowances are tracked outside the ERP today.',
+  ],
+  problemIntro: 'The same hours are typed twice.',
+  problem: [
+    'Two people re-key hours from the time clock into the ERP on payroll day.',
+    'Benefits and allowances live in spreadsheets, with a heavy review step every quarter.',
+    'On the floor, the same production record is written down more than once and never becomes a report.',
+  ],
+  builtIntro:
+    'Keep the time clock and the ERP. Close the gap between them, then decide whether floor scanning is worth a pilot.',
+  built: [
+    {
+      heading: 'Solution',
+      items: [
+        'Reviewed hours post from the time clock into the ERP on a schedule, with an exception list and a log.',
+        'Benefits and allowances move out of the spreadsheet into a review step people can run every month if they choose.',
+        'Scanning on the floor is a later pilot, after the payroll link is in place, not a completed rollout.',
+      ],
+    },
+  ],
+  closer:
+    'We prove the payroll link first. Floor production tracking follows only when the return is clear.',
 } satisfies CaseStudyPageContent
 
 export const caseStudiesBySlug: Record<string, CaseStudyPageContent> = {
   farmwork: farmWorkStudy,
   farmbridge: farmBridgeStudy,
+  'field-jobs': fieldJobsStudy,
+  'plant-time': plantTimeStudy,
 }
 
 export const caseStudyCta = {
-  title: 'If harvest, labour, inventory, or shipping still live in three places, talk with us.',
+  title: 'If the same number still lives in three places, talk with us.',
   actionLabel: 'Contact us',
   to: '/contact/',
 } satisfies CtaContent
+
+export const caseStudyIndexImage = opsWhiteboardPhoto
+export const caseStudyFieldImage = opsGraderPhoto

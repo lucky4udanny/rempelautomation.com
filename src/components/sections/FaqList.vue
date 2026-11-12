@@ -2,6 +2,7 @@
 import { useId } from 'vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
+import AppSection from '@/components/primitives/AppSection.vue'
 import type { FaqItem } from '@/types/content'
 
 interface Props {
@@ -15,7 +16,7 @@ const listId = useId()
 </script>
 
 <template>
-  <section class="py-16 md:py-24" :aria-labelledby="listId">
+  <AppSection :aria-labelledby="listId">
     <AppContainer class="max-w-3xl">
       <AppHeading :level="2" :eyebrow="kicker">
         <span :id="listId">{{ title }}</span>
@@ -27,5 +28,5 @@ const listId = useId()
         </div>
       </dl>
     </AppContainer>
-  </section>
+  </AppSection>
 </template>

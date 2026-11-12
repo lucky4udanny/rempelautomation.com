@@ -2,10 +2,11 @@
 import { onMounted, ref, useId, useTemplateRef } from 'vue'
 import AppButton from '@/components/primitives/AppButton.vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
+import AppSection from '@/components/primitives/AppSection.vue'
 import { contactEndpoint, jobOptions } from '@/content/contact'
 import { contactEmail } from '@/content/site'
 import type { ContactFieldErrors, FormStatus } from '@/types/forms'
-import type { JobThatHurts } from '@/types/content'
+import type { ContactTopic } from '@/types/content'
 
 interface TurnstileApi {
   render: (el: HTMLElement, options: { sitekey: string; callback: (token: string) => void }) => void
@@ -30,7 +31,7 @@ const turnstileHost = useTemplateRef<HTMLDivElement>('turnstile-host')
 const name = ref('')
 const operation = ref('')
 const email = ref('')
-const jobThatHurts = ref<JobThatHurts | ''>('')
+const jobThatHurts = ref<ContactTopic | ''>('')
 const visitWanted = ref(false)
 const message = ref('')
 const honeypot = ref('')
@@ -55,10 +56,10 @@ function validate(): boolean {
     next.email = 'Enter a working email address.'
   }
   if (!jobThatHurts.value) {
-    next.jobThatHurts = 'Choose the job that hurts.'
+    next.jobThatHurts = 'Choose a topic.'
   }
   if (!message.value.trim()) {
-    next.message = 'Tell us a little about the job.'
+    next.message = 'Tell us a little about what you want to improve.'
   }
   errors.value = next
   return Object.keys(next).length === 0
@@ -120,12 +121,13 @@ async function onSubmit(event: Event): Promise<void> {
 </script>
 
 <template>
-  <section class="py-16 md:py-24">
+  <AppSection>
     <AppContainer class="grid gap-12 lg:grid-cols-2">
       <form class="flex flex-col gap-5" novalidate @submit="onSubmit">
         <div
           :id="statusId"
-          class="min-h-6 text-sm"
+          class="text-sm"
+          :class="{ 'sr-only': status === 'idle' || status === 'submitting' }"
           role="status"
           aria-live="polite"
         >
@@ -185,7 +187,7 @@ async function onSubmit(event: Event): Promise<void> {
             <p v-if="errors.email" class="mt-1 text-sm text-ink-muted">{{ errors.email }}</p>
           </div>
           <div>
-            <label :for="jobId" class="block text-sm font-semibold">The job that hurts</label>
+            <label :for="jobId" class="block text-sm font-semibold">What do you want to improve?</label>
             <select
               :id="jobId"
               v-model="jobThatHurts"
@@ -203,7 +205,7 @@ async function onSubmit(event: Event): Promise<void> {
           </div>
           <div class="flex items-start gap-2">
             <input :id="visitId" v-model="visitWanted" type="checkbox" name="visitWanted" class="mt-1" />
-            <label :for="visitId" class="text-sm">I would like a visit in southwestern Ontario.</label>
+            <label :for="visitId" class="text-sm">I would like a site visit.</label>
           </div>
           <div>
             <label :for="messageId" class="block text-sm font-semibold">Message</label>
@@ -236,10 +238,10 @@ async function onSubmit(event: Event): Promise<void> {
           </a>
         </p>
         <p class="mt-6">
-          Say who you are, what the operation does, and whether payroll, receiving, shipping, or
-          floor paper is the job that hurts. If you want us on site, say that too.
+          Say who you are, what the operation does, and what you want to improve. If you want us on
+          site, say that too.
         </p>
       </aside>
     </AppContainer>
-  </section>
+  </AppSection>
 </template>

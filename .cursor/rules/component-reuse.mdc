@@ -20,7 +20,7 @@ Look and feel stays consistent because pages are assemblies, not one-off markup.
 |---|---|---|
 | `src/components/layout/` | Chrome on every page | `PageShell`, `SiteHeader`, `SiteFooter` |
 | `src/components/primitives/` | Small repeating controls | `AppButton`, `AppLink`, `AppContainer`, `AppHeading` |
-| `src/components/sections/` | Page bands | `HeroSection`, `ProofBar`, `FeatureGrid`, `CaseStudyCard`, `CtaBand`, `ContactForm` |
+| `src/components/sections/` | Page bands | `HeroSection`, `FeatureGrid`, `ProcessLoop`, `ProductGrid`, `CaseStudyCard`, `CtaBand`, `ContactForm` |
 | `src/pages/` | Routes only | Compose layout + sections. Almost no raw section markup. |
 | `src/content/` | Copy and case-study data | Typed modules (`satisfies` a shared interface). Pages do not hard-code long copy. |
 | `src/types/` | Shared interfaces | Section props, page content, public route meta |

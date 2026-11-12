@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppImage from '@/components/primitives/AppImage.vue'
+import AppSection from '@/components/primitives/AppSection.vue'
 import type { MediaImage } from '@/types/content'
 
 interface Props {
@@ -11,9 +12,9 @@ defineProps<Props>()
 </script>
 
 <template>
-  <section class="py-8 md:py-12">
+  <AppSection size="compact">
     <AppContainer class="max-w-4xl">
       <AppImage :image="image" />
     </AppContainer>
-  </section>
+  </AppSection>
 </template>

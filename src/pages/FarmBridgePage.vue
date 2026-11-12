@@ -10,9 +10,7 @@ usePageHead('/case-studies/farmbridge/')
 
 <template>
   <PageShell>
-    <div class="pt-16 md:pt-24">
-      <CaseStudyDetail :study="farmBridgeStudy" />
-    </div>
+    <CaseStudyDetail :study="farmBridgeStudy" />
     <CtaBand :content="caseStudyCta" />
   </PageShell>
 </template>

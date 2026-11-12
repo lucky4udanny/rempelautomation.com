@@ -1,6 +1,6 @@
 export const companyName = 'Rempel Automation'
 export const contactEmail = 'info@rempelautomation.com'
-export const region = 'southwestern Ontario'
+export const region = 'Canada, Mexico, and Belize'
 
 export const defaultSiteUrl = 'https://rempelautomation.com'
 
@@ -15,6 +15,3 @@ export function absoluteUrl(path: string): string {
   }
   return `${siteUrl()}${path}`
 }
-
-export const industryPhotoCaption =
-  'Industry photography, not a Rempel Automation client.'

@@ -1,7 +1,13 @@
-# Operations photos
+# Photographs and product screens
 
-The Drive brand folder has lockups, not photography. Client folders are off limits.
+Public images live under `src/assets/photos/` and `src/assets/screens/`, referenced from `src/content/media.ts`.
 
-This site uses Wikimedia Commons stills of packing lines, warehouses, forklifts, and docks. Every figure is captioned “Industry photography, not a Rempel Automation client,” with author, file page, and license. Credits live in `src/content/media.ts` so a new page cannot drop an unlabeled image.
+## Facility and desk photos
 
-Do not use AI-generated graphics. Do not use photos from `02 Clients`.
+Real facility frames (whiteboard, scale head, grader, wall controllers) and Dan’s angled desk monitor photos. EXIF stripped. WebP. No “not a client” stock captions. Crop people so faces are not recognizable.
+
+## Product screens
+
+FarmWork and FarmBridge captures are real UI with fake roster and account labels (no real worker names or faces). Perspective-warped “angled” versions sit in product grids, case studies, and the products slider. Heroes stay photo-only, without floating screen garnish.
+
+Do not publish grower names, phone numbers, street addresses, signatures, or scale-ticket photos that identify a person.

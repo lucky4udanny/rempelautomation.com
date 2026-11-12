@@ -1,154 +1,83 @@
-import type {
-  CtaContent,
-  FeatureGridContent,
-  HeroContent,
-  ProcessStepsContent,
-} from '@/types/content'
-import { loadingDockPhoto, warehousePalletsPhoto } from '@/content/media'
+import type { CtaContent, FeatureGridContent, HeroContent } from '@/types/content'
+import { deskMachinePhoto } from '@/content/media'
 
 export const servicesHero = {
-  kicker: 'Services',
-  title: 'Map the job. Build the record. Stay for the next change.',
+  kicker: 'What we do',
+  title: 'Design, build, connect, and support the systems that move work through your business.',
   leads: [
-    'We help operations become more capable by connecting their people, systems, data, machines, and process. We recommend what is right for them, not what is easiest to sell.',
-    'This is a solutions practice, not a catalog of apps you have to buy as-is. FarmWork and FarmBridge are evidence of that practice.',
+    'We are a solutions company. Software is one method. Hardware, process design, and ongoing support are part of the same engagement.',
+    'We recommend what is right for the operation, not what is easiest to sell.',
   ],
-  primaryAction: { label: 'Start a conversation', to: '/contact/', variant: 'primary' },
-  image: warehousePalletsPhoto,
+  primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
+  secondaryAction: { label: 'Our process', to: '/process/', variant: 'outline-light' },
+  image: deskMachinePhoto,
+  tone: 'photo',
 } satisfies HeroContent
 
-export const servicesProcess = {
-  kicker: 'How we work',
-  title: 'Six steps we repeat with each operation.',
-  steps: [
-    {
-      title: 'Map the real job',
-      body: 'Floor, field, and office, including the spreadsheets people are still using. We sit with the people who do the work.',
-    },
-    {
-      title: 'Build the system of record',
-      body: 'Time, production, lots, inventory, or shipping: one place the operation can trust.',
-    },
-    {
-      title: 'Put tools where the work is',
-      body: 'Offline field apps, handheld scan sessions, and dock hardware. A dead login token should not stop a crew.',
-    },
-    {
-      title: 'Automate the sequence, not a slogan',
-      body: 'Weigh, photo, print, move, notify: a flow the operation can change without waiting for a rewrite.',
-    },
-    {
-      title: 'Integrate the last mile',
-      body: 'Payroll export, bills of lading, grower settlement, accounting. No retyping.',
-    },
-    {
-      title: 'Host it like it matters',
-      body: 'Per-client install, in the country they choose or on-prem. Permissions that match who may see pay or move inventory.',
-    },
-  ],
-} satisfies ProcessStepsContent
-
-export const servicesWorkforce = {
-  kicker: 'Workforce and payroll',
-  title: 'Hours, pieces, and mixed pay that close into accounting.',
+export const servicesOfferings = {
+  kicker: 'Services',
+  title: 'What an engagement can include.',
   items: [
     {
-      title: 'The pay the floor actually uses',
-      body: 'Hourly, piecework, mixed, better-of, shared production, and seasonal-worker rules a generic clock does not understand.',
+      title: 'Custom software',
+      body: 'Web portals and phone or handheld apps built around your workflow.',
+      detail:
+        'Capabilities-based permissions so a bookkeeper, a supervisor, and a worker do not share one login.',
     },
     {
-      title: 'Exceptions, not reconstruction',
-      body: 'The office reviews open clocks, odd hours, and off counts. Payroll exports a clean file instead of rebuilding the week.',
+      title: 'Integration',
+      body: 'Connecting the systems you already own.',
+      detail:
+        'Time clock, ERP, accounting, CRM, e-signature, and supplier paperwork, without asking you to replace what already works.',
     },
     {
-      title: 'Floor capture',
-      body: 'Badge, station, job, scan. Paper timesheets go away for people who can scan. A paper path stays for people who will not, or cannot.',
+      title: 'Automation and hardware',
+      body: 'Scales, scanners, label printers, cameras, sensors, relays, and handhelds on one workflow.',
+      detail:
+        'We select hardware to the job. An on-site gateway keeps devices in the sequence. Fast and hazardous control stays in certified hardware.',
+    },
+    {
+      title: 'AI enablement',
+      body: 'Reading and matching documents, plain-language reports, and in-app help.',
+      detail:
+        'AI does work people cannot or do not want to do. It is never the only contact, and never the creative element of the solution.',
+    },
+    {
+      title: 'Process advisory',
+      body: 'Mapping how work really runs and recommending the simplest fix.',
+      detail:
+        'That can include which ERP, if any, to adopt. We do not recommend a platform because we resell it.',
+    },
+    {
+      title: 'Support and improvement',
+      body: 'Training for your trainers, monitoring, upgrades, and a regular look at what to improve next.',
+      detail: 'A named contact. On site when a season cannot wait.',
     },
   ],
 } satisfies FeatureGridContent
 
-export const servicesTrail = {
-  kicker: 'Product trail',
-  title: 'Receiving through shipping on one trail.',
+export const servicesPartners = {
+  kicker: 'How we deliver',
+  title: 'Direct where we have the expertise. Licensed partners where the law requires.',
   items: [
     {
-      title: 'Lots that keep their identity',
-      body: 'Intake stays with the lot through cooler, process, and load-out. Traceability is one step back and one step forward from the record.',
+      title: 'Your IT stays in the room',
+      body: 'We work with the IT provider you already trust. We do not displace them.',
     },
     {
-      title: 'Grower settlement from stored measures',
-      body: 'Payments use what receiving stored, not a side spreadsheet that disagrees with the cooler.',
+      title: 'Controls vendors',
+      body: 'Where PLCs or controls are involved, we work alongside your controls vendor and machinists.',
     },
     {
-      title: 'Shipping from the same numbers',
-      body: 'Load-out is a move plus an allocation. The cooler and the paperwork stop telling two stories.',
+      title: 'Licensed trades',
+      body: 'Electrical, panel fabrication, and safety-rated systems go through licensed partners. Codes are confirmed for each project.',
     },
   ],
 } satisfies FeatureGridContent
-
-export const servicesFloor = {
-  kicker: 'Floor and hardware',
-  title: 'The dock and the handheld are part of the record.',
-  items: [
-    {
-      title: 'Scan the way the job runs',
-      body: 'Destination first, then the bin. Sticky instruction on the handheld. No extra chrome that fights the SOP.',
-    },
-    {
-      title: 'Scales, cameras, printers, scanners',
-      body: 'Weights and timestamped photos land on the lot. Labels print in the same flow. An on-site gateway keeps hardware in the sequence.',
-    },
-    {
-      title: 'Simple by design',
-      body: 'Admin reviews exceptions. The floor is not blocked by a dead login token. Paper and no-scan paths stay available.',
-    },
-  ],
-} satisfies FeatureGridContent
-
-export const servicesFit = {
-  kicker: 'Fit what you already run',
-  title: 'We work with your systems and your IT.',
-  body: 'We do not displace the IT provider you already trust. We fit the tools that already earn their keep, then close the last mile.',
-  items: [
-    {
-      title: 'Attendance and payroll',
-      body: 'PayClock and similar clocks. Export shaped for Sage, Spire, QuickBooks, and the bookkeeper who still owns exceptions.',
-    },
-    {
-      title: 'Dock and shop equipment',
-      body: 'Cameras, scales, label printers, and scanners you already bought. We put them in the workflow instead of beside it.',
-    },
-    {
-      title: 'Platform first, then modules',
-      body: 'Later work is cheaper because the foundation exists. Crews, job costing, and field exceptions follow the same pattern when the shop is ready.',
-    },
-  ],
-} satisfies FeatureGridContent
-
-export const servicesHosting = {
-  kicker: 'Trust',
-  title: 'Hosting and permissions are part of the job.',
-  items: [
-    {
-      title: 'Per-client install',
-      body: 'Workforce and payroll data are not dumped into a shared multi-tenant pile. Each operation gets its own installation, in the country they choose, or on their own premises.',
-    },
-    {
-      title: 'Who may see pay or move inventory',
-      body: 'A bookkeeper, a supervisor, and a worker do not share one god-mode login. Permissions match the job.',
-    },
-    {
-      title: 'Ongoing support',
-      body: 'Train the trainer. Evergreen updates. On site when a season or a shift cannot wait. Agriculture does not wait for a scheduled remote visit.',
-    },
-  ],
-} satisfies FeatureGridContent
-
-export const servicesDockImage = loadingDockPhoto
 
 export const servicesCta = {
-  title: 'If the job still lives in three places, that is the gap.',
-  body: 'Tell us about payroll, receiving, shipping, or paper on the floor. We will say if we are a fit.',
+  title: 'If information still moves by re-keying, that is the gap.',
+  body: 'Tell us about the operation. We will say whether we are a fit.',
   actionLabel: 'Contact us',
   to: '/contact/',
 } satisfies CtaContent

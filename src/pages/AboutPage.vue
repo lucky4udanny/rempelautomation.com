@@ -4,7 +4,15 @@ import CtaBand from '@/components/sections/CtaBand.vue'
 import FaqList from '@/components/sections/FaqList.vue'
 import FeatureGrid from '@/components/sections/FeatureGrid.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
-import { aboutAi, aboutCta, aboutFaqs, aboutHero, aboutWho } from '@/content/about'
+import PeopleList from '@/components/sections/PeopleList.vue'
+import {
+  aboutAi,
+  aboutCta,
+  aboutFaqs,
+  aboutHero,
+  aboutPeople,
+  aboutValues,
+} from '@/content/about'
 import { usePageHead } from '@/composables/usePageHead'
 
 usePageHead('/about/')
@@ -13,7 +21,8 @@ usePageHead('/about/')
 <template>
   <PageShell>
     <HeroSection :content="aboutHero" />
-    <FeatureGrid :content="aboutWho" />
+    <FeatureGrid :content="aboutValues" />
+    <PeopleList :content="aboutPeople" />
     <FeatureGrid :content="aboutAi" />
     <FaqList title="Questions we already get" kicker="Continuity" :items="aboutFaqs" />
     <CtaBand :content="aboutCta" />

@@ -4,13 +4,15 @@ import type { MediaImage } from '@/types/content'
 interface Props {
   image: MediaImage
   lazy?: boolean
+  rounded?: boolean
+  cover?: boolean
 }
 
-const { image, lazy = true } = defineProps<Props>()
+const { image, lazy = true, rounded = true, cover = true } = defineProps<Props>()
 </script>
 
 <template>
-  <figure class="overflow-hidden rounded-lg bg-line">
+  <figure :class="rounded ? 'overflow-hidden rounded-lg' : 'overflow-hidden'">
     <img
       :src="image.src"
       :alt="image.alt"
@@ -18,21 +20,10 @@ const { image, lazy = true } = defineProps<Props>()
       :height="image.height"
       :loading="lazy ? 'lazy' : 'eager'"
       decoding="async"
-      class="h-auto w-full object-cover"
+      :class="cover ? 'h-auto w-full object-cover' : 'h-auto w-full object-contain'"
     />
-    <figcaption class="px-3 py-2 text-xs text-ink-muted">
+    <figcaption v-if="image.caption" class="px-3 py-2 text-xs text-ink-muted">
       {{ image.caption }}
-      <span class="block sm:inline sm:before:content-[' '] ">
-        Photo:
-        <a :href="image.sourceUrl" class="underline-offset-2 hover:underline" rel="license noopener">
-          {{ image.credit }}
-        </a>
-        ,
-        <a :href="image.licenseUrl" class="underline-offset-2 hover:underline" rel="license noopener">
-          {{ image.license }}
-        </a>
-        .
-      </span>
     </figcaption>
   </figure>
 </template>
