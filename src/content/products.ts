@@ -1,7 +1,7 @@
 import type { CtaContent, HeroContent, ProductGridContent } from '@/types/content'
 import {
   deskCodeAPhoto,
-  farmbridgeLotsFlat,
+  farmbridgeLotDetails,
   farmworkIpadAngled,
   opsScalePhoto,
 } from '@/content/media'
@@ -11,7 +11,7 @@ export const productsHero = {
   title: 'FarmWork, FarmBridge, and Conduit.',
   leads: [
     'These are products we implement and support. Case studies are separate: they describe the operations that drove the work.',
-    'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver.',
+    'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the systems we deliver.',
   ],
   image: opsScalePhoto,
   tone: 'photo',
@@ -51,16 +51,16 @@ export const productsGrid = {
       hrefLabel: 'FarmBridge on froveg.ca',
       to: '/case-studies/farmbridge/',
       toLabel: 'See the FVI case study',
-      image: farmbridgeLotsFlat,
+      image: farmbridgeLotDetails,
     },
     {
       name: 'Conduit',
       owner: 'AI helper for your business',
       summary:
-        'An AI helper built into the software we deliver so people can get set up, learn, get answers, get work done, and understand their numbers in plain language.',
+        'An AI helper built into the systems we deliver so people can get set up, learn, get answers, get work done, and understand their numbers in plain language across software and floor data.',
       points: [
         'Onboarding: read spreadsheets and PDFs, propose the mapping, you review, then import',
-        'Training and support inside the software, in your terms',
+        'Training and support inside the product, in your terms',
         'Ticketing, day-to-day work, reporting, and business intelligence by asking in plain language',
       ],
       image: deskCodeAPhoto,

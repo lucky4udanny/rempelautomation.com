@@ -11,6 +11,9 @@ import farmworkPhoneAngledUrl from '@/assets/screens/farmwork-phone-angled.webp'
 import farmworkPhoneFlatUrl from '@/assets/screens/farmwork-phone-flat.webp'
 import farmbridgeLotsAngledUrl from '@/assets/screens/farmbridge-lots-angled.webp'
 import farmbridgeLotsFlatUrl from '@/assets/screens/farmbridge-lots-flat.webp'
+import farmbridgeLotDetailsUrl from '@/assets/screens/farmbridge-lot-details.webp'
+import farmbridgeContractsUrl from '@/assets/screens/farmbridge-contracts.webp'
+import farmbridgeOrganizationsUrl from '@/assets/screens/farmbridge-organizations.webp'
 import type { MediaImage } from '@/types/content'
 
 export const opsWhiteboardPhoto = {
@@ -102,4 +105,25 @@ export const farmbridgeLotsFlat = {
   alt: 'FarmBridge recent lots list on a handheld.',
   width: 802,
   height: 1799,
+} satisfies MediaImage
+
+export const farmbridgeLotDetails = {
+  src: farmbridgeLotDetailsUrl,
+  alt: 'FarmBridge lot details with scale weight breakdown and dock camera stills on one record.',
+  width: 1024,
+  height: 767,
+} satisfies MediaImage
+
+export const farmbridgeContracts = {
+  src: farmbridgeContractsUrl,
+  alt: 'FarmBridge grower contract completion overview with product gauges.',
+  width: 1024,
+  height: 767,
+} satisfies MediaImage
+
+export const farmbridgeOrganizations = {
+  src: farmbridgeOrganizationsUrl,
+  alt: 'FarmBridge organizations view with locations, vehicles, crews, fields, and facilities.',
+  width: 1024,
+  height: 767,
 } satisfies MediaImage

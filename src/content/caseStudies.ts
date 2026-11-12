@@ -1,7 +1,8 @@
 import type { CaseStudyCardContent, CaseStudyPageContent, CtaContent, HeroContent } from '@/types/content'
 import {
-  farmbridgeLotsAngled,
-  farmbridgeLotsFlat,
+  farmbridgeContracts,
+  farmbridgeLotDetails,
+  farmbridgeOrganizations,
   farmworkIpadAngled,
   farmworkIpadFlat,
   farmworkPhoneAngled,
@@ -189,7 +190,7 @@ export const farmBridgeStudy = {
   closer:
     'Operators still drive forklifts. The office still settles growers and customers. They are no longer reconciling three versions of the truth.',
   externalProduct: { label: 'FarmBridge on froveg.ca', href: 'https://froveg.ca/farmbridge.html' },
-  screens: [farmbridgeLotsAngled, farmbridgeLotsFlat],
+  screens: [farmbridgeLotDetails, farmbridgeContracts, farmbridgeOrganizations],
 } satisfies CaseStudyPageContent
 
 export const fieldJobsStudy = {

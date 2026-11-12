@@ -23,7 +23,7 @@ Without a catalog, a greenfield Vue marketing site tends to grow a second hero a
 
 `ComparisonTable` holds the Foundations alternatives grid (off-the-shelf, large integrator, DIY+AI).
 
-Voice: people first, process second, software/machines last. Productivity, quality, safety. Products sell products; case studies tell client problems.
+Voice: people first, process second, then software and hardware automation as one practice (not software-or-hardware). Productivity, quality, safety. Products sell products; case studies tell client problems. FarmBridge product/case screens prefer lot details (scale + cameras on one record) over the old handheld lots list.
 
 The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`. Ring nodes use `ringLabel` (Audit, Design, …), not bare numbers; the sticky column does not repeat the stage summary under the ring.
 

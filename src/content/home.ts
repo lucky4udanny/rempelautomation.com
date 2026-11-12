@@ -9,7 +9,7 @@ import { caseStudyCards } from '@/content/caseStudies'
 import { homeProcessLoop } from '@/content/process'
 import {
   deskCodeBPhoto,
-  farmbridgeLotsFlat,
+  farmbridgeLotDetails,
   farmworkIpadAngled,
   opsWhiteboardPhoto,
 } from '@/content/media'
@@ -40,13 +40,13 @@ export const homeAdvantage = {
     },
     {
       title: 'Connect when it fits. Replace when it pays.',
-      body: 'We connect your time clock, ERP, accounting package, CRM, and handhelds when that is the better path. When replacing software improves ROI, we say so.',
+      body: 'We connect the software and hardware you already run when that is the better path: office systems, scales, scanners, controllers, and machines. When replacing software or hardware improves ROI, we say so. Otherwise we recommend keeping what you have invested in.',
       detail:
-        'Staff comfort and training load sit in that ROI math. Keep, connect, or replace is a decision for each system, not a slogan.',
+        'Staff comfort and training time are part of that ROI calculation. Keep, connect, or replace is decided for each system after the assessment.',
     },
     {
       title: 'AI that helps your people work',
-      body: 'In the product, AI reads messy files, answers “where do I click?”, and builds reports from plain-language questions.',
+      body: 'In the systems we deliver, AI reads messy files, answers “where do I click?”, and builds reports from plain-language questions across software and floor data.',
       detail:
         'AI is never your only contact with us, and never the creative element in your solution. People design it and people answer for it.',
     },
@@ -64,26 +64,26 @@ export const homeAlternatives = {
   title: 'What the usual alternatives give you, and where they fall short.',
   rows: [
     {
-      alternative: 'Off-the-shelf software alone',
+      alternative: 'Software vendor alone',
       gets: 'Fast start, low price.',
-      shortfall: 'Assumes one process shape, good Wi-Fi, and no floor hardware in the same workflow.',
+      shortfall: 'Stops at the screen. Scales, scanners, controllers, and machines stay outside the workflow.',
       instead:
-        'Software that matches your rules, plus scanners, scales, printers, and controllers on the same record. Conduit for onboarding and day-to-day help.',
+        'Software and hardware automation on the same record: rules, scanners, scales, printers, and controllers together. Conduit for onboarding and day-to-day help.',
     },
     {
-      alternative: 'Large automation integrator',
+      alternative: 'Hardware integrator alone',
       gets: 'Scale, credentials, and machine experience.',
-      shortfall: 'Priced and paced for much larger budgets. Office software is often a separate project.',
+      shortfall: 'Priced and paced for much larger budgets. Office software is often a separate project with a separate vendor.',
       instead:
-        'Phased software and hardware sized to a small or mid-sized operation, starting with the piece that pays back first. AI helper included where it earns its keep.',
+        'One engagement for software and hardware automation, phased for a small or mid-sized operation, starting with the piece that pays back first.',
     },
     {
       alternative: 'Build it yourself with AI tools',
       gets: 'Cheap prototype, full control.',
       shortfall:
-        'Someone still has to make software and machines reliable, train the crew, and answer the phone in harvest or peak season.',
+        'Someone still has to make software and machines reliable together, train the crew, and answer the phone in harvest or peak season.',
       instead:
-        'We own reliability across office software, floor automation, and Conduit, including training and support.',
+        'We own reliability across the integrated stack and Conduit, including training and support.',
     },
   ],
 } satisfies ComparisonTableContent
@@ -95,13 +95,13 @@ export const homeOutcomes = {
   items: [
     {
       title: 'Productivity',
-      body: 'Automation speeds the process on the floor and in the office: machines and sensors in the workflow, fewer re-keying steps, and visibility so people make better decisions.',
+      body: 'Software and hardware automation together speed the process: machines and sensors in the same workflow as the office, fewer re-keying steps, and visibility so people make better decisions.',
       detail:
-        'We are useful when office work and machine work still live in separate worlds. Clients come when the same numbers are re-keyed every pay run or load, the line is slow for unknown reasons, or the owner is the bottleneck.',
+        'We are useful when software automation and hardware automation still live in separate projects. Clients come when the same numbers are re-keyed every pay run or load, the line is slow for unknown reasons, or the owner is the bottleneck.',
     },
     {
       title: 'Quality',
-      body: 'Software and machines do not get tired or lose focus. They can be tuned to hold a set of tolerances more consistently.',
+      body: 'Software and machines on one record do not get tired or lose focus. They can be tuned to hold a set of tolerances more consistently.',
       detail:
         'Identity and checks on the lot help prevent recalls. When a recall still happens, traceability shrinks the envelope. Scale weights and timestamped photos settle disputes without relying on memory.',
     },
@@ -121,21 +121,21 @@ export const homeIndustries = {
   items: [
     {
       title: 'Agriculture',
-      body: 'Growers, packers, and shippers: seasonal labour, mixed pay, receiving, grading, cold storage, shipping, food-safety traceability.',
+      body: 'Growers, packers, and shippers: seasonal labour, mixed pay, receiving, grading, cold storage, shipping, and food-safety traceability.',
       detail:
-        'Hours, pieces, and product identity live in separate lists. Field work stalls without signal. Buyers ask for traceability. Dock hardware often sits beside paper.',
+        'We integrate field and packing software with dock scales, scanners, cameras, and line equipment into one visible, real-time record. Traceability is often legislated, and buyers expect it.',
     },
     {
       title: 'Manufacturing',
-      body: 'Production lines and job-based work: an ERP, a time clock, floor staff, and machines that should share one story with the office.',
+      body: 'Production lines and job-based work where the ERP, time clock, floor staff, controllers, and machines need one shared record.',
       detail:
-        'Time keyed in by hand. Production steps on paper that never reach a report. No clear data on where the line is slow. Controllers and sensors belong in the same engagement as the paperwork.',
+        'When time is keyed by hand and production steps stay on paper, controllers and sensors sit beside the office instead of feeding it. We put floor equipment and office systems on the same workflow.',
     },
     {
       title: 'Trades',
-      body: 'Roofing, construction, and service: crews in the field, quotes, supplier orders, job files, warranties.',
+      body: 'Field trades and service: electricians, plumbers, roofers, concrete, drywall, masonry, and similar crews. Quotes, materials, job files, warranties, and the tools and vehicles on site.',
       detail:
-        'The owner is the bottleneck. Job costing arrives late. Supplier invoices do not match deliveries. Paper job files and texted time sheets.',
+        'Often the owner is the bottleneck, job cost arrives late, or supplier invoices do not match deliveries. Paper job files and texted time sheets are common.',
     },
   ],
 } satisfies FeatureGridContent
@@ -143,7 +143,7 @@ export const homeIndustries = {
 export const homeProducts = {
   kicker: 'Products',
   title: 'Three products we implement and support.',
-  body: 'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver. Case studies are separate.',
+  body: 'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the systems we deliver. Case studies are separate.',
   items: [
     {
       name: 'FarmWork',
@@ -160,18 +160,18 @@ export const homeProducts = {
       name: 'FarmBridge',
       owner: 'Receiving through shipping',
       summary:
-        'Configurable receiving, processing, inventory, and shipping that fits how you already work, including sensors and machines in the flow.',
+        'Receiving through shipping on one trail: software workflows with scales, cameras, printers, scanners, and floor sequences in the same flow.',
       points: [],
       href: 'https://froveg.ca/farmbridge.html',
       to: '/products/',
       toLabel: 'Products',
-      image: farmbridgeLotsFlat,
+      image: farmbridgeLotDetails,
     },
     {
       name: 'Conduit',
       owner: 'AI helper',
       summary:
-        'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language inside the software.',
+        'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language inside the systems we deliver.',
       points: [],
       to: '/products/',
       toLabel: 'Products',
