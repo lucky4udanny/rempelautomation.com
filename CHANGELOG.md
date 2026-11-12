@@ -13,6 +13,7 @@
 
 ### Fixed
 
+- Home hero supporting line reworked so “go-live” is not a one-word widow.
 - Feature card expand: square the seam, drop the card bottom border, and pull the detail out by 1px so it matches the card width (absolute children sit inside the border).
 - Removed floating FarmWork / FarmBridge screen garnish from photo heroes (home and products).
 - Replaced real worker names and the FarmBridge account face on product screens with fake labels.

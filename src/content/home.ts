@@ -12,7 +12,7 @@ export const homeHero = {
   title: 'Software, hardware, and AI, in one accountable team.',
   leads: [
     'We design, connect, and support the systems that move information and product through small and mid-sized agriculture, manufacturing, and trades businesses.',
-    'We start with how the work runs. We fit what you already own. We stay after go-live.',
+    'We start with how the work runs, fit what you already own, and stay after\u00a0go-live.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
   secondaryAction: { label: 'See how we work', to: '/process/', variant: 'outline-light' },
