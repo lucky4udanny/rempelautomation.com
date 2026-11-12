@@ -29,10 +29,11 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | `FeatureGrid` | Capability cards; optional `detail` expands on hover, focus, or tap |
 | `ProcessLoop` | Interactive continuous-improvement ring; compact on home, full on process |
 | `ProductGrid` | Product cards with owner, status, points, links |
+| `ComparisonTable` | Four-column alternatives table (your alternative / get / shortfall / instead) |
 | `PeopleList` | Leadership bios |
 | `MediaSlider` | Angled or flat product screens with previous/next, no autoplay |
 | `CaseStudyCard` | One engagement: problem, solution, optional result, link |
-| `CaseStudyList` | Grid of `CaseStudyCard` |
+| `CaseStudyList` | Optional kicker/title plus grid of `CaseStudyCard` |
 | `CtaBand` | End-of-page ask (contact) |
 | `ContactForm` | Name, operation, email, topic, visit, message; posts to the function |
 | `FaqList` | Optional Q&A |

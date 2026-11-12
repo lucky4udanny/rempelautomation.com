@@ -1,37 +1,40 @@
 import { expect, test } from '@playwright/test'
 
-test('home states the advantage and points at contact', async ({ page }) => {
+test('home states people-first automation and points at contact', async ({ page }) => {
   await page.goto('/')
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Software, hardware, and AI, in one accountable team.',
+    'People, process, then software and machines.',
   )
-  await expect(page.getByRole('main')).toContainText('agriculture, manufacturing, and trades')
+  await expect(page.getByRole('main')).toContainText('Productivity, quality, and safety')
+  await expect(page.getByRole('main')).toContainText('Froese Vegetables Inc.')
   await expect(page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Contact' })).toBeVisible()
   await page.getByRole('main').getByRole('link', { name: 'Contact us' }).first().click()
   await expect(page).toHaveURL(/\/contact\/$/)
 })
 
-test('FarmWork case study shows before and after and links the product', async ({ page }) => {
+test('FarmWork case study names FVI and links the product', async ({ page }) => {
   await page.goto('/case-studies/farmwork/')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('FarmWork')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Froese Vegetables Inc.')
+  await expect(page.getByRole('main')).toContainText('FarmWork')
   await expect(page.getByRole('columnheader', { name: 'Before' })).toBeVisible()
   await expect(page.getByRole('columnheader', { name: 'After' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'FarmWork on froveg.ca' })).toBeVisible()
 })
 
-test('unnamed field jobs study has no company name', async ({ page }) => {
+test('unnamed roofing study has no company name', async ({ page }) => {
   await page.goto('/case-studies/field-jobs/')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Field jobs')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Roofing company')
   await expect(page.getByRole('main')).toContainText('The client is not named')
   await expect(page.getByRole('main')).not.toContainText('Armour')
   await expect(page.getByRole('main')).not.toContainText('Creative Enterprises')
 })
 
-test('products page marks Conduit as in development', async ({ page }) => {
+test('products page sells products without in-development framing', async ({ page }) => {
   await page.goto('/products/')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Systems you can run')
-  await expect(page.getByRole('main')).toContainText('In development')
-  await expect(page.getByRole('main')).toContainText('Conduit Suite')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('FarmWork, FarmBridge, and Conduit')
+  await expect(page.getByRole('main')).toContainText('Conduit')
+  await expect(page.getByRole('main')).toContainText('See the FVI case study')
+  await expect(page.getByRole('main')).not.toContainText('In development')
   await expect(
     page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Products' }),
   ).toHaveAttribute('aria-current', 'page')

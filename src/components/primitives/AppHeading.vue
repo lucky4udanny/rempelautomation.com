@@ -15,10 +15,10 @@ const headingId = computed(() => id ?? generatedId)
 const headingClass = computed(() => {
   const color = tone === 'inverse' ? 'text-surface-raised' : 'text-ink'
   if (level === 1) {
-    return `font-display text-3xl font-bold tracking-tight sm:text-5xl ${color}`
+    return `font-display text-balance text-3xl font-bold tracking-tight sm:text-5xl ${color}`
   }
   if (level === 2) {
-    return `font-display text-2xl font-bold tracking-tight sm:text-3xl ${color}`
+    return `font-display text-balance text-2xl font-bold tracking-tight sm:text-3xl ${color}`
   }
   return `font-display text-xl font-semibold ${color}`
 })

@@ -9,10 +9,10 @@ import { deskCodeAPhoto } from '@/content/media'
 
 export const aboutHero = {
   kicker: 'About',
-  title: 'Three partners. A solutions company.',
+  title: 'Three partners. A family name on the work.',
   leads: [
     'It started with a pattern, not an industry. On a packing floor, in a manufacturing plant, on a roofing crew, capable people spent their days moving information between systems that do not talk to each other.',
-    'We are based in southwestern Ontario. Our clients include operations in Canada, Mexico, and Belize. Rempel Automation is a new corporation. The brothers have already shipped operations software for seasonal employers and packing sheds. We stay after go-live.',
+    'We are based in southwestern Ontario. Rempel Automation is a new corporation. The brothers have already shipped operations software for seasonal employers and packing sheds. We stay after go-live.',
   ],
   image: deskCodeAPhoto,
   tone: 'photo',
@@ -110,6 +110,10 @@ export const aboutAi = {
       title: 'Never the only contact',
       body: 'AI is never the only contact for a client, and never the creative element of the solution. Judgment stays with people.',
     },
+    {
+      title: 'Protect by how we build',
+      body: 'Where we can, AI runs locally. Contracts say in plain words what is protected.',
+    },
   ],
 } satisfies FeatureGridContent
 
@@ -122,7 +126,7 @@ export const aboutFaqs: FaqItem[] = [
   {
     question: 'Do we have to buy FarmWork or FarmBridge?',
     answer:
-      'No. Those products are evidence of the practice. We map your job and build or connect the record you need, including fitting the systems you already run.',
+      'No. Those products grew out of work at Froese Vegetables Inc. We map your job and build or connect the record you need, including fitting the systems you already run.',
   },
   {
     question: 'Will you replace our IT provider?',

@@ -119,8 +119,24 @@ export interface ProductCardContent {
   summary: string
   points: string[]
   href?: string
+  hrefLabel?: string
   to?: string
+  toLabel?: string
   image?: MediaImage
+}
+
+export interface ComparisonRow {
+  alternative: string
+  gets: string
+  shortfall: string
+  instead: string
+}
+
+export interface ComparisonTableContent {
+  kicker?: string
+  title: string
+  body?: string
+  rows: ComparisonRow[]
 }
 
 export interface ProductGridContent {

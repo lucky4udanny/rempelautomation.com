@@ -19,6 +19,12 @@ Without a catalog, a greenfield Vue marketing site tends to grow a second hero a
 
 `SiteHeader` marks the current nav item in accent green: a light rounded underline on desktop, a left accent bar on mobile. Nested case-study URLs keep Case studies active.
 
+`CaseStudyList` accepts optional `kicker` and `title` so the home page can separate Products (`ProductGrid`) from Case studies without a second one-off section.
+
+`ComparisonTable` holds the Foundations alternatives grid (off-the-shelf, large integrator, DIY+AI).
+
+Voice: people first, process second, software/machines last. Productivity, quality, safety. Products sell products; case studies tell client problems.
+
 The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`.
 
 `FeatureGrid` detail must not change the card’s in-flow height. Keep title and body in the grid cell. Overlay the longer line under the card with `.feature-card-detail` (`max-height`, opacity, and transform over 0.55s) so neighbors do not jump. When open: `rounded-b-none border-b-0` on the card, and the detail uses `-left-px -right-px` so its borders align with the card’s outer edges (absolute children are laid out inside the border).

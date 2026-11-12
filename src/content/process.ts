@@ -6,6 +6,7 @@ export const processHero = {
   title: 'Map first. Change as little as will do the job. Stay for the next improvement.',
   leads: [
     'We walk the floor, the field, and the office before we recommend software or hardware. What we learn after go-live returns to the next audit.',
+    'The honest test of any advantage is what happens to your system if we are gone. Ours is documentation, portability, and an installation that runs on your terms.',
   ],
   image: opsControllersPhoto,
   tone: 'photo',
@@ -70,7 +71,7 @@ export const processLoop = {
       body: [
         'We set up accounts and permissions that match who may see pay or move inventory.',
         'A staged start keeps the floor running while people learn the new path.',
-        'File-reading import from messy spreadsheets and PDFs is a Conduit job and is still in development.',
+        'Conduit can read messy spreadsheets and PDFs, propose a mapping, and import after you review.',
       ],
     },
     {
@@ -86,11 +87,11 @@ export const processLoop = {
     {
       id: 'support',
       title: 'Support',
-      summary: 'A named contact, upgrades, and a visit when the season cannot wait.',
+      summary: 'A named contact, upgrades, and help when the season cannot wait.',
       body: [
         'Support is part of the engagement, not an add-on afterthought.',
-        'You get a named contact, upgrades, and on-site help when a season or a shift cannot wait for a scheduled remote visit.',
-        'We work with your IT. We do not displace them.',
+        'You get a named contact and upgrades. We work with your IT. We do not displace them.',
+        'Documentation and an installation that runs on your terms answer what happens if we are gone.',
       ],
     },
     {
@@ -99,7 +100,7 @@ export const processLoop = {
       summary: 'Shared numbers that send us back to the next audit.',
       body: [
         'Reports the floor and the office share, including cycle time and exceptions.',
-        'Plain-language questions across your data are a Conduit job and are still in development.',
+        'Conduit can answer plain-language questions across your data once it is configured for your business.',
         'What the numbers show goes back into the next audit. That return is the loop.',
       ],
     },

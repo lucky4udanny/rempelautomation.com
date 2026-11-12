@@ -4,16 +4,15 @@
 
 ### Changed
 
-- Geography copy: based in southwestern Ontario, clients in Canada, Mexico, and Belize. Site visit is not limited to Ontario.
-- Rebuilt public copy and information architecture around advantage, outcomes, industries, products, process, and four case studies.
-- Replaced cute casual headings with specific, calm B2B language. Contact topics are plain (time and payroll, receiving and shipping, and so on).
-- Full-bleed photo heroes with overlay header, desktop parallax, and an interactive continuous-improvement process loop.
-- Products page for FarmWork, FarmBridge (FVI-owned, linked to froveg.ca), and Conduit Suite marked In development.
-- Case studies: FarmWork, FarmBridge, unnamed field jobs, unnamed plant time.
-
-### Changed
-
-- Primary nav marks the current page in accent green with a light underline (desktop) or a green side bar (mobile).
+- Full substance rewrite from Marketing Foundations, Capabilities, and Conduit docs. Plain voice. No slogan deck.
+- Automation order: people, then process, then software with controllers, sensors, machines, and robots. Office work counts as automation.
+- What automation is for: productivity, quality, and safety (safety stated without inventing a case study).
+- Products and case studies separated. Product pages sell FarmWork, FarmBridge, and Conduit. FVI case studies name Froese Vegetables Inc.
+- What we do offerings ordered: process audit/design, software/integration, floor hardware, Conduit, support.
+- Home: alternatives comparison table; products teaser vs case-study teaser without duplicated copy.
+- Images match subject (whiteboard/process, controllers/scale, product screens, code photo for Conduit).
+- Full-bleed photo heroes, process loop, `text-balance` headings, accent nav underline.
+- Contact topics stay job-named (time and payroll, receiving and shipping, and so on).
 
 ### Fixed
 

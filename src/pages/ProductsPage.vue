@@ -21,7 +21,7 @@ const productScreens = [farmworkIpadAngled, farmworkPhoneAngled, farmbridgeLotsA
   <PageShell>
     <HeroSection :content="productsHero" />
     <ProductGrid :content="productsGrid" />
-    <MediaSlider :images="productScreens" title="Product screens" tone="raised" />
+    <MediaSlider :images="productScreens" title="FarmWork and FarmBridge screens" tone="raised" />
     <CtaBand :content="productsCta" />
   </PageShell>
 </template>

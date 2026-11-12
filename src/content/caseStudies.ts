@@ -12,9 +12,9 @@ import {
 
 export const caseStudiesHero = {
   kicker: 'Case studies',
-  title: 'Four engagements. Two named products. Two clients who stay unnamed.',
+  title: 'Operations we worked in. Problems we solved.',
   leads: [
-    'FarmWork and FarmBridge are live agricultural systems. The trades and manufacturing studies describe the problem and the solution we are designing. Those clients are not named.',
+    'Froese Vegetables Inc. drove FarmWork and FarmBridge. The roofing and manufacturing studies name the problem and the solution without naming the client.',
   ],
   image: opsScalePhoto,
   tone: 'photo',
@@ -23,53 +23,51 @@ export const caseStudiesHero = {
 export const caseStudyCards = [
   {
     slug: 'farmwork',
-    title: 'FarmWork',
-    subtitle: 'Workforce time, piecework, and payroll for a seasonal agricultural employer.',
+    title: 'Froese Vegetables Inc.',
+    subtitle: 'Seasonal workforce time, piecework, and payroll.',
     problem:
-      'Hours, piece counts, and shared production lived in separate lists. Payroll reconstructed the week by hand.',
+      'Complex pay rules (conditional bonuses, program deductions, hourly plus piecework on the same task) and double-entry of hours and production. Off-the-shelf tools did not deliver.',
     built:
-      'Office web app plus a native field app with offline sync. One record from clock-in through the pay file.',
-    changed: 'Payroll reviews exceptions and exports. The floor still owns the clock and the count.',
+      'FarmWork was built so time and production are collected once in the field or packing area, pay rules run in the system, and payroll reviews a clean file.',
+    changed: 'Payroll reviews exceptions and exports. Supervisors still own the clock and the count where the work happens.',
   },
   {
     slug: 'farmbridge',
-    title: 'FarmBridge',
-    subtitle: 'Receiving through shipping for a packing and shipping operation.',
+    title: 'Froese Vegetables Inc.',
+    subtitle: 'Receiving through shipping for packing and distribution.',
     problem:
-      'Clipboards from intake to load-out. Dock hardware sat beside the paperwork.',
+      'Different forms and flows per product. Receiving, processing, inventory, and shipping had to stay traced. Existing systems covered steps but forced the shed to work for the software.',
     built:
-      'One lot trail from receiving through shipping, handheld scan, dock hardware, and flows the shed can author.',
+      'FarmBridge was built as a configurable system that fits how the shed already works, including paper processes, sensors, and machines, with a recall window that can be tuned.',
     changed:
-      'Location, age, and quantity on screen. Load-out is a move plus an allocation on the same trail.',
+      'Identity, location, and quantity stay on one trail. Load-out is a move plus an allocation on that same trail.',
   },
   {
     slug: 'field-jobs',
-    title: 'Field jobs',
-    subtitle: 'Crew time, job cost, and accounting for a trades contractor.',
+    title: 'Roofing company',
+    subtitle: 'Crew time, job cost, and accounting.',
     problem:
       'The quote does not survive contact with the roof. Extra work, crew time, and trailer stock live in texts and memory.',
     built:
-      'Keep the estimating tool. Add crew time, job cost, field issues with photos, trailer inventory, equipment service, and an accounting sync.',
-    statusNote: 'Engagement in design. Problem and solution, not a finished result.',
+      'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting.',
   },
   {
     slug: 'plant-time',
-    title: 'Plant time',
-    subtitle: 'Time clock, ERP, and benefits for a manufacturer.',
+    title: 'Manufacturer',
+    subtitle: 'Time clock, ERP, and benefits.',
     problem:
       'Hours are re-keyed from the time clock into the ERP on payroll day. Benefits live in spreadsheets.',
     built:
-      'Keep the clock and the ERP. Reviewed hours post on a schedule. Benefits get a review step instead of a spreadsheet.',
-    statusNote: 'Engagement in design. Problem and solution, not a finished result.',
+      'Keep the clock and the ERP. Reviewed hours post on a schedule. Benefits move into a review step instead of a spreadsheet.',
   },
 ] as const satisfies readonly CaseStudyCardContent[]
 
 export const farmWorkStudy = {
   slug: 'farmwork',
-  title: 'FarmWork',
-  subtitle: 'Workforce time, piecework, and payroll for a seasonal agricultural employer.',
+  title: 'Froese Vegetables Inc.',
+  subtitle: 'Seasonal workforce time, piecework, and payroll. FarmWork was the product that followed.',
   operation: [
-    'A commercial vegetable grower and packing operation with a large seasonal workforce. People are paid in more than one way: hourly, piecework, piecework plus hourly, or the better of the two. Production is often shared across several workers on the same task.',
+    'Froese Vegetables Inc. is a commercial vegetable grower and packing operation with a large seasonal workforce. People are paid in more than one way: hourly, piecework, piecework plus hourly, or the better of the two. Production is often shared across several workers on the same task.',
     'The employer hires through foreign and seasonal worker programs, including the Seasonal Agricultural Worker Program (SAWP), which brings program deductions and paperwork that a generic time clock does not understand.',
     'Supervisors work in fields and packing areas where the network drops. The office has to close a pay period, apply bonuses and deductions, and send a clean file into accounting.',
   ],
@@ -82,7 +80,7 @@ export const farmWorkStudy = {
     'Off-the-shelf time clocks assume one pay type, one worksite, and a reliable network.',
   ],
   builtIntro:
-    'FarmWork: one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Owned by Froese Vegetables Inc. We implement, customize, train, and support it.',
+    'FarmWork is the product that came out of that problem: one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Rempel Automation implements, customizes, trains, and supports it.',
   built: [
     {
       heading: 'Office (web)',
@@ -134,21 +132,22 @@ export const farmWorkStudy = {
 
 export const farmBridgeStudy = {
   slug: 'farmbridge',
-  title: 'FarmBridge',
-  subtitle: 'Receiving, inventory, processing, shipping, and floor automation for a packing and shipping operation.',
+  title: 'Froese Vegetables Inc.',
+  subtitle: 'Receiving through shipping. FarmBridge was the product that followed.',
   operation: [
-    'A grower, grader, and shipper handling inbound lots from fields and other growers, then inventory, processing, and outbound loads.',
+    'Froese Vegetables Inc. grows, grades, and ships. Inbound lots come from fields and other growers, then inventory, processing, and outbound loads.',
     'Buyers and inspectors ask one-step-back and one-step-forward questions. The dock has scales, cameras, and label printers. The office needs live quantity, age, and location.',
   ],
   problemIntro: 'The product trail was a stack of clipboards.',
   problem: [
-    'Intake captured weight, container counts, grower, and quality in ways that did not stay with the lot once it left the scale.',
+    'Different products needed different forms and flows. Typical systems covered the steps but forced the shed to work for the software.',
+    'Intake captured weight, container counts, grower, and quality in ways that did not stay with the product once it left the scale.',
     'Inventory was a walk-around. Shipping paperwork and the cooler did not share a source of truth.',
     'Floor hardware was not part of the same workflow as the record.',
     'When the packing shed changed how a job ran, the answer was a custom code change.',
   ],
   builtIntro:
-    'FarmBridge: one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs. Owned by Froese Vegetables Inc. We implement, customize, train, and support it.',
+    'FarmBridge is the product that came out of that problem: one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs. Rempel Automation implements, customizes, trains, and supports it.',
   built: [
     {
       heading: 'Core operations',
@@ -161,7 +160,7 @@ export const farmBridgeStudy = {
       heading: 'Floor and hardware',
       items: [
         'Handheld scanning with destination-first flows.',
-        'Scales, cameras, and printers attached to the same lot the office sees.',
+        'Scales, cameras, and printers attached to the same record the office sees.',
       ],
     },
     {
@@ -169,17 +168,18 @@ export const farmBridgeStudy = {
       items: [
         'Floor sequences authored and published without a rewrite of the core product.',
         'Site rules such as tare and yield stay with the site.',
+        'Recall window can be tuned to balance productivity and risk.',
       ],
     },
   ],
   changedRows: [
     {
       before: 'Clipboards and exports that aged the moment they were saved',
-      after: 'One lot record from intake through shipping',
+      after: 'One identity trail from intake through shipping',
     },
     {
       before: 'Disputes from memory and phone photos',
-      after: 'Scale weights and timestamped photos on the lot',
+      after: 'Scale weights and timestamped photos on the record',
     },
     {
       before: 'Every SOP change needed custom code',
@@ -194,11 +194,9 @@ export const farmBridgeStudy = {
 
 export const fieldJobsStudy = {
   slug: 'field-jobs',
-  title: 'Field jobs',
-  subtitle: 'Crew time, job cost, field issues, and accounting for a trades contractor.',
-  unnamedNotice:
-    'The client is not named. What remains is the operational problem and the solution we are designing.',
-  statusNote: 'This engagement is in design. The page describes the problem and the solution, not a finished result.',
+  title: 'Roofing company',
+  subtitle: 'Crew time, job cost, field issues, and accounting.',
+  unnamedNotice: 'The client is not named. What remains is the operational problem and the solution.',
   operation: [
     'A roofing contractor. Quotes go out from an estimating tool the crew already knows. Jobs change once the roof is open. Crews work across sites. Trailer stock and equipment service matter to margin.',
   ],
@@ -223,17 +221,14 @@ export const fieldJobsStudy = {
       ],
     },
   ],
-  closer:
-    'We are designing this with the contractor now. Ask us how a similar pattern would fit your crews.',
+  closer: 'Ask us how a similar pattern would fit your crews.',
 } satisfies CaseStudyPageContent
 
 export const plantTimeStudy = {
   slug: 'plant-time',
-  title: 'Plant time',
-  subtitle: 'Time clock, ERP, and benefits for a manufacturer.',
-  unnamedNotice:
-    'The client is not named. What remains is the operational problem and the solution we are designing.',
-  statusNote: 'This engagement is in design. The page describes the problem and the solution, not a finished result.',
+  title: 'Manufacturer',
+  subtitle: 'Time clock, ERP, and benefits.',
+  unnamedNotice: 'The client is not named. What remains is the operational problem and the solution.',
   operation: [
     'A manufacturer with a time clock for attendance and an ERP for payroll and job records. Office staff close payroll on a fixed cycle. Benefits and allowances are tracked outside the ERP today.',
   ],

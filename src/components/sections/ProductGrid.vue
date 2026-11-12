@@ -49,15 +49,17 @@ defineProps<Props>()
             </div>
             <p class="mt-2 text-xs font-medium uppercase tracking-wide text-ink-muted">{{ item.owner }}</p>
             <p class="mt-4 text-sm leading-6 text-ink-muted">{{ item.summary }}</p>
-            <ul class="mt-4 space-y-2 text-sm leading-6 text-ink">
+            <ul v-if="item.points.length" class="mt-4 space-y-2 text-sm leading-6 text-ink">
               <li v-for="point in item.points" :key="point" class="flex gap-2">
                 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 <span>{{ point }}</span>
               </li>
             </ul>
             <div class="mt-6 flex flex-wrap gap-3">
-              <AppLink v-if="item.href" :href="item.href">Product site</AppLink>
-              <AppButton v-if="item.to" :to="item.to" variant="secondary">Case study</AppButton>
+              <AppLink v-if="item.href" :href="item.href">{{ item.hrefLabel ?? 'Product site' }}</AppLink>
+              <AppButton v-if="item.to" :to="item.to" variant="secondary">
+                {{ item.toLabel ?? 'Learn more' }}
+              </AppButton>
             </div>
           </div>
         </li>

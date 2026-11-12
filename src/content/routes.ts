@@ -1,13 +1,13 @@
 import type { PublicPageMeta } from '../types/content.ts'
 import { companyName } from './site.ts'
 
-export const publicPages = [
+export const publicPages: PublicPageMeta[] = [
   {
     path: '/',
     name: 'home',
-    title: `${companyName} | Software, hardware, and AI`,
+    title: `${companyName} | People, process, then software and machines`,
     description:
-      'Rempel Automation designs, connects, and supports systems for agriculture, manufacturing, and trades. One accountable team for software, hardware, and AI.',
+      'Rempel Automation connects people, process, and equipment so work is done once. Productivity, quality, and safety for agriculture, manufacturing, and trades.',
     navLabel: 'Home',
     navOrder: 0,
     footerLabel: 'Home',
@@ -18,7 +18,7 @@ export const publicPages = [
     name: 'services',
     title: `What we do | ${companyName}`,
     description:
-      'Custom software, integration, automation and hardware, AI enablement, process advisory, and ongoing support for small and mid-sized operations.',
+      'Process audit and design, custom software and integration, controllers and machines, Conduit AI helper, and support. Assessment first.',
     navLabel: 'What we do',
     navOrder: 1,
     footerLabel: 'What we do',
@@ -29,7 +29,7 @@ export const publicPages = [
     name: 'process',
     title: `Process | ${companyName}`,
     description:
-      'How we work: audit, design, implement, onboard, train, support, and improve. A continuous loop, not a one-time project.',
+      'Audit, design, implement, onboard, train, support, and improve. A continuous loop with documentation and portability built in.',
     navLabel: 'Process',
     navOrder: 2,
     footerLabel: 'Process',
@@ -40,7 +40,7 @@ export const publicPages = [
     name: 'products',
     title: `Products | ${companyName}`,
     description:
-      'FarmWork and FarmBridge for agricultural operations, plus Conduit Suite for AI-enabled onboarding, training, support, and reporting.',
+      'FarmWork, FarmBridge, and Conduit: products we implement and support. Case studies are separate.',
     navLabel: 'Products',
     navOrder: 3,
     footerLabel: 'Products',
@@ -51,7 +51,7 @@ export const publicPages = [
     name: 'case-studies',
     title: `Case studies | ${companyName}`,
     description:
-      'FarmWork, FarmBridge, and unnamed engagements in trades and manufacturing. Problem, solution, and what changed where the work is live.',
+      'Froese Vegetables Inc. workforce and packing studies, plus unnamed roofing and manufacturing engagements.',
     navLabel: 'Case studies',
     navOrder: 4,
     footerLabel: 'Case studies',
@@ -60,37 +60,37 @@ export const publicPages = [
   {
     path: '/case-studies/farmwork/',
     name: 'farmwork',
-    title: `FarmWork | ${companyName}`,
+    title: `Froese Vegetables Inc. workforce | ${companyName}`,
     description:
-      'One record from clock-in through the pay file for a seasonal agricultural employer: mixed pay, offline field capture, and payroll export.',
-    footerLabel: 'FarmWork',
+      'How complex agricultural pay and double-entry led to FarmWork: one record from clock-in through the pay file.',
+    footerLabel: 'FVI workforce',
     footerOrder: 8,
   },
   {
     path: '/case-studies/farmbridge/',
     name: 'farmbridge',
-    title: `FarmBridge | ${companyName}`,
+    title: `Froese Vegetables Inc. packing | ${companyName}`,
     description:
-      'Receiving through shipping on one lot trail, with dock hardware and floor sequences the operation can publish.',
-    footerLabel: 'FarmBridge',
+      'How product-specific receiving through shipping led to FarmBridge: one trail with sensors and machines in the flow.',
+    footerLabel: 'FVI packing',
     footerOrder: 9,
   },
   {
     path: '/case-studies/field-jobs/',
     name: 'field-jobs',
-    title: `Field jobs | ${companyName}`,
+    title: `Roofing company | ${companyName}`,
     description:
-      'How we connect crew time, job cost, field issues, and accounting for a trades contractor. The client is not named.',
-    footerLabel: 'Field jobs',
+      'Crew time, job cost, field issues, and accounting for a roofing contractor. The client is not named.',
+    footerLabel: 'Roofing company',
     footerOrder: 10,
   },
   {
     path: '/case-studies/plant-time/',
     name: 'plant-time',
-    title: `Plant time | ${companyName}`,
+    title: `Manufacturer | ${companyName}`,
     description:
-      'How we connect a time clock to an ERP and replace spreadsheet benefits tracking for a manufacturer. The client is not named.',
-    footerLabel: 'Plant time',
+      'Time clock to ERP sync and benefits tracking for a manufacturer. The client is not named.',
+    footerLabel: 'Manufacturer',
     footerOrder: 11,
   },
   {
@@ -98,7 +98,7 @@ export const publicPages = [
     name: 'about',
     title: `About | ${companyName}`,
     description:
-      'Three partners based in southwestern Ontario, with clients in Canada, Mexico, and Belize. Values that change how we work.',
+      'Three partners based in southwestern Ontario. Values, story, and how we use AI with a person accountable.',
     navLabel: 'About',
     navOrder: 5,
     footerLabel: 'About',
@@ -119,29 +119,25 @@ export const publicPages = [
     path: '/privacy/',
     name: 'privacy',
     title: `Privacy | ${companyName}`,
-    description:
-      'What the contact form collects, who sees it, and that we do not sell your information.',
+    description: 'How Rempel Automation handles information you send through the contact form.',
     footerLabel: 'Privacy',
     footerOrder: 7,
+    noindex: true,
   },
-] satisfies PublicPageMeta[]
-
-export function pageByPath(path: string): PublicPageMeta | undefined {
-  return publicPages.find((page) => page.path === path)
-}
+]
 
 export function navPages(): PublicPageMeta[] {
   return publicPages
-    .filter((page) => page.navLabel && page.path !== '/')
-    .sort((a, b) => (a.navOrder ?? 99) - (b.navOrder ?? 99))
+    .filter((page) => page.navLabel != null && page.navOrder != null)
+    .sort((a, b) => (a.navOrder ?? 0) - (b.navOrder ?? 0))
 }
 
 export function footerPages(): PublicPageMeta[] {
   return publicPages
-    .filter((page) => page.footerLabel)
-    .sort((a, b) => (a.footerOrder ?? 99) - (b.footerOrder ?? 99))
+    .filter((page) => page.footerLabel != null && page.footerOrder != null)
+    .sort((a, b) => (a.footerOrder ?? 0) - (b.footerOrder ?? 0))
 }
 
-export function prerenderPaths(): string[] {
-  return publicPages.map((page) => page.path)
+export function pageByPath(path: string): PublicPageMeta | undefined {
+  return publicPages.find((page) => page.path === path)
 }

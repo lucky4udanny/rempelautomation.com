@@ -1,168 +1,191 @@
-import type { CtaContent, FeatureGridContent, HeroContent, ProductGridContent } from '@/types/content'
+import type {
+  ComparisonTableContent,
+  CtaContent,
+  FeatureGridContent,
+  HeroContent,
+  ProductGridContent,
+} from '@/types/content'
 import { caseStudyCards } from '@/content/caseStudies'
 import { homeProcessLoop } from '@/content/process'
 import {
+  deskCodeBPhoto,
   farmbridgeLotsAngled,
   farmworkIpadAngled,
-  opsGraderPhoto,
+  opsWhiteboardPhoto,
 } from '@/content/media'
 
 export const homeHero = {
   kicker: 'Rempel Automation',
-  title: 'Software, hardware, and AI, in one accountable team.',
+  title: 'People, process, then software and machines.',
   leads: [
-    'We design, connect, and support the systems that move information and product through small and mid-sized agriculture, manufacturing, and trades businesses.',
-    'We start with how the work runs, fit what you already own, and stay after\u00a0go-live.',
+    'We start with the people who do the work and the process they run. Software, controllers, sensors, machines, and robots come after that, and only for what the assessment shows you need.',
+    'Most businesses treat equipment, office work, and people as separate worlds. We connect them so information moves once, instead of being re-typed.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
-  secondaryAction: { label: 'See how we work', to: '/process/', variant: 'outline-light' },
-  image: opsGraderPhoto,
+  secondaryAction: { label: 'How we work', to: '/process/', variant: 'outline-light' },
+  image: opsWhiteboardPhoto,
   tone: 'photo',
 } satisfies HeroContent
 
 export const homeAdvantage = {
   kicker: 'Our advantage',
-  title: 'The tools get easier to copy. The accountable team does not.',
-  body: 'Software, hardware, and AI each get cheaper every year. One team that puts all three to work inside your building, on your equipment, is still rare.',
+  title: 'Software, hardware, and AI each get cheaper every year. One accountable team that puts all three to work inside your building is still rare.',
+  body: 'The combination is how we deliver. What is hard to copy is below.',
   items: [
     {
-      title: 'One record from the sensor to the spreadsheet',
-      body: 'A scale weight, a photo, a label, and the ledger land on the same record.',
+      title: 'One team from the sensor to the database',
+      body: 'A scale weight, a timestamped photo, a printed label, and a ledger entry land on the same record.',
       detail:
         'We built that for a packing operation. The office and the dock now read the same numbers.',
     },
     {
-      title: 'Fit what you already own',
-      body: 'We connect the time clock, ERP, accounting, and handhelds you already paid for.',
-      detail:
-        'Your staff keep the tools they know. The re-keying between them goes away.',
+      title: 'We fit what you already own',
+      body: 'We connect your time clock, ERP, accounting package, CRM, and handhelds instead of asking you to replace them.',
+      detail: 'Your staff keep the tools they know. The re-keying between them goes away.',
     },
     {
-      title: 'AI with a person in charge',
-      body: 'AI speeds how we build, and it can read files, answer “where do I click?”, and draft a report.',
+      title: 'AI that helps your people work',
+      body: 'In the product, AI reads messy files, answers “where do I click?”, and builds reports from plain-language questions.',
       detail:
-        'A person still designs the solution and answers for it. AI is never the only contact.',
+        'AI is never your only contact with us, and never the creative element in your solution. People design it and people answer for it.',
     },
     {
-      title: 'Close, and we stay',
-      body: 'On site when it matters, and reachable when the season will not wait for a scheduled visit.',
-      detail: 'Support is part of the product, not an add-on afterthought. We work with clients in Canada, Mexico, and Belize.',
+      title: 'We stay',
+      body: 'Support is part of the product, not an add-on afterthought.',
+      detail:
+        'You reach a person who knows the system. Documentation and an installation that runs on your terms answer what happens if we are gone.',
     },
   ],
 } satisfies FeatureGridContent
 
+export const homeAlternatives = {
+  kicker: 'How we compare',
+  title: 'What the usual alternatives give you, and where they fall short.',
+  rows: [
+    {
+      alternative: 'Off-the-shelf software',
+      gets: 'Fast start, low price.',
+      shortfall: 'Assumes one pay type, one site, good Wi-Fi, and no hardware.',
+      instead: 'Model your real rules. Add scanners, scales, and printers to the same record.',
+    },
+    {
+      alternative: 'Large integrator',
+      gets: 'Scale and credentials.',
+      shortfall: 'Priced and paced for much larger budgets.',
+      instead: 'Phased work sized to a small or mid-sized operation, starting with the piece that pays back first.',
+    },
+    {
+      alternative: 'Build it yourself with AI tools',
+      gets: 'Cheap prototype, full control.',
+      shortfall:
+        'Someone still has to make it reliable, train the crew, and answer the phone in harvest or peak season.',
+      instead: 'We take ownership of reliability, training, and support.',
+    },
+  ],
+} satisfies ComparisonTableContent
+
 export const homeOutcomes = {
-  kicker: 'Why clients call',
-  title: 'What operations leads ask us to improve.',
+  kicker: 'What automation is for',
+  title: 'Productivity, quality, and safety.',
+  body: 'An engagement aims at one or more of these. We measure before and after.',
   items: [
     {
       title: 'Productivity',
-      body: 'Stop re-keying the same numbers every pay run or every load.',
-      detail: 'We sync systems and replace paper with scans where that earns its keep.',
-    },
-    {
-      title: 'Traceability',
-      body: 'Answer where that bin is, and what went into this load.',
-      detail: 'One lot trail from receiving to shipping supports one-step-back and one-step-forward questions.',
+      body: 'Automation speeds the process, removes steps such as data input and re-keying, and gives visibility so people make better decisions.',
+      detail:
+        'Clients come to us when the same numbers are re-keyed every pay run, process, or load, or when the owner is the bottleneck in their own company.',
     },
     {
       title: 'Quality',
-      body: 'Settle disputes with stored measures, not memory.',
-      detail: 'Scale weights and timestamped photos sit on the same record as the lot.',
+      body: 'Software and machines do not get tired or lose focus. They can be tuned to hold a set of tolerances more consistently.',
+      detail:
+        'When recalls happen, traceability shrinks the recall envelope. Scale weights and timestamped photos settle disputes without relying on memory.',
     },
     {
-      title: 'Visibility',
-      body: 'The operation does not live in one person’s head.',
-      detail: 'Dashboards and workflows that do not depend on a single owner to move every file.',
-    },
-    {
-      title: 'Continuous improvement',
-      body: 'Measure a station, change it, measure again.',
-      detail: 'Cycle times and exceptions become numbers the floor and the office share.',
+      title: 'Safety',
+      body: 'Dull, dirty, and dangerous work moves off your valuable workforce onto automation.',
+      detail:
+        'Better morale, fewer injuries, and lower insurance cost. We state this as a reason to automate. We do not yet have a published safety case study.',
     },
   ],
 } satisfies FeatureGridContent
 
 export const homeIndustries = {
   kicker: 'Who we work with',
-  title: 'Owner-led businesses that know they could be faster and clearer.',
-  body: 'Small and mid-sized companies, typically with tens of employees, one or two people who hold the whole operation in their heads, and a stack of tools that do not quite fit.',
+  title: 'Small and mid-sized, owner-led businesses.',
+  body: 'Typically tens of employees, one or two people who hold the whole operation in their heads, and a stack of spreadsheets, paper, software, and equipment that does not quite fit.',
   items: [
     {
       title: 'Agriculture',
-      body: 'Growers, packers, and shippers with seasonal labour, mixed pay, receiving, cold storage, and shipping.',
+      body: 'Growers, packers, and shippers: seasonal labour, mixed pay, receiving, grading, cold storage, shipping, food-safety traceability.',
       detail:
-        'Hours, pieces, and lots often live in separate lists. Field work stalls without signal. Buyers ask for traceability.',
+        'Hours, pieces, and product identity live in separate lists. Field work stalls without signal. Buyers ask for traceability. Dock hardware often sits beside paper.',
     },
     {
       title: 'Manufacturing',
-      body: 'Production lines, job-based work, an ERP, a time clock, and floor staff who still prefer paper.',
+      body: 'Production lines and job-based work: an ERP, a time clock, floor staff, and machines that should share one story with the office.',
       detail:
-        'Time keyed in by hand. Production steps on paper that never reach a report. No clear data on where the line is slow.',
+        'Time keyed in by hand. Production steps on paper that never reach a report. No clear data on where the line is slow. Controllers and sensors belong in the same engagement as the paperwork.',
     },
     {
       title: 'Trades',
-      body: 'Crews in the field, quotes, supplier orders, job files, and warranties.',
+      body: 'Roofing, construction, and service: crews in the field, quotes, supplier orders, job files, warranties.',
       detail:
-        'The owner is the bottleneck. Job costing arrives late. Supplier invoices do not match deliveries.',
+        'The owner is the bottleneck. Job costing arrives late. Supplier invoices do not match deliveries. Paper job files and texted time sheets.',
     },
   ],
 } satisfies FeatureGridContent
 
 export const homeProducts = {
   kicker: 'Products',
-  title: 'Proven agricultural systems, plus an AI suite in development.',
-  body: 'FarmWork and FarmBridge are owned by Froese Vegetables Inc. We implement, customize, train, and support them. Conduit Suite is ours, and it is still in development.',
+  title: 'Three products we implement and support.',
+  body: 'FarmWork and FarmBridge grew out of problems at Froese Vegetables Inc. Conduit is the AI helper we add to the software we deliver. Case studies are separate.',
   items: [
     {
       name: 'FarmWork',
-      owner: 'Owned by Froese Vegetables Inc.',
+      owner: 'Time and production',
       summary:
-        'Time on the clock and production in the field, with payroll rules that match agriculture.',
-      points: [
-        'Hourly, piecework, mixed, and better-of pay',
-        'Offline-capable field apps',
-        'Export shaped for common payroll workflows',
-      ],
+        'Workforce time, piecework, and payroll rules that match how agriculture actually pays people, with offline field capture.',
+      points: [],
       href: 'https://froveg.ca/farmwork.html',
-      to: '/case-studies/farmwork/',
+      to: '/products/',
+      toLabel: 'Products',
       image: farmworkIpadAngled,
     },
     {
       name: 'FarmBridge',
-      owner: 'Owned by Froese Vegetables Inc.',
+      owner: 'Receiving through shipping',
       summary:
-        'Receiving, inventory, processing, and shipping on one lot trail, with dock hardware and authored floor flows.',
-      points: [
-        'Lot identity from intake to load-out',
-        'Scales, cameras, and label printers in the flow',
-        'Floor sequences you can publish without a rewrite',
-      ],
+        'Configurable receiving, processing, inventory, and shipping that fits how you already work, including sensors and machines in the flow.',
+      points: [],
       href: 'https://froveg.ca/farmbridge.html',
-      to: '/case-studies/farmbridge/',
+      to: '/products/',
+      toLabel: 'Products',
       image: farmbridgeLotsAngled,
     },
     {
-      name: 'Conduit Suite',
-      status: 'In development',
-      owner: 'Rempel Automation',
+      name: 'Conduit',
+      owner: 'AI helper',
       summary:
-        'An AI layer for onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence.',
-      points: [
-        'Plain-language help inside the software',
-        'Import from messy files with a review step',
-        'Reports you can ask for in your own words',
-      ],
+        'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language inside the software.',
+      points: [],
       to: '/products/',
+      toLabel: 'Products',
+      image: deskCodeBPhoto,
     },
   ],
 } satisfies ProductGridContent
 
+export const homeCaseStudiesIntro = {
+  kicker: 'Case studies',
+  title: 'What changed for specific operations.',
+} as const
+
 export { caseStudyCards, homeProcessLoop }
 
 export const homeCta = {
-  title: 'Tell us what you want to improve.',
-  body: 'Time and payroll, receiving and shipping, floor equipment, or systems you already run. The contact form is the next step.',
+  title: 'Tell us how the work runs today.',
+  body: 'We start with an assessment. The contact form is the next step.',
   actionLabel: 'Contact us',
   to: '/contact/',
 } satisfies CtaContent
