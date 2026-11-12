@@ -40,7 +40,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'products',
     title: `Products | ${companyName}`,
     description:
-      'FarmWork, FarmBridge, and Conduit: products we implement and support. Case studies are separate.',
+      'FarmWork, FarmBridge, and Conduit are products we implement and support. Case studies are separate.',
     navLabel: 'Products',
     navOrder: 3,
     footerLabel: 'Products',
@@ -62,7 +62,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'farmwork',
     title: `Froese Vegetables Inc. workforce | ${companyName}`,
     description:
-      'How complex agricultural pay and double-entry led to FarmWork: one record from clock-in through the pay file.',
+      'How complex agricultural pay and double-entry led to FarmWork. One record from clock-in through the pay file.',
     footerLabel: 'FVI workforce',
     footerOrder: 8,
   },
@@ -71,7 +71,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'farmbridge',
     title: `Froese Vegetables Inc. packing | ${companyName}`,
     description:
-      'How product-specific receiving through shipping led to FarmBridge: one trail with sensors and machines in the flow.',
+      'How product-specific receiving through shipping led to FarmBridge. One trail with sensors and machines in the flow.',
     footerLabel: 'FVI packing',
     footerOrder: 9,
   },

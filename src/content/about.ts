@@ -76,7 +76,7 @@ export const aboutPeople = {
       role: 'Co-Founder',
       paragraphs: [
         'David co-founded a technology company and served as its chief operating officer for 15 years, growing the team to 35 and delivering integrated software to healthcare organizations across Canada. The work covered business development, technology integration, change management, and turning what senior leaders needed into systems people could run.',
-        'At Rempel Automation he leads new business and solutions design: understand the operation first, then choose the technology. He was born in Mexico, raised in Canada, and is working toward fluency in Spanish.',
+        'At Rempel Automation he leads new business and solutions design. He starts by understanding the operation, then chooses the technology. He was born in Mexico, raised in Canada, and is working toward fluency in Spanish.',
       ],
     },
     {

@@ -67,7 +67,7 @@ export const servicesBuildingBlocks = {
     },
     {
       title: 'Connectivity',
-      body: 'Wiring, networks, and message formats between everything: Modbus, MQTT, OPC UA, and what your equipment already speaks.',
+      body: 'Wiring, networks, and message formats between everything. That includes Modbus, MQTT, OPC UA, and what your equipment already speaks.',
     },
     {
       title: 'Edge, data, and integration',

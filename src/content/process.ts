@@ -42,7 +42,7 @@ export const processLoop = {
         {
           title: 'Keep and tidy',
           when: 'The process is sound, but the handoffs are manual.',
-          body: 'Remove re-keying, add checks, leave the rest alone. Example: a time-clock export reviewed once, then loaded into the ERP.',
+          body: 'Remove re-keying, add checks, leave the rest alone. One example is a time-clock export reviewed once, then loaded into the ERP.',
         },
         {
           title: 'Redesign',

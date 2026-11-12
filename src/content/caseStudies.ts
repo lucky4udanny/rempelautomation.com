@@ -68,26 +68,26 @@ export const farmWorkStudy = {
   title: 'Froese Vegetables Inc.',
   subtitle: 'Seasonal workforce time, piecework, and payroll. FarmWork was the product that followed.',
   operation: [
-    'Froese Vegetables Inc. is a commercial vegetable grower and packing operation with a large seasonal workforce. People are paid in more than one way: hourly, piecework, piecework plus hourly, or the better of the two. Production is often shared across several workers on the same task.',
+    'Froese Vegetables Inc. is a commercial vegetable grower and packing operation with a large seasonal workforce. People are paid in more than one way. That can be hourly, piecework, piecework plus hourly, or the better of the two. Production is often shared across several workers on the same task.',
     'The employer hires through foreign and seasonal worker programs, including the Seasonal Agricultural Worker Program (SAWP), which brings program deductions and paperwork that a generic time clock does not understand.',
     'Supervisors work in fields and packing areas where the network drops. The office has to close a pay period, apply bonuses and deductions, and send a clean file into accounting.',
   ],
   problemIntro: 'Time and production did not live in one place.',
   problem: [
     'Hours lived in one process. Piece counts lived in another. Shared production lived in a third conversation, often a spreadsheet.',
-    'Payroll had to reconstruct the week by hand: who was on which task, how many pieces, who shared a row, which program deduction applied, and which bonus rule fired.',
+    'Payroll had to reconstruct the week by hand. Who was on which task, how many pieces, who shared a row, which program deduction applied, and which bonus rule fired all had to be rebuilt every period.',
     'Re-keying the same adjustments every pay run created delay and quiet errors.',
     'Supervisors needed to clock a crew and enter counts where the work was happening. A browser that only works on Wi-Fi is not a field tool.',
     'Generic time clocks and HR tools assume one pay type, one worksite, and a reliable network.',
   ],
   builtIntro:
-    'FarmWork is the product that came out of that problem: one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Rempel Automation implements, customizes, trains, and supports it.',
+    'FarmWork is the product that came out of that problem. It is one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Rempel Automation implements, customizes, trains, and supports it.',
   built: [
     {
       heading: 'Office (web)',
       items: [
         'Employee records, tasks, rates, crews, and permission-based access.',
-        'Pay configuration: pay period, overtime, holiday premium, bonuses, and deductions, including program rules.',
+        'Pay configuration covers pay period, overtime, holiday premium, bonuses, and deductions, including program rules.',
         'Shared production payout that follows hours on the task in that period.',
         'Pay-period review before the file goes to accounting.',
       ],
@@ -148,7 +148,7 @@ export const farmBridgeStudy = {
     'When the packing shed changed how a job ran, the answer was a custom code change.',
   ],
   builtIntro:
-    'FarmBridge is the product that came out of that problem: one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs. Rempel Automation implements, customizes, trains, and supports it.',
+    'FarmBridge is the product that came out of that problem. It is one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs. Rempel Automation implements, customizes, trains, and supports it.',
   built: [
     {
       heading: 'Core operations',

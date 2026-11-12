@@ -10,7 +10,7 @@ export const productsHero = {
   kicker: 'Products',
   title: 'FarmWork, FarmBridge, and Conduit.',
   leads: [
-    'These are products we implement and support. Case studies are separate: they describe the operations that drove the work.',
+    'These are products we implement and support. Case studies are separate. They describe the operations that drove the work.',
     'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the systems we deliver.',
   ],
   image: opsScalePhoto,
@@ -25,7 +25,7 @@ export const productsGrid = {
       name: 'FarmWork',
       owner: 'Workforce time and production',
       summary:
-        'Time on the clock and production on the field or floor, with payroll rules that match agriculture: hourly, piecework, mixed, shared production, better-of pay, and seasonal-program deductions.',
+        'Time on the clock and production on the field or floor, with payroll rules that match agriculture. That includes hourly, piecework, mixed, shared production, better-of pay, and seasonal-program deductions.',
       points: [
         'Office web app and offline-capable mobile capture',
         'Collect once on the floor; no double-entry into payroll',
@@ -59,8 +59,8 @@ export const productsGrid = {
       summary:
         'An AI helper built into the systems we deliver so people can get set up, learn, get answers, get work done, and understand their numbers in plain language across software and floor data.',
       points: [
-        'Onboarding: read spreadsheets and PDFs, propose the mapping, you review, then import',
-        'Training and support inside the product, in your terms',
+        'Onboarding reads spreadsheets and PDFs, proposes the mapping, waits for your review, then imports',
+        'Training and support stay inside the product, in your terms',
         'Ticketing, day-to-day work, reporting, and business intelligence by asking in plain language',
       ],
       image: deskCodeAPhoto,

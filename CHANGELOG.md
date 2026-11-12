@@ -4,6 +4,7 @@
 
 ### Changed
 
+- Writing rule: ban trailing elaborations after a colon or dash (same sentence shape the em-dash ban was meant to stop). Site-wide content sweep rewrote those sentence tails into full sentences.
 - Home copy pass: software and hardware automation as one practice; connect-or-replace covers both; alternatives contrast software-alone vs hardware-alone vendors; industry details are integration-led; trades breadth; FarmBridge uses lot-details / contracts / organizations screens; process ring uses stage names.
 - Full substance rewrite from Marketing Foundations, Capabilities, and Conduit docs. Plain voice. No slogan deck.
 - Automation order: people, then process, then software with controllers, sensors, machines, and robots. Office work counts as automation.

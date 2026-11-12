@@ -19,7 +19,7 @@ export const homeHero = {
   title: 'People, process, then software and machines.',
   leads: [
     'We start with the people who do the work and the process they run. Software, controllers, sensors, machines, and robots come after that, and only for what the assessment shows you need.',
-    'Most businesses treat equipment, office work, and people as separate worlds. We connect them so the same information moves with the work: through paperwork and software, and as scales, sensors, and machines run.',
+    'Most businesses treat equipment, office work, and people as separate worlds. We connect them so the same information moves with the work. That includes paperwork and software, and it includes scales, sensors, and machines as they run.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
   secondaryAction: { label: 'How we work', to: '/process/', variant: 'outline-light' },
@@ -40,7 +40,7 @@ export const homeAdvantage = {
     },
     {
       title: 'Connect when it fits. Replace when it pays.',
-      body: 'We connect the software and hardware you already run when that is the better path: office systems, scales, scanners, controllers, and machines. When replacing software or hardware improves ROI, we say so. Otherwise we recommend keeping what you have invested in.',
+      body: 'We connect the software and hardware you already run when that is the better path. That can mean office systems, scales, scanners, controllers, and machines. When replacing software or hardware improves ROI, we say so. Otherwise we recommend keeping what you have invested in.',
       detail:
         'Staff comfort and training time are part of that ROI calculation. Keep, connect, or replace is decided for each system after the assessment.',
     },
@@ -68,7 +68,7 @@ export const homeAlternatives = {
       gets: 'Fast start, low price.',
       shortfall: 'Stops at the screen. Scales, scanners, controllers, and machines stay outside the workflow.',
       instead:
-        'Software and hardware automation on the same record: rules, scanners, scales, printers, and controllers together. Conduit for onboarding and day-to-day help.',
+        'Software and hardware automation on the same record. Rules, scanners, scales, printers, and controllers work together. Conduit helps with onboarding and day-to-day work.',
     },
     {
       alternative: 'Hardware integrator alone',
@@ -95,7 +95,7 @@ export const homeOutcomes = {
   items: [
     {
       title: 'Productivity',
-      body: 'Software and hardware automation together speed the process: machines and sensors in the same workflow as the office, fewer re-keying steps, and visibility so people make better decisions.',
+      body: 'Software and hardware automation together speed the process. Machines and sensors sit in the same workflow as the office. Re-keying drops. People get visibility to make better decisions.',
       detail:
         'We are useful when software automation and hardware automation still live in separate projects. Clients come when the same numbers are re-keyed every pay run or load, the line is slow for unknown reasons, or the owner is the bottleneck.',
     },
@@ -121,7 +121,7 @@ export const homeIndustries = {
   items: [
     {
       title: 'Agriculture',
-      body: 'Growers, packers, and shippers: seasonal labour, mixed pay, receiving, grading, cold storage, shipping, and food-safety traceability.',
+      body: 'Growers, packers, and shippers. Seasonal labour, mixed pay, receiving, grading, cold storage, shipping, and food-safety traceability.',
       detail:
         'We integrate field and packing software with dock scales, scanners, cameras, and line equipment into one visible, real-time record. Traceability is often legislated, and buyers expect it.',
     },
@@ -133,7 +133,7 @@ export const homeIndustries = {
     },
     {
       title: 'Trades',
-      body: 'Field trades and service: electricians, plumbers, roofers, concrete, drywall, masonry, and similar crews. Quotes, materials, job files, warranties, and the tools and vehicles on site.',
+      body: 'Field trades and service. That includes electricians, plumbers, roofers, concrete, drywall, masonry, and similar crews. Quotes, materials, job files, warranties, and the tools and vehicles on site all belong in the same picture.',
       detail:
         'Often the owner is the bottleneck, job cost arrives late, or supplier invoices do not match deliveries. Paper job files and texted time sheets are common.',
     },
@@ -160,7 +160,7 @@ export const homeProducts = {
       name: 'FarmBridge',
       owner: 'Receiving through shipping',
       summary:
-        'Receiving through shipping on one trail: software workflows with scales, cameras, printers, scanners, and floor sequences in the same flow.',
+        'Receiving through shipping on one trail. Software workflows share the same flow as scales, cameras, printers, scanners, and floor sequences.',
       points: [],
       href: 'https://froveg.ca/farmbridge.html',
       to: '/products/',
