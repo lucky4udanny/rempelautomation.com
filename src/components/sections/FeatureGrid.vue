@@ -53,8 +53,12 @@ function onCardFocusOut(title: string, event: FocusEvent): void {
         <li
           v-for="item in content.items"
           :key="item.title"
-          class="relative rounded-lg border border-line bg-surface-raised shadow-sm transition-shadow duration-500 ease-out"
-          :class="item.detail && isOpen(item.title) ? 'z-20 shadow-lg' : 'z-0 hover:shadow-md'"
+          class="relative rounded-lg border border-line bg-surface-raised shadow-sm transition-[box-shadow,border-radius] duration-500 ease-out"
+          :class="
+            item.detail && isOpen(item.title)
+              ? 'z-20 rounded-b-none border-b-0 shadow-lg'
+              : 'z-0 hover:shadow-md'
+          "
           @mouseenter="item.detail ? open(item.title) : undefined"
           @mouseleave="item.detail ? close(item.title) : undefined"
           @focusin="item.detail ? open(item.title) : undefined"
@@ -77,11 +81,13 @@ function onCardFocusOut(title: string, event: FocusEvent): void {
 
           <div
             v-if="item.detail"
-            class="feature-card-detail absolute inset-x-0 top-full z-20"
+            class="feature-card-detail absolute -left-px -right-px top-full z-20"
             :class="{ 'is-open': isOpen(item.title) }"
             :aria-hidden="!isOpen(item.title)"
           >
-            <p class="rounded-b-lg border border-t-0 border-line bg-surface-raised px-6 pb-6 pt-1 text-sm leading-6 text-ink shadow-lg">
+            <p
+              class="rounded-b-lg border border-t-0 border-line bg-surface-raised px-6 pb-6 pt-1 text-sm leading-6 text-ink shadow-lg"
+            >
               {{ item.detail }}
             </p>
           </div>

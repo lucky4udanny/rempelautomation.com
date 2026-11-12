@@ -19,7 +19,7 @@ Without a catalog, a greenfield Vue marketing site tends to grow a second hero a
 
 The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`.
 
-`FeatureGrid` detail must not change the card’s in-flow height. Keep title and body in the grid cell. Overlay the longer line under the card with `.feature-card-detail` (`max-height`, opacity, and transform over 0.55s) so neighbors do not jump.
+`FeatureGrid` detail must not change the card’s in-flow height. Keep title and body in the grid cell. Overlay the longer line under the card with `.feature-card-detail` (`max-height`, opacity, and transform over 0.55s) so neighbors do not jump. When open: `rounded-b-none border-b-0` on the card, and the detail uses `-left-px -right-px` so its borders align with the card’s outer edges (absolute children are laid out inside the border).
 
 Case studies use `CaseStudyDetail` and optional `BeforeAfterTable`. Unnamed engagements omit the table and say the work is still in design.
 

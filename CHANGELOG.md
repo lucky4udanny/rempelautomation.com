@@ -13,6 +13,7 @@
 
 ### Fixed
 
+- Feature card expand: square the seam, drop the card bottom border, and pull the detail out by 1px so it matches the card width (absolute children sit inside the border).
 - Removed floating FarmWork / FarmBridge screen garnish from photo heroes (home and products).
 - Replaced real worker names and the FarmBridge account face on product screens with fake labels.
 - Product and slider media panels fill their frames edge to edge instead of sitting in a padded dark letterbox.
