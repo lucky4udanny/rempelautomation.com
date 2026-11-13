@@ -1,14 +1,14 @@
 import type { CaseStudyCardContent, CaseStudyPageContent, CtaContent, HeroContent } from '@/types/content'
 import {
-  farmbridgeContracts,
+  farmbridgeAndroid1,
+  farmbridgeAndroidInventory,
   farmbridgeLotDetails,
-  farmbridgeOrganizations,
-  farmworkIpadAngled,
-  farmworkIpadFlat,
+  farmworkArtboard20,
+  farmworkArtboard25,
   farmworkPhoneAngled,
+  farmworkPhoneFlat,
   opsGraderPhoto,
   opsScalePhoto,
-  opsWhiteboardPhoto,
 } from '@/content/media'
 
 export const caseStudiesHero = {
@@ -50,7 +50,7 @@ export const caseStudyCards = [
     problem:
       'Once the roof is open, the job changes. Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     built:
-      'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting.',
+      'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting. Conduit ticketing keeps field issues out of group texts.',
   },
   {
     slug: 'plant-time',
@@ -59,7 +59,7 @@ export const caseStudyCards = [
     problem:
       'Hours are re-keyed from the time clock into the ERP on payroll day. Benefits live in spreadsheets.',
     built:
-      'Keep the clock and the ERP. Reviewed hours post on a schedule. Benefits move into a review step instead of a spreadsheet.',
+      'Keep the clock and the ERP. Reviewed hours post on a schedule. Benefits move into a review step instead of a spreadsheet. Conduit reporting helps the office ask for those numbers in plain language.',
   },
 ] as const satisfies readonly CaseStudyCardContent[]
 
@@ -128,7 +128,7 @@ export const farmWorkStudy = {
   closer:
     'The office still owns the pay period. The floor still owns the clock and the count. They finally share the same numbers.',
   externalProduct: { label: 'FarmWork on froveg.ca', href: 'https://froveg.ca/farmwork.html' },
-  screens: [farmworkIpadAngled, farmworkPhoneAngled, farmworkIpadFlat],
+  screens: [farmworkPhoneAngled, farmworkPhoneFlat, farmworkArtboard25, farmworkArtboard20],
 } satisfies CaseStudyPageContent
 
 export const farmBridgeStudy = {
@@ -190,7 +190,7 @@ export const farmBridgeStudy = {
   closer:
     'Operators still drive forklifts. The office still settles growers and customers. They are no longer reconciling three versions of the truth.',
   externalProduct: { label: 'FarmBridge on froveg.ca', href: 'https://froveg.ca/farmbridge.html' },
-  screens: [farmbridgeLotDetails, farmbridgeContracts, farmbridgeOrganizations],
+  screens: [farmbridgeLotDetails, farmbridgeAndroid1, farmbridgeAndroidInventory],
 } satisfies CaseStudyPageContent
 
 export const fieldJobsStudy = {
@@ -215,7 +215,7 @@ export const fieldJobsStudy = {
       items: [
         'Crew time against the job, with a mobile path for supervisors.',
         'Job cost that combines labour and material as the work happens.',
-        'Field issues with photos, instead of group texts.',
+        'Field issues with photos, instead of group texts. Conduit issue ticketing keeps those items in one place.',
         'Trailer inventory and equipment service logs.',
         'An accounting sync so invoices are not re-typed.',
         'One owner view of open work, receivables, and exceptions.',
@@ -240,19 +240,20 @@ export const plantTimeStudy = {
     'On the floor, the same production record is written down more than once and never becomes a report.',
   ],
   builtIntro:
-    'Keep the time clock and the ERP. Close the gap between them, then decide whether floor scanning is worth a pilot.',
+    'Keep the time clock and the ERP. Close the gap between them. Add floor capture where the return is clear.',
   built: [
     {
       heading: 'Solution',
       items: [
         'Reviewed hours post from the time clock into the ERP on a schedule, with an exception list and a log.',
         'Benefits and allowances move out of the spreadsheet into a review step people can run every month if they choose.',
-        'Scanning on the floor is a later pilot, after the payroll link is in place, not a completed rollout.',
+        'Floor production capture is scoped as its own phase once payroll handoffs are stable.',
+        'Conduit reporting and business intelligence answer plain-language questions across the linked records.',
       ],
     },
   ],
   closer:
-    'We prove the payroll link first. Floor production tracking follows only when the return is clear.',
+    'We start with the payroll link. Floor production tracking is added when the assessment shows it pays.',
 } satisfies CaseStudyPageContent
 
 export const caseStudiesBySlug: Record<string, CaseStudyPageContent> = {
@@ -268,5 +269,5 @@ export const caseStudyCta = {
   to: '/contact/',
 } satisfies CtaContent
 
-export const caseStudyIndexImage = opsWhiteboardPhoto
+export const caseStudyIndexImage = opsScalePhoto
 export const caseStudyFieldImage = opsGraderPhoto

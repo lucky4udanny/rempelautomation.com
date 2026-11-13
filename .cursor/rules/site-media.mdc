@@ -1,0 +1,40 @@
+---
+description: Site media for rempelautomation.com (unique assets, images_source, no faces)
+alwaysApply: true
+---
+
+# Site media
+
+Applies when adding, replacing, or assigning visitor-facing images (heroes, product cards, case-study screens, sliders).
+
+## Source pool
+
+Pull new and replacement stills from `images_source/` (FarmWork anonymous artboards, FarmBridge office/android screens, FVI ops photos, CAD/desk shots). Export optimized WebP into `src/assets/` and register in `src/content/media.ts`. Prefer stills over `.MOV` for site chrome.
+
+Do not invent unlabeled stock outside `images_source` without asking Dan.
+
+## Uniqueness
+
+- Do **not** reuse the same image (same asset / same recognizable crop) on more than one public surface.
+- Do not add new duplicates. A full uniqueness rebuild of existing shared exports is a separate pass Dan may request.
+- Cropping, perspective warp, and deliberate distortion are allowed to create a **distinct** asset for a new band. A slight crop that is still obviously the same photo does not count as unique.
+
+## Faces
+
+- Do **not** show a recognizable face. Prefer `images_source/FarmWork_screenshots_anonymous/` and screens already scrubbed.
+- If a source still shows a face, black out or crop it out before shipping.
+
+## Pairing
+
+Subject matches the band:
+
+- Overview: category visuals (people/process/facility context, software+hardware as a practice).
+- Dock / scale / line detail: case studies or product deep-dives.
+- Conduit: desk/code photography, not a fake Conduit UI.
+- Product screens: match the named product.
+
+## Fail tests
+
+- Same `media.ts` export (or obviously identical crop) used on two public pages? Fail.
+- Recognizable human face in a shipped still? Fail.
+- Inventing stock outside `images_source` without asking Dan? Fail.

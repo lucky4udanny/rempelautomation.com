@@ -15,7 +15,7 @@ const links = footerPages()
       <div class="max-w-sm">
         <img :src="logoUrl" :alt="companyName" width="186" height="58" class="h-9 w-auto" />
         <p class="mt-4 text-sm text-ink-muted">
-          People first, process second, then software with controllers, sensors, machines, and
+          People first, process second, then software with controllers, sensors, actuators, and
           robots. We stay after go-live.
         </p>
         <p class="mt-3 text-sm">

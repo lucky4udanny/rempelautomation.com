@@ -6,7 +6,7 @@ export const processHero = {
   title: 'Map first. Change as little as will do the job. Stay for the next improvement.',
   leads: [
     'We walk the floor, the field, and the office before we recommend software or hardware. What we learn after go-live returns to the next audit.',
-    'The honest test of any advantage is what happens to your system if we are gone. Ours is documentation, portability, and an installation that runs on your terms.',
+    'Documentation, portability, and an installation that runs on your terms are part of every engagement.',
   ],
   image: opsControllersPhoto,
   tone: 'photo',
@@ -35,7 +35,7 @@ export const processLoop = {
       summary: 'Keep and tidy, redesign, or build new. Change as little as will do the job.',
       body: [
         'When the process is sound, we remove re-keying and add checks. When steps are duplicated or depend on one person, we simplify or automate them.',
-        'When the current tools cannot do the job, we compare ERPs without reselling one, add a portal for people the ERP does not suit, and add a drag-and-drop automation designer for printers, scanners, scales, cameras, motors, conveyors, sensors, and PLCs.',
+        'When the current tools cannot do the job, we compare ERPs without reselling one, add a portal for people the ERP does not suit, and add an automation layer for controllers, sensors, actuators, and machines in the same workflow as the office.',
         'Engineering sits with the client’s controls vendor. The PLC remains the fallback if the network drops. The operator sees the procedure that was published. Site rules such as tare and yield stay with the site.',
       ],
       paths: [
@@ -75,7 +75,7 @@ export const processLoop = {
       body: [
         'We set up accounts and permissions that match who may see pay or move inventory.',
         'A staged start keeps the floor running while people learn the new path.',
-        'Conduit can read messy spreadsheets and PDFs, propose a mapping, and import after you review.',
+        'Conduit onboarding can read messy spreadsheets and PDFs, propose a mapping, and import after you review.',
       ],
     },
     {
@@ -85,6 +85,7 @@ export const processLoop = {
       summary: 'Train the client’s trainers. Keep a path for people who will not scan.',
       body: [
         'We train your trainers so the knowledge stays with the operation.',
+        'Conduit training keeps answers inside the product, in your terms.',
         'A no-scan or paper-compatible path is designed from the start for anyone who will not, or cannot, scan.',
         'Supervisors add records. They do not quietly edit history.',
       ],
@@ -97,7 +98,7 @@ export const processLoop = {
       body: [
         'Support is part of the engagement, not an add-on afterthought.',
         'You get a named contact and upgrades. We work with your IT. We do not displace them.',
-        'Documentation and an installation that runs on your terms answer what happens if we are gone.',
+        'Documentation and Conduit in-context support keep people productive. Issue ticketing captures problems in the same place. The installation runs on your terms.',
       ],
     },
     {
@@ -107,7 +108,7 @@ export const processLoop = {
       summary: 'Shared numbers that send us back to the next audit.',
       body: [
         'Reports the floor and the office share, including cycle time and exceptions.',
-        'Conduit can answer plain-language questions across your data once it is configured for your business.',
+        'Conduit reporting and business intelligence answer plain-language questions across your data once configured for your business.',
         'What the numbers show goes back into the next audit. That return is the loop.',
       ],
     },

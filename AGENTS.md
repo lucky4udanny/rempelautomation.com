@@ -4,9 +4,11 @@ Public B2B marketing site for Rempel Automation. Vue 3.5, TypeScript (strict, `@
 
 ## Agent entry
 
-1. `.cursor/rules/` (always-on site, serverless, reuse, marketing; Vue/design on matching files)
+1. `.cursor/rules/` (always-on site, serverless, reuse, marketing, **writing-voice**, **site-media**; Vue/design on matching files)
 2. `.cursor/skills/vue3-marketing-site/SKILL.md`
 3. `.cursor/skills/vue3-component-reuse/SKILL.md`
+
+Visitor copy: `writing-voice.mdc`. Images: `site-media.mdc` (unique assets from `images_source/`, no recognizable faces).
 
 Pages compose `PageShell` plus shared sections. Search those components before adding a new `.vue` file.
 

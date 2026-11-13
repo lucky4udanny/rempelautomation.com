@@ -1,10 +1,12 @@
 # Photographs and product screens
 
-Public images live under `src/assets/photos/` and `src/assets/screens/`, referenced from `src/content/media.ts`.
+Public images live under `src/assets/photos/` and `src/assets/screens/`, referenced from `src/content/media.ts`. Agent rules: `.cursor/rules/site-media.mdc`.
+
+New and replacement stills come from `images_source/`. Export WebP into `src/assets/`. Do not reuse the same asset (or an obviously identical crop) on more than one public surface. Crop, warp, or distort to make a distinct asset when needed. No recognizable faces.
 
 ## Facility and desk photos
 
-Real facility frames (whiteboard, scale head, grader, wall controllers) and Dan’s angled desk monitor photos. EXIF stripped. WebP. No “not a client” stock captions. Crop people so faces are not recognizable.
+Real facility frames (whiteboard, scale head, grader, wall controllers, conveyor, shipping floor, cooler, edge device) and desk photographs (code monitors, CAD/machine design). EXIF stripped. WebP. No “not a client” stock captions. Crop people so faces are not recognizable.
 
 ## Product screens
 

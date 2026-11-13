@@ -4,7 +4,7 @@ import CtaBand from '@/components/sections/CtaBand.vue'
 import FeatureGrid from '@/components/sections/FeatureGrid.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import MediaBand from '@/components/sections/MediaBand.vue'
-import { opsControllersPhoto, opsScalePhoto } from '@/content/media'
+import { opsCoolerPhoto, opsEdgePhoto } from '@/content/media'
 import {
   servicesBuildingBlocks,
   servicesCta,
@@ -23,9 +23,9 @@ usePageHead('/services/')
     <HeroSection :content="servicesHero" />
     <FeatureGrid :content="servicesOfferings" />
     <FeatureGrid :content="servicesOutcomes" />
-    <MediaBand :image="opsControllersPhoto" />
+    <MediaBand :image="opsEdgePhoto" />
     <FeatureGrid :content="servicesBuildingBlocks" />
-    <MediaBand :image="opsScalePhoto" />
+    <MediaBand :image="opsCoolerPhoto" />
     <FeatureGrid :content="servicesPartners" />
     <CtaBand :content="servicesCta" />
   </PageShell>

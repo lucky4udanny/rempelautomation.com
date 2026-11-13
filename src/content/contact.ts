@@ -5,7 +5,7 @@ export const contactHero = {
   kicker: 'Contact',
   title: 'Tell us how the work runs today.',
   leads: [
-    `Use the form, or email ${contactEmail}. We start with an assessment.`,
+    `Use the form, or email ${contactEmail}. We start with an assessment of people, process, software, and machines.`,
   ],
 } satisfies HeroContent
 

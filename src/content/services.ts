@@ -1,16 +1,16 @@
 import type { CtaContent, FeatureGridContent, HeroContent } from '@/types/content'
-import { opsWhiteboardPhoto } from '@/content/media'
+import { opsConveyorPhoto } from '@/content/media'
 
 export const servicesHero = {
   kicker: 'What we do',
   title: 'People first. Process second. Software and machines after that.',
   leads: [
     'We start with an assessment of how your business runs, what you already have, and where time or money is being lost. Then we design around you, not a fixed package.',
-    'Office workflows and paperwork are part of the same automation practice as controllers, sensors, machines, and robots.',
+    'Office workflows and paperwork are part of the same automation practice as controllers, sensors, actuators, and robots.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
   secondaryAction: { label: 'Our process', to: '/process/', variant: 'outline-light' },
-  image: opsWhiteboardPhoto,
+  image: opsConveyorPhoto,
   tone: 'photo',
 } satisfies HeroContent
 
@@ -29,15 +29,15 @@ export const servicesOfferings = {
     },
     {
       title: 'Controllers, sensors, machines, and robots',
-      body: 'Scales, scanners, label printers, cameras, sensors, relays, PLCs, drives, and handhelds in the same workflow as the office. Safety loops stay in dedicated or certified hardware. We work with your controls vendor and licensed partners.',
+      body: 'Sensors, actuators, controllers, and machines sit in the same workflow as the office software. Safety loops stay in dedicated or certified hardware. We work with your controls vendor and licensed partners.',
     },
     {
       title: 'AI helper (Conduit)',
-      body: 'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language. AI is never the only contact, and never the creative element of the solution.',
+      body: 'Onboarding, training, in-context support, issue ticketing, day-to-day work, reporting, and business intelligence in plain language. AI is never the only contact, and never the creative element of the solution.',
     },
     {
       title: 'Support and improvement',
-      body: 'Training for your trainers, upgrades, a named contact, and a regular look at the numbers. A no-scan path is designed from the start for anyone who will not, or cannot, scan.',
+      body: 'Training for your trainers, upgrades, a named contact, and a regular look at the numbers. Conduit training and in-context support sit beside that person. A no-scan path is designed from the start for anyone who will not, or cannot, scan.',
     },
   ],
 } satisfies FeatureGridContent
@@ -49,7 +49,7 @@ export const servicesBuildingBlocks = {
   items: [
     {
       title: 'Devices',
-      body: 'Sensors, actuators, scales, cameras, readers, and printers.',
+      body: 'Sensors, actuators, cameras, readers, and printers.',
     },
     {
       title: 'Control',

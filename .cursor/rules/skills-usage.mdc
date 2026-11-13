@@ -7,6 +7,8 @@ alwaysApply: true
 
 Read the skill before writing Vue, CSS, routes, or copy. Do not skip them for "small" page tweaks; those are how look-and-feel drifts.
 
+Visitor copy also follows always-on `writing-voice.mdc`. Images follow `site-media.mdc`.
+
 | Skill | Use when |
 |---|---|
 | `.cursor/skills/vue3-marketing-site/SKILL.md` | Scaffolding, pages, routing, prerender/SEO, Tailwind 4, TypeScript/`vue-tsc`, forms, deploy, or Vue 3.5 patterns |

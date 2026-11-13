@@ -1,9 +1,9 @@
 import type { CtaContent, HeroContent, ProductGridContent } from '@/types/content'
 import {
   deskCodeAPhoto,
-  farmbridgeLotDetails,
+  farmbridgeContracts,
   farmworkIpadAngled,
-  opsScalePhoto,
+  opsShippingPhoto,
 } from '@/content/media'
 
 /** In-page target for every visitor-facing “Conduit” mention. */
@@ -14,9 +14,9 @@ export const productsHero = {
   title: 'FarmWork, FarmBridge, and Conduit.',
   leads: [
     'These are products we implement and support. Case studies are separate. They describe the operations that drove the work.',
-    'FarmWork and FarmBridge grew out of opportunities at Froese Vegetables Inc. Conduit is the AI helper we add to the systems we deliver.',
+    'FarmWork and FarmBridge grew out of work at Froese Vegetables Inc. Conduit is the AI helper we add across the systems we deliver, in every sector we serve.',
   ],
-  image: opsScalePhoto,
+  image: opsShippingPhoto,
   tone: 'photo',
 } satisfies HeroContent
 
@@ -54,17 +54,17 @@ export const productsGrid = {
       hrefLabel: 'FarmBridge on froveg.ca',
       to: '/case-studies/farmbridge/',
       toLabel: 'See the FVI case study',
-      image: farmbridgeLotDetails,
+      image: farmbridgeContracts,
     },
     {
       name: 'Conduit',
       owner: 'AI helper for your business',
       summary:
-        'People get set up, learn, get answers, get work done, and understand their numbers by asking in plain language. That covers onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence across software and floor data.',
+        'People get set up, learn, get answers, get work done, and understand their numbers by asking in plain language. Conduit covers onboarding, training, in-context support, issue ticketing, day-to-day work, reporting, and business intelligence across software and floor data.',
       points: [
         'Onboarding reads spreadsheets and PDFs, proposes the mapping, waits for your review, then imports',
-        'Training and support stay inside the product, in your terms',
-        'Ticketing, day-to-day work, reporting, and business intelligence by asking in plain language',
+        'Training and in-context support stay inside the product, in your terms',
+        'Issue ticketing, day-to-day work, reporting, and business intelligence by asking in plain language',
       ],
       image: deskCodeAPhoto,
     },

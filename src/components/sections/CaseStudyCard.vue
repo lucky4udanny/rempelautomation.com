@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppButton from '@/components/primitives/AppButton.vue'
+import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import type { CaseStudyCardContent } from '@/types/content'
 
 interface Props {
@@ -25,15 +26,15 @@ defineProps<Props>()
       <dl class="mt-4 flex flex-1 flex-col gap-3 text-sm leading-6 text-ink-muted">
         <div>
           <dt class="font-semibold text-ink">Problem</dt>
-          <dd>{{ study.problem }}</dd>
+          <dd><LinkedProse :text="study.problem" /></dd>
         </div>
         <div>
           <dt class="font-semibold text-ink">Solution</dt>
-          <dd>{{ study.built }}</dd>
+          <dd><LinkedProse :text="study.built" /></dd>
         </div>
         <div v-if="study.changed">
           <dt class="font-semibold text-ink">What changed</dt>
-          <dd>{{ study.changed }}</dd>
+          <dd><LinkedProse :text="study.changed" /></dd>
         </div>
       </dl>
       <div class="mt-6">

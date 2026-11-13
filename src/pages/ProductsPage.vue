@@ -5,11 +5,11 @@ import HeroSection from '@/components/sections/HeroSection.vue'
 import MediaSlider from '@/components/sections/MediaSlider.vue'
 import ProductGrid from '@/components/sections/ProductGrid.vue'
 import {
-  farmbridgeContracts,
-  farmbridgeLotDetails,
-  farmbridgeOrganizations,
-  farmworkIpadAngled,
-  farmworkPhoneAngled,
+  farmbridgeLotsAngled,
+  farmbridgeLotsFlat,
+  farmbridgeOffice,
+  farmbridgeReceivingReport,
+  opsCameraPhoto,
 } from '@/content/media'
 import { productsCta, productsGrid, productsHero } from '@/content/products'
 import { usePageHead } from '@/composables/usePageHead'
@@ -17,11 +17,11 @@ import { usePageHead } from '@/composables/usePageHead'
 usePageHead('/products/')
 
 const productScreens = [
-  farmworkIpadAngled,
-  farmworkPhoneAngled,
-  farmbridgeLotDetails,
-  farmbridgeContracts,
-  farmbridgeOrganizations,
+  farmbridgeOffice,
+  farmbridgeReceivingReport,
+  farmbridgeLotsAngled,
+  farmbridgeLotsFlat,
+  opsCameraPhoto,
 ]
 </script>
 
@@ -29,7 +29,7 @@ const productScreens = [
   <PageShell>
     <HeroSection :content="productsHero" />
     <ProductGrid :content="productsGrid" />
-    <MediaSlider :images="productScreens" title="FarmWork and FarmBridge screens" tone="raised" />
+    <MediaSlider :images="productScreens" title="Product screens and floor tooling" tone="raised" />
     <CtaBand :content="productsCta" />
   </PageShell>
 </template>

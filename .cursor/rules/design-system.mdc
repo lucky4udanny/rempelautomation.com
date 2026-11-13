@@ -28,7 +28,7 @@ Direction: quiet industrial B2B with a dynamic opening. Light surfaces, dark ink
 - Allowed: desktop parallax on photo heroes, one-shot section arrival, interactive process loop, hover/tap detail on feature cards, media sliders without autoplay.
 - Honor `prefers-reduced-motion`: turn parallax and fades off; keep loop and slider usable.
 - One full-bleed hero per page (`HeroSection`). Do not invent a second hero component.
-- Images: real operations photography and perspective-warped product screens, explicit width/height, lazy below the fold, WebP. No unlabeled stock.
+- Images: real operations photography and perspective-warped product screens, explicit width/height, lazy below the fold, WebP. Uniqueness, `images_source/`, crop/warp, and no recognizable faces: see `site-media.mdc`.
 
 ## Responsive
 

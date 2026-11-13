@@ -7,7 +7,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'home',
     title: `${companyName} | People, process, then software and machines`,
     description:
-      'Rempel Automation connects people, process, and equipment so work is done once. Productivity, quality, and safety for agriculture, manufacturing, and trades.',
+      'Rempel Automation connects people, process, software, and machines so work is done once. Productivity, quality, and safety for agriculture, manufacturing, and trades.',
     navLabel: 'Home',
     navOrder: 0,
     footerLabel: 'Home',
@@ -18,7 +18,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'services',
     title: `What we do | ${companyName}`,
     description:
-      'Process audit and design, custom software and integration, controllers and machines, Conduit AI helper, and support. Assessment first.',
+      'Process audit and design, custom software and integration, controllers, sensors, and machines, Conduit AI helper, and support. Assessment first.',
     navLabel: 'What we do',
     navOrder: 1,
     footerLabel: 'What we do',
@@ -40,7 +40,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'products',
     title: `Products | ${companyName}`,
     description:
-      'FarmWork, FarmBridge, and Conduit are products we implement and support. Case studies are separate.',
+      'FarmWork, FarmBridge, and Conduit. Products we implement and support across software and floor data. Case studies are separate.',
     navLabel: 'Products',
     navOrder: 3,
     footerLabel: 'Products',

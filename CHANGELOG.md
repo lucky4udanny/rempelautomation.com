@@ -4,6 +4,9 @@
 
 ### Changed
 
+- Full-site copy pass against writing-voice: overview specificity (software/controllers/sensors/actuators), named Conduit services in context, digital+physical balance, no incompleteness hedges; plant-time and process continuity lines rewritten.
+- Media uniqueness pass: new WebPs from `images_source/` (conveyor, shipping, cooler, edge, camera, CAD crop without faces, FarmBridge android/office, FarmWork artboards); each public surface gets a distinct asset.
+- Cursor rules: `writing-voice.mdc` (operations buyer, digital+physical, Conduit services, completeness posture, second pass) and `site-media.mdc` (unique images from `images_source/`, no recognizable faces).
 - Home AI advantage card rewritten in plain language (import, in-product answers, plain-language reports, human accountability).
 - Home advantage and industry copy rewritten around prospect benefit. Conduit mentions link to `/products/#conduit` via `LinkedProse`.
 - FeatureGrid cards are static. Expand/detail overlays removed. Useful lines folded into each card body.

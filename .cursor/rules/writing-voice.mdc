@@ -1,0 +1,95 @@
+---
+description: Visitor copy voice for rempelautomation.com (operations buyer, digital+physical, Conduit)
+alwaysApply: true
+---
+
+# Writing voice (visitor copy)
+
+Applies to UI strings, marketing HTML, meta, and markdown the visitor reads. Punctuation and sentence shape: global `writing-content.mdc` (no em/en dashes; no trailing colon elaborations).
+
+## Reader (do not name them on the site)
+
+- Prospect seeking automation of processes and machines for a small to mid-sized business (about 1–500 people).
+- Sector unknown; likely agriculture, manufacturing, or trades.
+- They already know their pain (dull/dangerous/dirty work, compliance, waste, quality of data and product). Do not lecture them about their world.
+- Non-technical. Name jobs and outcomes (payroll, receiving, recalls, crew time), not stack jargon.
+- Never write “Sam,” “our buyer persona,” or similar in visitor copy.
+
+## What we must explain
+
+Rempel Automation streamlines and automates **data collection, processing, and reporting**, **connected to** automation of **machines and sensors where the work happens**, plus AI where it helps people work. Digital and physical stay one story on general pages. Do not drift into software-only or hardware-only framing.
+
+## Conduit (locked)
+
+Conduit is a **central offering**, not a side note. FarmWork and FarmBridge are primarily agriculture. Conduit applies across **every sector** and likely **every solution**.
+
+Seven AI-assisted services (name the relevant ones in context; do not dump all seven every time):
+
+1. Onboarding
+2. Training
+3. In-context support
+4. Issue ticketing
+5. Day-to-day work
+6. Reporting
+7. Business intelligence
+
+**Placement:** Where the local subject touches a pain the reader already has, mention the **specific Conduit service(s)** that help there. Tie the benefit to that band’s topic. Link the word Conduit with `LinkedProse` to `/products/#conduit`. Do not invent Conduit capabilities beyond these seven.
+
+```text
+❌ One vague line: “AI helps your people work.”
+✅ Support band: Documentation and Conduit in-context support help manage support costs.
+✅ Process onboarding: Conduit onboarding can read spreadsheets and PDFs, propose a mapping, then import after review.
+✅ Trades / manufacturing: Conduit reporting and business intelligence answer plain-language questions across the operation.
+```
+
+## Specificity by surface (locked)
+
+Overview and general bands (home advantage, who we work with, services opening, SEO blurbs) stay at **category** level:
+
+- Say **software, controllers, sensors, and actuators (machines)**.
+- Do **not** lead with a single tenant-specific device. A **scale is just a sensor**. Scales, label printers, particular handheld UIs, and other one-product examples belong in a **case study** or product detail, not overview copy.
+
+```text
+❌ Overview: Scale weights, photos, labels, and ledger entries…
+✅ Overview: Sensors, controllers, and machines feed the same workflow as the office software.
+✅ Case study (FarmBridge / FVI): Scales, cameras, and label printers on the dock…
+```
+
+## Voice
+
+- Pragmatic and solutions-focused. Get to the point. No flowers, slogans, or bragging.
+- Do not announce that we are pragmatic. Just write that way.
+- No marketing tone. Evidence and job names over claims.
+- Convince them a conversation (and then a proposal) is worth it. CTA stays honest: assessment / contact.
+- Succinct. Ask Dan when content is too thin. Do not invent case studies, metrics, capabilities, or safety proofs.
+- Name the job: receiving, payroll, shipping, floor scans. Not “unlock synergy.”
+
+## Completeness posture (locked)
+
+Do **not** draw attention to inadequacies, incompleteness, or “not yet” status in visitor copy.
+
+- Do not say “in progress,” “in development,” “coming soon,” “we do not yet have a safety case study,” or similar hedges.
+- Do not write meta lines like “will be complete by the time we go to market.”
+- Write as if the offering is ready for market **without inventing** facts, metrics, logos, or case studies you do not have.
+- If the honest material is thin or status is unclear, **ask Dan** how to proceed. Do not invent, and do not advertise the gap.
+
+## Second pass (required before copy is done)
+
+Reread as the recipient and cut anything they would not miss. Then answer:
+
+1. **Clarity:** In this section, what would the reader still ask? Add plain answers or ask Dan.
+2. **Balance (general sections):** Does this lean too hard on only digital, only machines, or only AI? Restore the connected practice unless the surface is intentionally narrow. Did Conduit get omitted where a named service would help this band’s pain?
+3. **Specificity:** Is overview copy using a case-study device (scales, one printer, one screen) as if it were the whole practice? Lift to software / controllers / sensors / actuators, or move the example to a case study.
+4. **Repetition:** Have we said the same idea twice on the page? Cut or merge.
+5. **Scoped surfaces (product, service, case study):** Cover the breadth of *this* subject without bleeding into another page’s job. Case studies may name concrete hardware.
+6. **Gaps:** Where is content missing or too thin? Ask Dan or leave an explicit gap note; do not invent.
+
+## Quick fail tests
+
+- Could this sentence belong to a software-only or hardware-only vendor? Fail.
+- Does it teach the reader their own pain? Fail.
+- Overview band led by scales or another single-tenant device? Fail.
+- Conduit treated as agriculture-only or as a vague “AI” with no service named where context calls for one? Fail.
+- Visitor copy that flags incompleteness (“in development,” “no case study yet,” “coming soon”)? Fail. Ask Dan instead.
+- Em dash, en dash, or finished-thought + colon tail? Fail (`writing-content.mdc`).
+- Named “Sam” or “our buyer persona” in visitor copy? Fail.
