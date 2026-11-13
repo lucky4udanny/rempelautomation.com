@@ -11,11 +11,11 @@ interface Props {
   content: ProductGridContent
 }
 
-defineProps<Props>()
+const { content } = defineProps<Props>()
 </script>
 
 <template>
-  <AppSection>
+  <AppSection :tone="content.tone ?? 'default'">
     <AppContainer>
       <div class="max-w-3xl">
         <AppHeading :level="2" :eyebrow="content.kicker">
@@ -30,7 +30,8 @@ defineProps<Props>()
           v-for="item in content.items"
           :key="item.name"
           :id="item.name === 'Conduit' ? 'conduit' : undefined"
-          class="flex flex-col overflow-hidden rounded-lg border border-line bg-surface-raised shadow-sm scroll-mt-28"
+          class="flex flex-col overflow-hidden rounded-lg border border-line shadow-sm scroll-mt-28"
+          :class="content.tone === 'raised' ? 'bg-surface' : 'bg-surface-raised'"
         >
           <div v-if="item.image" class="aspect-[16/10] overflow-hidden bg-ink">
             <img

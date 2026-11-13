@@ -21,7 +21,7 @@ Without a catalog, a greenfield Vue marketing site tends to grow a second hero a
 
 `CaseStudyList` accepts optional `kicker` and `title` so the home page can separate Products (`ProductGrid`) from Case studies without a second one-off section.
 
-`ComparisonTable` holds the Foundations alternatives grid (off-the-shelf, large integrator, DIY+AI).
+`ComparisonTable` remains in the catalog for a four-column alternatives grid. Home no longer uses it.
 
 Voice: people first, process second, then software and hardware automation as one practice (not software-or-hardware). Productivity, quality, safety. Products sell products; case studies tell client problems. FarmBridge product/case screens prefer lot details (scale + cameras on one record) over the old handheld lots list. Visitor copy must not finish a thought then tack on a related phrase after a colon or dash. Write another sentence instead (`writing-content.mdc`).
 

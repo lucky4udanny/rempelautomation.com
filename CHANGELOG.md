@@ -4,6 +4,8 @@
 
 ### Changed
 
+- Home: restored alternating section backgrounds after removing the alternatives table (outcomes, products, process use `raised`).
+- Home: removed the “How we compare” alternatives table section.
 - Full-site copy pass against writing-voice: overview specificity (software/controllers/sensors/actuators), named Conduit services in context, digital+physical balance, no incompleteness hedges; plant-time and process continuity lines rewritten.
 - Media uniqueness pass: new WebPs from `images_source/` (conveyor, shipping, cooler, edge, camera, CAD crop without faces, FarmBridge android/office, FarmWork artboards); each public surface gets a distinct asset.
 - Cursor rules: `writing-voice.mdc` (operations buyer, digital+physical, Conduit services, completeness posture, second pass) and `site-media.mdc` (unique images from `images_source/`, no recognizable faces).

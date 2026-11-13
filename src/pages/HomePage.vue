@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import PageShell from '@/components/layout/PageShell.vue'
 import CaseStudyList from '@/components/sections/CaseStudyList.vue'
-import ComparisonTable from '@/components/sections/ComparisonTable.vue'
 import CtaBand from '@/components/sections/CtaBand.vue'
 import FeatureGrid from '@/components/sections/FeatureGrid.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -10,7 +9,6 @@ import ProductGrid from '@/components/sections/ProductGrid.vue'
 import {
   caseStudyCards,
   homeAdvantage,
-  homeAlternatives,
   homeCaseStudiesIntro,
   homeCta,
   homeHero,
@@ -28,7 +26,6 @@ usePageHead('/')
   <PageShell>
     <HeroSection :content="homeHero" />
     <FeatureGrid :content="homeAdvantage" />
-    <ComparisonTable :content="homeAlternatives" />
     <FeatureGrid :content="homeOutcomes" />
     <FeatureGrid :content="homeIndustries" />
     <ProductGrid :content="homeProducts" />

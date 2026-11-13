@@ -118,7 +118,7 @@ watch(
 </script>
 
 <template>
-  <AppSection>
+  <AppSection :tone="content.tone ?? 'default'">
     <AppContainer>
       <div class="max-w-3xl">
         <AppHeading :id="headingId" :level="2" :eyebrow="content.kicker">{{ content.title }}</AppHeading>

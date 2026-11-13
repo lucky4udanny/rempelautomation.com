@@ -120,6 +120,7 @@ export const homeProcessLoop = {
   compact: true,
   moreTo: '/process/',
   moreLabel: 'See the full process',
+  tone: 'raised',
 } satisfies ProcessLoopContent
 
 export const processCta = {

@@ -61,6 +61,7 @@ export interface ProcessLoopContent {
   compact?: boolean
   moreTo?: string
   moreLabel?: string
+  tone?: 'default' | 'raised' | 'ink'
 }
 
 export interface ProofItem {
@@ -145,6 +146,7 @@ export interface ProductGridContent {
   title: string
   body?: string
   items: ProductCardContent[]
+  tone?: 'default' | 'raised' | 'ink'
 }
 
 export interface PersonBio {

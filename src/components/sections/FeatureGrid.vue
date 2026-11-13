@@ -30,7 +30,8 @@ const { content } = defineProps<Props>()
         <li
           v-for="item in content.items"
           :key="item.title"
-          class="rounded-lg border border-line bg-surface-raised p-6 shadow-sm"
+          class="rounded-lg border border-line p-6 shadow-sm"
+          :class="content.tone === 'raised' ? 'bg-surface' : 'bg-surface-raised'"
         >
           <h3 class="font-display text-lg font-semibold text-ink">
             <LinkedProse :text="item.title" />

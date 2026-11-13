@@ -1,5 +1,4 @@
 import type {
-  ComparisonTableContent,
   CtaContent,
   FeatureGridContent,
   HeroContent,
@@ -30,7 +29,7 @@ export const homeHero = {
 export const homeAdvantage = {
   kicker: 'Our advantage',
   title: 'Software, hardware, and AI each get cheaper every year. One accountable team that puts all three to work inside your building is still rare.',
-  body: 'The combination is how we deliver. What is hard to copy is below.',
+  body: 'The combination is how we deliver. That is hard to copy.',
   items: [
     {
       title: 'One team from the sensor to the database',
@@ -51,41 +50,11 @@ export const homeAdvantage = {
   ],
 } satisfies FeatureGridContent
 
-export const homeAlternatives = {
-  kicker: 'How we compare',
-  title: 'What the usual alternatives give you, and where they fall short.',
-  rows: [
-    {
-      alternative: 'Software vendor alone',
-      gets: 'Fast start, low price.',
-      shortfall:
-        'Stops at the screen. Controllers, sensors, actuators, and machines stay outside the workflow.',
-      instead:
-        'Software and hardware automation work together. Controllers, sensors, and machines feed the same workflow as the office. Conduit onboarding and day-to-day work help people use it.',
-    },
-    {
-      alternative: 'Hardware integrator alone',
-      gets: 'Deep equipment experience, sized for large budgets.',
-      shortfall:
-        'Priced and paced for much larger programs. Office software is often a separate project with a separate vendor.',
-      instead:
-        'One engagement for software and hardware automation, phased for a small or mid-sized operation, starting with the piece that pays back first.',
-    },
-    {
-      alternative: 'Build it yourself with AI tools',
-      gets: 'Cheap prototype, full control.',
-      shortfall:
-        'Someone still has to make software and machines reliable together, train the crew, and answer the phone in harvest or peak season.',
-      instead:
-        'We own reliability across the integrated stack. Conduit covers training and in-context support. A named person still answers.',
-    },
-  ],
-} satisfies ComparisonTableContent
-
 export const homeOutcomes = {
   kicker: 'What automation is for',
   title: 'Productivity, quality, and safety.',
   body: 'An engagement aims at one or more of these. We measure before and after.',
+  tone: 'raised',
   items: [
     {
       title: 'Productivity',
@@ -97,7 +66,7 @@ export const homeOutcomes = {
     },
     {
       title: 'Safety',
-      body: 'Dull, dirty, and dangerous work moves onto automation. Better morale, fewer injuries, and lower insurance cost.',
+      body: 'Dull, dirty, and dangerous work moves onto automation. Achieve better morale, fewer injuries, and lower insurance cost.',
     },
   ],
 } satisfies FeatureGridContent
@@ -105,7 +74,7 @@ export const homeOutcomes = {
 export const homeIndustries = {
   kicker: 'Who we work with',
   title: 'Owner-led operations that need software and hardware to work together.',
-  body: 'We work with businesses from a few dozen people to several hundred. Spreadsheets, paper, software, and equipment often still run as separate worlds.',
+  body: 'We work with businesses from a few dozen people to several hundred. Spreadsheets, paper, software, and equipment often still run as separate worlds. Regardless of sector, we bring them together for greater efficiency, visibility, and control.',
   items: [
     {
       title: 'Agriculture',
@@ -117,7 +86,7 @@ export const homeIndustries = {
     },
     {
       title: 'Trades',
-      body: 'Electricians, plumbers, roofers, concrete, drywall, masonry, and similar crews. Crew time, materials, and job cost show up while the work is underway. Conduit ticketing and in-context support keep field issues and answers in the same place.',
+      body: 'Electricians, plumbers, roofers, concrete, drywall, masonry, and any other trade. Crew time, materials, and job cost show up in your accounting while the work is underway. Conduit ticketing and in-context support keep field issues and answers in the same place.',
     },
   ],
 } satisfies FeatureGridContent
@@ -125,7 +94,8 @@ export const homeIndustries = {
 export const homeProducts = {
   kicker: 'Products',
   title: 'Three products we implement and support.',
-  body: 'FarmWork and FarmBridge grew out of work at Froese Vegetables Inc. Conduit is the AI helper we add across the systems we deliver. Case studies are separate.',
+  body: 'FarmWork and FarmBridge grew out of work at Froese Vegetables Inc. Subscriptions are available for farms and agricultural processing and distribution organizations. Conduit is also available as a subscription. It is the AI helper we add across the systems we deliver. It may fit your existing software and hardware automation, or it may become a new piece of a new stack.',
+  tone: 'raised',
   items: [
     {
       name: 'FarmWork',

@@ -46,6 +46,7 @@ export const servicesBuildingBlocks = {
   kicker: 'Building blocks',
   title: 'What we draw on after the assessment.',
   body: 'You may need only some of these. An office workflow may need no hardware. A monitoring project may need no PLC.',
+  tone: 'raised',
   items: [
     {
       title: 'Devices',
@@ -73,6 +74,7 @@ export const servicesBuildingBlocks = {
 export const servicesPartners = {
   kicker: 'How we deliver',
   title: 'Direct where we have the expertise. Licensed partners for trades and safety work.',
+  tone: 'raised',
   items: [
     {
       title: 'Your IT stays in the room',
@@ -92,6 +94,7 @@ export const servicesPartners = {
 export const servicesOutcomes = {
   kicker: 'What automation is for',
   title: 'Productivity, quality, and safety.',
+  tone: 'raised',
   items: [
     {
       title: 'Productivity',
