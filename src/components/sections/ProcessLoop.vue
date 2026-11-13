@@ -4,6 +4,7 @@ import AppButton from '@/components/primitives/AppButton.vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
+import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import type { ProcessLoopContent } from '@/types/content'
 
 interface Props {
@@ -202,9 +203,13 @@ watch(
         <div class="space-y-8">
           <article v-if="content.compact" class="rounded-lg border border-line bg-surface-raised p-6">
             <h3 class="font-display text-xl font-semibold">{{ activeStage.title }}</h3>
-            <p class="mt-2 text-sm text-ink-muted">{{ activeStage.summary }}</p>
+            <p class="mt-2 text-sm text-ink-muted">
+              <LinkedProse :text="activeStage.summary" />
+            </p>
             <div class="mt-4 space-y-3 text-sm leading-6 text-ink">
-              <p v-for="(paragraph, index) in activeStage.body" :key="index">{{ paragraph }}</p>
+              <p v-for="(paragraph, index) in activeStage.body" :key="index">
+                <LinkedProse :text="paragraph" />
+              </p>
             </div>
             <div v-if="content.moreTo" class="mt-6 lg:hidden">
               <AppButton :to="content.moreTo" variant="secondary">{{ content.moreLabel }}</AppButton>
@@ -224,9 +229,13 @@ watch(
                 Stage {{ index + 1 }}
               </p>
               <h3 class="mt-2 font-display text-2xl font-semibold">{{ stage.title }}</h3>
-              <p class="mt-2 text-sm text-ink-muted">{{ stage.summary }}</p>
+              <p class="mt-2 text-sm text-ink-muted">
+                <LinkedProse :text="stage.summary" />
+              </p>
               <div class="mt-4 space-y-3 text-base leading-7 text-ink">
-                <p v-for="(paragraph, pIndex) in stage.body" :key="pIndex">{{ paragraph }}</p>
+                <p v-for="(paragraph, pIndex) in stage.body" :key="pIndex">
+                  <LinkedProse :text="paragraph" />
+                </p>
               </div>
 
               <div v-if="stage.paths?.length && activeIndex === index" class="mt-6 rounded-md bg-surface p-4">

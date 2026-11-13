@@ -6,6 +6,9 @@ import {
   opsScalePhoto,
 } from '@/content/media'
 
+/** In-page target for every visitor-facing “Conduit” mention. */
+export const conduitHref = '/products/#conduit'
+
 export const productsHero = {
   kicker: 'Products',
   title: 'FarmWork, FarmBridge, and Conduit.',
@@ -57,7 +60,7 @@ export const productsGrid = {
       name: 'Conduit',
       owner: 'AI helper for your business',
       summary:
-        'An AI helper built into the systems we deliver so people can get set up, learn, get answers, get work done, and understand their numbers in plain language across software and floor data.',
+        'People get set up, learn, get answers, get work done, and understand their numbers by asking in plain language. That covers onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence across software and floor data.',
       points: [
         'Onboarding reads spreadsheets and PDFs, proposes the mapping, waits for your review, then imports',
         'Training and support stay inside the product, in your terms',

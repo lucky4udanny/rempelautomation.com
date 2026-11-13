@@ -21,33 +21,23 @@ export const servicesOfferings = {
   items: [
     {
       title: 'Process audit and design',
-      body: 'Walk the work. Map paperwork, software, machines, and handoffs. Keep and tidy, redesign, or build new.',
-      detail:
-        'When the process is sound, we remove re-keying and add checks. When steps are duplicated or depend on one person, we simplify or automate them.',
+      body: 'Walk the work. Map paperwork, software, machines, and handoffs. Keep and tidy, redesign, or build new. Remove re-keying when the process is sound. Simplify when steps depend on one person.',
     },
     {
       title: 'Custom software and integration',
-      body: 'Web portals and phone or handheld apps built around your workflow. Links to the systems you already paid for.',
-      detail:
-        'Time clock, ERP, accounting, CRM, and supplier paperwork. Capabilities-based permissions so a bookkeeper, a supervisor, and a worker do not share one login.',
+      body: 'Web portals and phone or handheld apps built around your workflow, linked to the systems you already paid for. Permissions so a bookkeeper, a supervisor, and a worker do not share one login.',
     },
     {
       title: 'Controllers, sensors, machines, and robots',
-      body: 'Scales, scanners, label printers, cameras, sensors, relays, PLCs, drives, and handhelds in the same workflow as the office.',
-      detail:
-        'Safety functions and fast control loops stay in dedicated controllers or certified safety hardware. We work with your controls vendor and licensed electrical and panel partners.',
+      body: 'Scales, scanners, label printers, cameras, sensors, relays, PLCs, drives, and handhelds in the same workflow as the office. Safety loops stay in dedicated or certified hardware. We work with your controls vendor and licensed partners.',
     },
     {
       title: 'AI helper (Conduit)',
-      body: 'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language.',
-      detail:
-        'AI informs or carries out routine work within limits you set. It is never the only contact, and never the creative element of the solution.',
+      body: 'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language. AI is never the only contact, and never the creative element of the solution.',
     },
     {
       title: 'Support and improvement',
-      body: 'Training for your trainers, upgrades, a named contact, and a regular look at the numbers.',
-      detail:
-        'What we learn after go-live returns to the next audit. A no-scan or paper-compatible path is designed from the start for anyone who will not, or cannot, scan.',
+      body: 'Training for your trainers, upgrades, a named contact, and a regular look at the numbers. A no-scan path is designed from the start for anyone who will not, or cannot, scan.',
     },
   ],
 } satisfies FeatureGridContent

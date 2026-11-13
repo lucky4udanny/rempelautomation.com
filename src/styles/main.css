@@ -19,33 +19,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Feature card detail: expand under the card without changing grid row height. */
-.feature-card-detail {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-0.35rem);
-  pointer-events: none;
-  transition:
-    max-height 0.55s ease,
-    opacity 0.55s ease,
-    transform 0.55s ease;
-}
-
-.feature-card-detail.is-open {
-  max-height: 12rem;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .feature-card-detail {
-    transition: none;
   }
 }
 

@@ -4,6 +4,9 @@
 
 ### Changed
 
+- Home AI advantage card rewritten in plain language (import, in-product answers, plain-language reports, human accountability).
+- Home advantage and industry copy rewritten around prospect benefit. Conduit mentions link to `/products/#conduit` via `LinkedProse`.
+- FeatureGrid cards are static. Expand/detail overlays removed. Useful lines folded into each card body.
 - Contact form: “Company name” instead of “Operation”; free-text “What do you want to improve?” instead of a topic dropdown; removed site-visit checkbox.
 - Writing rule: ban trailing elaborations after a colon or dash (same sentence shape the em-dash ban was meant to stop). Site-wide content sweep rewrote those sentence tails into full sentences.
 - Home copy pass: software and hardware automation as one practice; connect-or-replace covers both; alternatives contrast software-alone vs hardware-alone vendors; industry details are integration-led; trades breadth; FarmBridge uses lot-details / contracts / organizations screens; process ring uses stage names.

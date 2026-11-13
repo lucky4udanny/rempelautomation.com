@@ -27,7 +27,9 @@ Voice: people first, process second, then software and hardware automation as on
 
 The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`. Ring nodes use `ringLabel` (Audit, Design, …), not bare numbers; the sticky column does not repeat the stage summary under the ring.
 
-`FeatureGrid` detail must not change the card’s in-flow height. Keep title and body in the grid cell. Overlay the longer line under the card with `.feature-card-detail` (`max-height`, opacity, and transform over 0.55s) so neighbors do not jump. When open: `rounded-b-none border-b-0` on the card, and the detail uses `-left-px -right-px` so its borders align with the card’s outer edges (absolute children are laid out inside the border).
+`FeatureGrid` is static cards only (title + body). Expand overlays were removed. Put the useful sentence in `body`. Do not add a second “marketing” paragraph behind a click.
+
+`LinkedProse` turns every visitor-facing “Conduit” into a link to `/products/#conduit`. The Conduit product card uses `id="conduit"`. Prefer that helper over hand-coded links in section copy.
 
 Case studies use `CaseStudyDetail` and optional `BeforeAfterTable`. Unnamed engagements omit the table and say the work is still in design.
 

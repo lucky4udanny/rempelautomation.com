@@ -4,6 +4,7 @@ import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
 import AppLink from '@/components/primitives/AppLink.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
+import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import type { ProductGridContent } from '@/types/content'
 
 interface Props {
@@ -17,14 +18,19 @@ defineProps<Props>()
   <AppSection>
     <AppContainer>
       <div class="max-w-3xl">
-        <AppHeading :level="2" :eyebrow="content.kicker">{{ content.title }}</AppHeading>
-        <p v-if="content.body" class="mt-4 text-base leading-7 text-ink-muted">{{ content.body }}</p>
+        <AppHeading :level="2" :eyebrow="content.kicker">
+          <LinkedProse :text="content.title" />
+        </AppHeading>
+        <p v-if="content.body" class="mt-4 text-base leading-7 text-ink-muted">
+          <LinkedProse :text="content.body" />
+        </p>
       </div>
       <ul class="mt-10 grid gap-6 lg:grid-cols-3">
         <li
           v-for="item in content.items"
           :key="item.name"
-          class="flex flex-col overflow-hidden rounded-lg border border-line bg-surface-raised shadow-sm"
+          :id="item.name === 'Conduit' ? 'conduit' : undefined"
+          class="flex flex-col overflow-hidden rounded-lg border border-line bg-surface-raised shadow-sm scroll-mt-28"
         >
           <div v-if="item.image" class="aspect-[16/10] overflow-hidden bg-ink">
             <img
@@ -48,11 +54,13 @@ defineProps<Props>()
               </span>
             </div>
             <p class="mt-2 text-xs font-medium uppercase tracking-wide text-ink-muted">{{ item.owner }}</p>
-            <p class="mt-4 text-sm leading-6 text-ink-muted">{{ item.summary }}</p>
+            <p class="mt-4 text-sm leading-6 text-ink-muted">
+              <LinkedProse :text="item.summary" />
+            </p>
             <ul v-if="item.points.length" class="mt-4 space-y-2 text-sm leading-6 text-ink">
               <li v-for="point in item.points" :key="point" class="flex gap-2">
                 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                <span>{{ point }}</span>
+                <span><LinkedProse :text="point" /></span>
               </li>
             </ul>
             <div class="mt-6 flex flex-wrap gap-3">

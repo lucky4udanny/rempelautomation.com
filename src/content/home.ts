@@ -19,7 +19,7 @@ export const homeHero = {
   title: 'People, process, then software and machines.',
   leads: [
     'We start with the people who do the work and the process they run. Software, controllers, sensors, machines, and robots come after that, and only for what the assessment shows you need.',
-    'Most businesses fragment equipment, office work, and people in separate worlds. We connect them so the same information moves with the work. That includes paperwork and software, and it includes scales, sensors, and machines.',
+    'Most businesses fragment equipment, office work, and people in separate worlds. We connect them so the same information moves with the work. That includes paperwork and software, and it includes sensors, and machines.',
   ],
   primaryAction: { label: 'Contact us', to: '/contact/', variant: 'primary' },
   secondaryAction: { label: 'How we work', to: '/process/', variant: 'outline-light' },
@@ -34,27 +34,19 @@ export const homeAdvantage = {
   items: [
     {
       title: 'One team from the sensor to the database',
-      body: 'A scale weight, a timestamped photo, a printed label, and a ledger entry land on the same record.',
-      detail:
-        'We built that for a packing operation. The office and the dock now read the same numbers.',
+      body: 'Scale weights, photos, labels, and ledger entries stay connected so the office and the floor work from the same numbers without re-keying.',
     },
     {
       title: 'Connect when it fits. Replace when it pays.',
-      body: 'We connect the software and hardware you already run when that is the better path. That can mean office systems, scales, scanners, controllers, and machines. When replacing software or hardware improves ROI, we say so. Otherwise we recommend keeping what you have invested in.',
-      detail:
-        'Staff comfort and training time are part of that ROI calculation. Keep, connect, or replace is decided for each system after the assessment.',
+      body: 'We use the equipment you have already invested in unless there is good reason to replace it. We focus on staff comfort, training costs, and your bottom line.',
     },
     {
       title: 'AI that helps your people work',
-      body: 'In the systems we deliver, AI reads messy files, answers “where do I click?”, and builds reports from plain-language questions across software and floor data.',
-      detail:
-        'AI is never your only contact with us, and never the creative element in your solution. People design it and people answer for it.',
+      body: 'Conduit helps your staff import spreadsheets and PDFs, get answers inside the software, and ask for reports in plain language. A person on our team stays accountable for the solution.',
     },
     {
       title: 'We stay',
-      body: 'Support is part of the product, not an add-on afterthought.',
-      detail:
-        'You reach a person who knows the system. Documentation and an installation that runs on your terms answer what happens if we are gone.',
+      body: 'Support is part of the product. You reach a person who knows the system. Documentation and Conduit help manage support costs.',
     },
   ],
 } satisfies FeatureGridContent
@@ -68,7 +60,7 @@ export const homeAlternatives = {
       gets: 'Fast start, low price.',
       shortfall: 'Stops at the screen. Scales, scanners, controllers, and machines stay outside the workflow.',
       instead:
-        'Software and hardware automation on the same record. Rules, scanners, scales, printers, and controllers work together. Conduit helps with onboarding and day-to-day work.',
+        'Software and hardware automation work together. Rules, scanners, scales, printers, and controllers feed the same workflow. Conduit helps with onboarding and day-to-day work.',
     },
     {
       alternative: 'Hardware integrator alone',
@@ -96,46 +88,34 @@ export const homeOutcomes = {
     {
       title: 'Productivity',
       body: 'Software and hardware automation together speed the process. Machines and sensors sit in the same workflow as the office. Re-keying drops. People get visibility to make better decisions.',
-      detail:
-        'We are useful when software automation and hardware automation still live in separate projects. Clients come when the same numbers are re-keyed every pay run or load, the line is slow for unknown reasons, or the owner is the bottleneck.',
     },
     {
       title: 'Quality',
-      body: 'Software and machines on one record do not get tired or lose focus. They can be tuned to hold a set of tolerances more consistently.',
-      detail:
-        'Identity and checks on the lot help prevent recalls. When a recall still happens, traceability shrinks the envelope. Scale weights and timestamped photos settle disputes without relying on memory.',
+      body: 'Software and machines working together improve tolerances more consistently. Identity and checks help prevent recalls. When a recall still happens, traceability shrinks the envelope.',
     },
     {
       title: 'Safety',
-      body: 'Dull, dirty, and dangerous work moves off your valuable workforce onto automation.',
-      detail:
-        'Better morale, fewer injuries, and lower insurance cost. We state this as a reason to automate. We do not yet have a published safety case study.',
+      body: 'Dull, dirty, and dangerous work moves onto automation. Better morale, fewer injuries, and lower insurance cost.',
     },
   ],
 } satisfies FeatureGridContent
 
 export const homeIndustries = {
   kicker: 'Who we work with',
-  title: 'Small and mid-sized, owner-led businesses.',
-  body: 'Typically tens of employees, one or two people who hold the whole operation in their heads, and a stack of spreadsheets, paper, software, and equipment that does not quite fit.',
+  title: 'Owner-led operations that need software and hardware to work together.',
+  body: 'We work with businesses from a few dozen people to several hundred. Spreadsheets, paper, software, and equipment often still run as separate worlds.',
   items: [
     {
       title: 'Agriculture',
-      body: 'Growers, packers, and shippers. Seasonal labour, mixed pay, receiving, grading, cold storage, shipping, and food-safety traceability.',
-      detail:
-        'We integrate field and packing software with dock scales, scanners, cameras, and line equipment into one visible, real-time record. Traceability is often legislated, and buyers expect it.',
+      body: 'Growers, packers, and shippers. We help you answer legislated traceability demands with field and packing software tied to dock scales, scanners, cameras, and line equipment.',
     },
     {
       title: 'Manufacturing',
-      body: 'Production lines and job-based work where the ERP, time clock, floor staff, controllers, and machines need one shared record.',
-      detail:
-        'When time is keyed by hand and production steps stay on paper, controllers and sensors sit beside the office instead of feeding it. We put floor equipment and office systems on the same workflow.',
+      body: 'Production lines and job-based work. Time, production, and machine data feed the office so you can see where the line is slow and stop re-keying hours into the ERP.',
     },
     {
       title: 'Trades',
-      body: 'Field trades and service. That includes electricians, plumbers, roofers, concrete, drywall, masonry, and similar crews. Quotes, materials, job files, warranties, and the tools and vehicles on site all belong in the same picture.',
-      detail:
-        'Often the owner is the bottleneck, job cost arrives late, or supplier invoices do not match deliveries. Paper job files and texted time sheets are common.',
+      body: 'Electricians, plumbers, roofers, concrete, drywall, masonry, and similar crews. Crew time, materials, and job cost show up while the work is underway, so you can protect margin without chasing texts.',
     },
   ],
 } satisfies FeatureGridContent
@@ -160,7 +140,7 @@ export const homeProducts = {
       name: 'FarmBridge',
       owner: 'Receiving through shipping',
       summary:
-        'Receiving through shipping on one trail. Software workflows share the same flow as scales, cameras, printers, scanners, and floor sequences.',
+        'Receiving through shipping with scales, cameras, printers, scanners, and floor sequences in the same workflow as the office.',
       points: [],
       href: 'https://froveg.ca/farmbridge.html',
       to: '/products/',
@@ -171,10 +151,10 @@ export const homeProducts = {
       name: 'Conduit',
       owner: 'AI helper',
       summary:
-        'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence in plain language inside the systems we deliver.',
+        'Onboarding, training, support, ticketing, day-to-day work, reporting, and business intelligence through plain-language prompts inside the systems we deliver.',
       points: [],
-      to: '/products/',
-      toLabel: 'Products',
+      to: '/products/#conduit',
+      toLabel: 'About Conduit',
       image: deskCodeBPhoto,
     },
   ],

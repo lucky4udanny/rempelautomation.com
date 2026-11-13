@@ -27,7 +27,6 @@ export interface HeroContent {
 export interface FeatureItem {
   title: string
   body: string
-  detail?: string
 }
 
 export interface FeatureGridContent {

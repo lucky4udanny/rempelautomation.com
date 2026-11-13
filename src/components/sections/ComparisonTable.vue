@@ -2,6 +2,7 @@
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
+import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import type { ComparisonTableContent } from '@/types/content'
 
 interface Props {
@@ -34,7 +35,7 @@ defineProps<Props>()
               <th scope="row" class="px-4 py-3 font-semibold text-ink">{{ row.alternative }}</th>
               <td class="px-4 py-3 text-ink-muted">{{ row.gets }}</td>
               <td class="px-4 py-3 text-ink-muted">{{ row.shortfall }}</td>
-              <td class="px-4 py-3 text-ink">{{ row.instead }}</td>
+              <td class="px-4 py-3 text-ink"><LinkedProse :text="row.instead" /></td>
             </tr>
           </tbody>
         </table>

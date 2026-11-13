@@ -24,45 +24,31 @@ export const aboutValues = {
   items: [
     {
       title: 'Integrity',
-      body: 'We do what we say we will do.',
-      detail:
-        'We do not hide problems, shift blame, or trade our integrity for a longer-term gain. If a simple digital process solves the problem, we say AI is not needed.',
+      body: 'We do what we say we will do. We do not hide problems or shift blame. If a simple digital process solves the problem, we say AI is not needed.',
     },
     {
       title: 'Trust',
-      body: 'We aim for no surprises.',
-      detail:
-        'We show our work before we talk numbers. We answer the hard question about continuity before you ask it, and we include your IT person in every decision.',
+      body: 'We aim for no surprises. We show our work before we talk numbers, answer continuity before you ask, and include your IT person in decisions.',
     },
     {
       title: 'Accountability',
-      body: 'We call you a client.',
-      detail:
-        'Not a customer (too transactional) and not a partner (we do not share ownership of your business). One party answers the phone.',
+      body: 'We call you a client. Not a customer, and not a partner who shares ownership of your business. One party answers the phone.',
     },
     {
       title: 'Curiosity',
-      body: 'We start by listening.',
-      detail:
-        'We interview the supervisors, counters, and bookkeepers who do the work, not only management. A first visit is to learn, not to pitch.',
+      body: 'We start by listening. We talk with the people who do the work, not only management. A first visit is to learn, not to pitch.',
     },
     {
       title: 'Excellence',
-      body: 'A digital version has to be at least as careful as the paper it replaces.',
-      detail:
-        'If your paper file catches a wrong supplier invoice, our version catches it too.',
+      body: 'A digital version has to be at least as careful as the paper it replaces. If your paper file catches a wrong supplier invoice, our version catches it too.',
     },
     {
       title: 'Innovation',
-      body: 'We adopt new technology only when it gives you a significant advantage.',
-      detail:
-        'We turn it down when it would break your commitments or our ethics. We will make our own work obsolete before a competitor does.',
+      body: 'We adopt new technology only when it gives you a significant advantage. We turn it down when it would break your commitments or our ethics.',
     },
     {
       title: 'Continuous improvement',
-      body: 'We measure before and after.',
-      detail:
-        'A station that got faster or slower after a change shows up in real numbers. We use the same discipline on our own work.',
+      body: 'We measure before and after. A station that got faster or slower after a change shows up in real numbers.',
     },
   ],
 } satisfies FeatureGridContent

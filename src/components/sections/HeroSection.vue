@@ -3,6 +3,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import AppButton from '@/components/primitives/AppButton.vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
+import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import type { HeroContent } from '@/types/content'
 
 interface Props {
@@ -81,7 +82,9 @@ onBeforeUnmount(() => {
           class="mt-6 flex flex-col gap-4 text-base leading-7 sm:text-lg"
           :class="content.tone === 'photo' ? 'text-surface-raised/90' : 'text-ink-muted'"
         >
-          <p v-for="(lead, index) in content.leads" :key="index">{{ lead }}</p>
+          <p v-for="(lead, index) in content.leads" :key="index">
+            <LinkedProse :text="lead" />
+          </p>
         </div>
         <div v-if="content.primaryAction || content.secondaryAction" class="mt-8 flex flex-wrap gap-3">
           <AppButton
