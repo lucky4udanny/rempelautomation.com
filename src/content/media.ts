@@ -12,12 +12,15 @@ import deskMachineUrl from '@/assets/photos/desk-machine.webp'
 import deskCadUrl from '@/assets/photos/desk-cad.webp'
 import deskCadCropUrl from '@/assets/photos/desk-cad-crop.webp'
 import opsCameraUrl from '@/assets/photos/ops-camera.webp'
+import opsReceivingUrl from '@/assets/photos/ops-receiving.webp'
 import farmworkIpadAngledUrl from '@/assets/screens/farmwork-ipad-angled.webp'
 import farmworkIpadFlatUrl from '@/assets/screens/farmwork-ipad-flat.webp'
 import farmworkPhoneAngledUrl from '@/assets/screens/farmwork-phone-angled.webp'
 import farmworkPhoneFlatUrl from '@/assets/screens/farmwork-phone-flat.webp'
 import farmworkArtboard20Url from '@/assets/screens/farmwork-artboard-20.webp'
 import farmworkArtboard25Url from '@/assets/screens/farmwork-artboard-25.webp'
+import farmworkArtboard14Url from '@/assets/screens/farmwork-artboard-14.webp'
+import farmworkArtboard16Url from '@/assets/screens/farmwork-artboard-16.webp'
 import farmbridgeLotsAngledUrl from '@/assets/screens/farmbridge-lots-angled.webp'
 import farmbridgeLotsFlatUrl from '@/assets/screens/farmbridge-lots-flat.webp'
 import farmbridgeLotDetailsUrl from '@/assets/screens/farmbridge-lot-details.webp'
@@ -127,6 +130,13 @@ export const opsCameraPhoto = {
   height: 2400,
 } satisfies MediaImage
 
+export const opsReceivingPhoto = {
+  src: opsReceivingUrl,
+  alt: 'Handheld FarmBridge screen confirming a lot after a scale weight on receiving.',
+  width: 1800,
+  height: 2400,
+} satisfies MediaImage
+
 export const farmworkIpadAngled = {
   src: farmworkIpadAngledUrl,
   alt: 'FarmWork crew clock manager on a tablet, shown at an angle.',
@@ -167,6 +177,20 @@ export const farmworkArtboard25 = {
   alt: 'FarmWork office screen for crew and pay review.',
   width: 1600,
   height: 1199,
+} satisfies MediaImage
+
+export const farmworkArtboard14 = {
+  src: farmworkArtboard14Url,
+  alt: 'FarmWork screen for workforce time and production.',
+  width: 912,
+  height: 608,
+} satisfies MediaImage
+
+export const farmworkArtboard16 = {
+  src: farmworkArtboard16Url,
+  alt: 'FarmWork screen for pay-period review.',
+  width: 912,
+  height: 608,
 } satisfies MediaImage
 
 export const farmbridgeLotsAngled = {

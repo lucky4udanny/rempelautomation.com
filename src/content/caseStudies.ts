@@ -3,8 +3,8 @@ import {
   farmbridgeAndroid1,
   farmbridgeAndroidInventory,
   farmbridgeLotDetails,
+  farmworkArtboard16,
   farmworkArtboard20,
-  farmworkArtboard25,
   farmworkPhoneAngled,
   farmworkPhoneFlat,
   opsGraderPhoto,
@@ -128,7 +128,7 @@ export const farmWorkStudy = {
   closer:
     'The office still owns the pay period. The floor still owns the clock and the count. They finally share the same numbers.',
   externalProduct: { label: 'FarmWork on froveg.ca', href: 'https://froveg.ca/farmwork.html' },
-  screens: [farmworkPhoneAngled, farmworkPhoneFlat, farmworkArtboard25, farmworkArtboard20],
+  screens: [farmworkPhoneAngled, farmworkPhoneFlat, farmworkArtboard20, farmworkArtboard16],
 } satisfies CaseStudyPageContent
 
 export const farmBridgeStudy = {

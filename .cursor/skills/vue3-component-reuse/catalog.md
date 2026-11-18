@@ -29,10 +29,11 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | `HeroSection` | Full-bleed photo opening with desktop parallax (no floating screen garnish) |
 | `FeatureGrid` | Static capability cards (title + body). No expand overlay |
 | `ProcessLoop` | Interactive continuous-improvement ring; compact on home, full on process |
-| `ProductGrid` | Product cards with owner, status, points, links |
+| `ProductGrid` | Teaser product cards; whole card links to `/products/#id` |
+| `ProductDetailBand` | One product: purpose, audience, benefits, optional domains, boundary, optional contain carousel |
 | `ComparisonTable` | Four-column alternatives table (your alternative / get / shortfall / instead) |
 | `PeopleList` | Leadership bios |
-| `MediaSlider` | Angled or flat product screens with previous/next, no autoplay |
+| `MediaSlider` | Product screens with previous/next; `fit="contain"` for full UI shots; `embedded` when nested |
 | `CaseStudyCard` | One engagement: problem, solution, optional result, link |
 | `CaseStudyList` | Optional kicker/title plus grid of `CaseStudyCard` |
 | `CtaBand` | End-of-page ask (contact) |

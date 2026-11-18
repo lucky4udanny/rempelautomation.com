@@ -116,6 +116,8 @@ export interface CaseStudyPageContent {
 
 export interface ProductCardContent {
   name: string
+  /** In-page anchor id on the products page (farmwork, farmbridge, conduit). */
+  id: string
   status?: string
   owner: string
   summary: string
@@ -125,6 +127,33 @@ export interface ProductCardContent {
   to?: string
   toLabel?: string
   image?: MediaImage
+}
+
+/** A capability band on a product page. Each benefit states what the reader gets. */
+export interface ProductDomainGroup {
+  title: string
+  purpose?: string
+  benefits: string[]
+}
+
+export interface ProductDetailContent {
+  id: string
+  name: string
+  owner: string
+  purpose: string
+  audience: string
+  /** Top benefits for this product (positive outcomes). */
+  benefits: string[]
+  /** Deeper capability bands (features) with benefits. */
+  domains?: ProductDomainGroup[]
+  /** Honest boundary or how this product pairs with others. */
+  boundary?: string
+  screens?: MediaImage[]
+  caseStudyTo?: string
+  caseStudyLabel?: string
+  externalHref?: string
+  externalLabel?: string
+  tone?: 'default' | 'raised' | 'ink'
 }
 
 export interface ComparisonRow {

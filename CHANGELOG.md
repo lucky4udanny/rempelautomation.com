@@ -4,6 +4,10 @@
 
 ### Changed
 
+- Products page: FarmWork, FarmBridge, and Conduit rewritten around positive benefits, capability domains, and honest boundaries. Conduit domains include concrete FarmWork and FarmBridge examples (onboarding through import). Home product cards list benefit points. E2e asserts Benefits / What it covers copy. x2 (heading and bullets say what you get, not “Pain it removes”).
+- Products page: separate FarmWork, FarmBridge, and Conduit sections (purpose, who it is for, benefits). FarmWork and FarmBridge each have a full-screen contain carousel.
+- Home product cards are whole-card links to `/products/#farmwork` (and siblings), with image scale and darker hover; removed misaligned Product site / Products controls.
+- Products hero uses a handheld FarmBridge receiving confirmation shot instead of trailer row.
 - Home: restored alternating section backgrounds after removing the alternatives table (outcomes, products, process use `raised`).
 - Home: removed the “How we compare” alternatives table section.
 - Full-site copy pass against writing-voice: overview specificity (software/controllers/sensors/actuators), named Conduit services in context, digital+physical balance, no incompleteness hedges; plant-time and process continuity lines rewritten.

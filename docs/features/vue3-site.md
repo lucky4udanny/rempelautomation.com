@@ -16,6 +16,8 @@ A B2B marketing site needs real HTML for search and share cards, and it does not
 
 ## Learned
 
+Product pages sell benefits (what you get), not feature catalogs or “pain” headlines. `ProductDetailBand` shows purpose, audience, **Benefits**, then **What it covers** domain groups. Conduit’s seven services each show FarmWork and FarmBridge example prompts so agriculture prospects see the stack together without making Conduit agriculture-only.
+
 The git repo was empty aside from the workspace file. Case study copy already lives in the Google Drive marketing folder (`Case Studies/software and automation.md`). That copy should land in `src/content/` as `satisfies` typed objects, not be pasted into a one-off page, so the case-study section can be reused.
 
 Official Vue TypeScript setup uses `@vue/tsconfig` and project references. FarmWork still has many `.js` SFCs; this marketing site must not copy that. Vite will not catch type errors unless `vue-tsc` runs.

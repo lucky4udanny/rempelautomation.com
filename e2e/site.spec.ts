@@ -32,12 +32,28 @@ test('unnamed roofing study has no company name', async ({ page }) => {
 test('products page sells products without in-development framing', async ({ page }) => {
   await page.goto('/products/')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('FarmWork, FarmBridge, and Conduit')
-  await expect(page.getByRole('main')).toContainText('Conduit')
-  await expect(page.getByRole('main')).toContainText('See the FVI case study')
+  await expect(page.getByRole('heading', { level: 2, name: 'FarmWork' })).toBeVisible()
+  await expect(page.getByRole('heading', { level: 2, name: 'FarmBridge' })).toBeVisible()
+  await expect(page.getByRole('heading', { level: 2, name: 'Conduit' })).toBeVisible()
+  await expect(page.getByRole('main')).toContainText('Benefits')
+  await expect(page.getByRole('main')).toContainText('What it covers')
+  await expect(page.locator('#farmwork')).toContainText('Electronic hours')
+  await expect(page.locator('#farmbridge')).toContainText('Cooler inventory that matches')
+  await expect(page.locator('#conduit')).toContainText('Onboarding')
+  await expect(page.locator('#conduit')).toContainText('FarmWork:')
+  await expect(page.locator('#conduit')).toContainText('FarmBridge:')
+  await expect(page.getByRole('main')).toContainText('Read the FVI case study')
   await expect(page.getByRole('main')).not.toContainText('In development')
   await expect(
     page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Products' }),
   ).toHaveAttribute('aria-current', 'page')
+})
+
+test('home product cards link to product anchors', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('main').locator('a[href="/products/#farmwork"]').click()
+  await expect(page).toHaveURL(/\/products\/#farmwork$/)
+  await expect(page.locator('#farmwork')).toBeVisible()
 })
 
 test('contact form reports success when the function accepts the message', async ({ page }) => {

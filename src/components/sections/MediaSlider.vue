@@ -8,9 +8,13 @@ interface Props {
   images: MediaImage[]
   title?: string
   tone?: 'default' | 'raised' | 'ink'
+  /** Product UI shots should use contain so the full screen is visible. */
+  fit?: 'cover' | 'contain'
+  /** Render without an outer AppSection when nested inside another band. */
+  embedded?: boolean
 }
 
-const { images, title = '', tone = 'default' } = defineProps<Props>()
+const { images, title = '', tone = 'default', fit = 'cover', embedded = false } = defineProps<Props>()
 const index = ref(0)
 const current = computed(() => images[index.value] ?? images[0])
 
@@ -24,8 +28,12 @@ function prev(): void {
 </script>
 
 <template>
-  <AppSection v-if="images.length" :tone="tone" size="compact">
-    <AppContainer>
+  <component
+    :is="embedded ? 'div' : AppSection"
+    v-if="images.length"
+    v-bind="embedded ? {} : { tone, size: 'compact' }"
+  >
+    <component :is="embedded ? 'div' : AppContainer">
       <div class="flex items-end justify-between gap-4">
         <h3 v-if="title" class="font-display text-lg font-semibold">{{ title }}</h3>
         <div v-if="images.length > 1" class="flex gap-2">
@@ -37,13 +45,21 @@ function prev(): void {
           </button>
         </div>
       </div>
-      <div class="mt-4 aspect-[16/10] overflow-hidden rounded-lg bg-ink sm:aspect-[2/1]">
+      <div
+        class="mt-4 overflow-hidden rounded-lg border border-line"
+        :class="
+          fit === 'contain'
+            ? 'flex min-h-[20rem] items-center justify-center bg-surface-raised p-4 sm:min-h-[28rem]'
+            : 'aspect-[16/10] bg-ink sm:aspect-[2/1]'
+        "
+      >
         <img
           :src="current.src"
           :alt="current.alt"
           :width="current.width"
           :height="current.height"
-          class="h-full w-full object-cover object-center"
+          class="max-h-[32rem] w-full"
+          :class="fit === 'contain' ? 'object-contain object-center' : 'h-full object-cover object-center'"
           loading="lazy"
           decoding="async"
         />
@@ -59,6 +75,6 @@ function prev(): void {
           @click="index = dotIndex"
         />
       </div>
-    </AppContainer>
-  </AppSection>
+    </component>
+  </component>
 </template>

@@ -9,7 +9,7 @@ import { homeProcessLoop } from '@/content/process'
 import {
   deskCodeBPhoto,
   farmbridgeOrganizations,
-  farmworkIpadFlat,
+  farmworkIpadAngled,
   opsWhiteboardPhoto,
 } from '@/content/media'
 
@@ -99,34 +99,38 @@ export const homeProducts = {
   items: [
     {
       name: 'FarmWork',
+      id: 'farmwork',
       owner: 'Time and production',
       summary:
         'Workforce time, piecework, and payroll rules that match how agriculture actually pays people, with offline field capture.',
-      points: [],
-      href: 'https://froveg.ca/farmwork.html',
-      to: '/products/',
-      toLabel: 'Products',
-      image: farmworkIpadFlat,
+      points: [
+        'Trusted hours and piece counts through a pay file ready for review.',
+        'Offline field capture that syncs when coverage returns.',
+      ],
+      image: farmworkIpadAngled,
     },
     {
       name: 'FarmBridge',
+      id: 'farmbridge',
       owner: 'Receiving through shipping',
       summary:
         'Receiving through shipping with sensors, controllers, printers, scanners, and floor sequences in the same workflow as the office.',
-      points: [],
-      href: 'https://froveg.ca/farmbridge.html',
-      to: '/products/',
-      toLabel: 'Products',
+      points: [
+        'Live cooler inventory, settlement proof, and dock scans that agree with the cooler.',
+        'Flows and devices authored for your shed, not one standard line.',
+      ],
       image: farmbridgeOrganizations,
     },
     {
       name: 'Conduit',
+      id: 'conduit',
       owner: 'AI helper',
       summary:
         'Onboarding, training, in-context support, issue ticketing, day-to-day work, reporting, and business intelligence through plain-language prompts inside the systems we deliver.',
-      points: [],
-      to: '/products/#conduit',
-      toLabel: 'About Conduit',
+      points: [
+        'Guided work and answers inside FarmWork and FarmBridge.',
+        'Spreadsheet and PDF imports you review before they land.',
+      ],
       image: deskCodeBPhoto,
     },
   ],
