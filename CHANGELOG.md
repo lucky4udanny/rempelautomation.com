@@ -4,6 +4,13 @@
 
 ### Changed
 
+- About page: removed Continuity FAQ band and `aboutFaqs` content.
+- About Innovation value: forward-looking expertise helping clients keep up with change, not reluctant tech adoption.
+- About Excellence value: carefulness covers software and hardware automation, not only a digital copy of paper.
+- About Integrity value: honesty and follow-through, including owning mistakes early and fixing them. Tool judgment stays under Innovation / How we use AI.
+- Dropped slogan “We stay after go-live.” Footer, home advantage card, and process hero now say support continues after the system is running / after launch.
+- Field-jobs case study: rewrote the operation blurb in plain language. Dropped roofing slang (“tear-off,” “roof is open”). Once work starts, scope and cost often exceed the quote.
+- FarmBridge case study: replaced vague “identity stays with the product” line with plain lot/grower/container history through shipping, including cooler and process links for shipped product.
 - FarmWork and FarmBridge case-study carousels now use the former ProductsPage screen sets (ipad/artboards; office/receiving/contracts). ProductsPage took the former case-study sets so assets stay unique per `site-media`.
 - FarmWork case study problem corrected. FVI already had time/production software. Gaps were unreliable field production (paper re-key), complex pay types (better-of, shared crew, year-end stay bonuses), and a weak Sage payment handoff. Solution and before/after rows match. Index card and SEO blurb updated.
 - Case study cards on `/case-studies/`: removed “What changed.” Solution copy now carries the outcome (payroll exceptions/export and floor ownership for FarmWork; one trail through load-out for FarmBridge). Fixed plant-time card object brace so `built` stays inside the card.

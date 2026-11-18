@@ -44,7 +44,7 @@ export const homeAdvantage = {
       body: 'Conduit onboarding imports spreadsheets and PDFs after you review. In-context support answers questions inside the product. Reporting and business intelligence answer plain-language questions. A person on our team stays accountable.',
     },
     {
-      title: 'We stay',
+      title: 'Support continues after launch',
       body: 'Support is part of the product. You reach a person who knows the system. Documentation and Conduit in-context support help manage support costs.',
     },
   ],
@@ -117,7 +117,7 @@ export const homeProducts = {
         'Receiving through shipping with sensors, controllers, printers, scanners, and floor automations in the same workflow as the office.',
       points: [
         'Live cooler inventory, settlement proof, and dock scans that agree with the cooler.',
-        'Flows and devices authored for your shed, not one standard line.',
+        'Flows and devices authored for your operation, not one standard line.',
       ],
       image: farmbridgeOrganizations,
     },

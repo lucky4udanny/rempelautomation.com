@@ -5,7 +5,7 @@ export const processHero = {
   kicker: 'Process',
   title: 'Map first. Change as little as will do the job. Stay for the next improvement.',
   leads: [
-    'We walk the floor, the field, and the office before we recommend software or hardware. What we learn after go-live returns to the next audit.',
+    'We walk the floor, the field, and the office before we recommend software or hardware. What we learn after the system is running feeds the next audit.',
     'Documentation, portability, and an installation that runs on your terms are part of every engagement.',
   ],
   image: opsControllersPhoto,

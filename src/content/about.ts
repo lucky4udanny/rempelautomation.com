@@ -1,6 +1,5 @@
 import type {
   CtaContent,
-  FaqItem,
   FeatureGridContent,
   HeroContent,
   PeopleListContent,
@@ -12,7 +11,7 @@ export const aboutHero = {
   title: 'Three partners. A family name on the work.',
   leads: [
     'It started with a pattern, not an industry. On a packing floor, in a manufacturing plant, on a roofing crew, capable people spent their days moving information between systems that do not talk to each other.',
-    'We are based in southwestern Ontario. The partners have shipped operations software for seasonal employers and packing sheds, and hardware interfaces for the floor. We stay after go-live.',
+    'We are based in southwestern Ontario. We have shipped automation solutions for seasonal employers and distribution operations, and hardware interfaces for the floor. And support continues after the system is running.',
   ],
   image: deskCadCropPhoto,
   tone: 'photo',
@@ -24,7 +23,7 @@ export const aboutValues = {
   items: [
     {
       title: 'Integrity',
-      body: 'We do what we say we will do. We do not hide problems or shift blame. If a simple digital process solves the problem, we say AI is not needed.',
+      body: 'We do what we say we will do. We do not hide problems or shift blame. If we get something wrong, we say so early and we fix it.',
     },
     {
       title: 'Trust',
@@ -40,11 +39,11 @@ export const aboutValues = {
     },
     {
       title: 'Excellence',
-      body: 'A digital version has to be at least as careful as the paper it replaces. If your paper file catches a wrong supplier invoice, our version catches it too.',
+      body: 'What we build has to be at least as careful as the process it replaces. That includes software, controllers, sensors, and machines. ',
     },
     {
       title: 'Innovation',
-      body: 'We adopt new technology only when it gives you a significant advantage. We turn it down when it would break your commitments or our ethics.',
+      body: 'We watch what is changing in software, robotics and AI. We bring you what helps your operation. You should not have to keep up with that alone. We help you choose and put useful new tools to work without breaking what already runs.',
     },
     {
       title: 'Continuous improvement',
@@ -62,7 +61,8 @@ export const aboutPeople = {
       role: 'Co-Founder',
       paragraphs: [
         'David co-founded a technology company and served as its chief operating officer for 15 years, growing the team to 35 and delivering integrated software to healthcare organizations across Canada. The work covered business development, technology integration, change management, and turning what senior leaders needed into systems people could run.',
-        'At Rempel Automation he leads new business and solutions design. He starts by understanding the operation, then chooses the technology. He was born in Mexico, raised in Canada, and is working toward fluency in Spanish.',
+        'He was born in Mexico, raised in Canada, and is working toward fluency in Spanish.',
+        'At Rempel Automation he leads new business and solutions design. He starts by understanding the operation, then chooses the technology.',
       ],
     },
     {
@@ -78,7 +78,7 @@ export const aboutPeople = {
       role: 'Founder',
       paragraphs: [
         'James was among the first employees of Research In Motion, where he led development teams. He founded Rempel Automation.',
-        'He leads hardware communication, controllers, and protocol interfaces, and he works with the controls vendors a site already uses.',
+        'He leads hardware communication, controllers, and protocol interfaces.',
       ],
     },
   ],
@@ -102,24 +102,6 @@ export const aboutAi = {
     },
   ],
 } satisfies FeatureGridContent
-
-export const aboutFaqs: FaqItem[] = [
-  {
-    question: 'What happens to our system if you are gone?',
-    answer:
-      'Each operation gets its own installation, not a shared pile we take with us. We document the system, train your people, and work with your IT. Ask us about continuity when we scope the work. We do not claim a legal escrow unless that is written into the engagement.',
-  },
-  {
-    question: 'Do we have to buy FarmWork or FarmBridge?',
-    answer:
-      'No. Those products grew out of work at Froese Vegetables Inc. We map your job and build or connect the record you need, including fitting the systems you already run. Conduit can sit on those systems when it fits.',
-  },
-  {
-    question: 'Will you replace our IT provider?',
-    answer:
-      'No. We work with them. If they need to upgrade a server or a clock, we say so plainly and stay in our lane.',
-  },
-]
 
 export const aboutCta = {
   title: 'If you own receiving, payroll, shipping, or a shop still on paper, write to us.',

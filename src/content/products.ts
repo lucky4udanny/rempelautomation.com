@@ -114,7 +114,7 @@ export const productDetails: ProductDetailContent[] = [
     purpose:
       'FarmBridge is product, inventory, receiving, shipping, and plant-floor automation. Track and automate product from intake through processing and inventory to outbound loads. Grower and customer contracts, loads, bills of lading, and invoices work together without double-entry.',
     audience:
-      'FarmBridge is for farm, packing, processing and distribution operations that need live inventory, grower settlement proof, buyer and inspector traceability, and floor automations that match your own equipment and processes.',
+      'FarmBridge is for farm, packing, processing and distribution operations that need live inventory, grower settlement proof, customer settlement proof, buyer and inspector traceability, and floor automations that match your own equipment and processes.',
     benefits: [
       'Inventory transparency from receiving to shipping.',
       'Grower statements backed by receiving evidence (bins, block, planting).',

@@ -45,7 +45,7 @@ export const caseStudyCards = [
     title: 'Roofing company',
     subtitle: 'Crew time, job cost, and accounting.',
     problem:
-      'Once the roof is open, the job changes. Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
+      'Once work starts, the job often costs more than the quote. Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     built:
       'Keep the estimating tool. Connect estimates, material orders, packing slips and invoices using custom middleware between the estimating tool and the 3rd party ERP.',
   },
@@ -130,18 +130,17 @@ export const farmWorkStudy = {
 export const farmBridgeStudy = {
   slug: 'farmbridge',
   title: 'Froese Vegetables Inc.',
-  subtitle: 'Receiving through shipping. FarmBridge was the product that followed.',
+  subtitle: 'FarmBridge: Receiving through shipping.',
   operation: [
-    'Froese Vegetables Inc. grows, grades, and ships. Inbound lots come from fields and other growers, then inventory, processing and outbound loads.',
-    'Buyers and inspectors ask one-step-back and one-step-forward questions. The dock has scales, cameras, and label printers. The office needs live quantity, age, and location.',
+    'Froese Vegetables Inc. grows, collects, grades, and ships. Inbound lots come from fields and other growers, then inventory, processing and customer bound shipments.',
+    'Buyers and food safety inspectors require traceability. The office needs live quantity, age, and location.',
   ],
   problemIntro: 'The product trail was a stack of clipboards.',
   problem: [
-    'Different products needed different forms and flows. Typical systems covered the steps but forced the shed to work for the software.',
-    'Intake captured weight, container counts, grower, and quality in ways that did not stay with the product once it left the scale.',
+    'Different products needed different forms and flows. Typical systems covered the steps but forced the operation to work for the software rather than the other way around.',
+    'Intake captured weight, container counts, grower, and quality on paper. The office had to re-key them into the system, and the information was not accessbile to the floor.',
     'Inventory was a walk-around. Shipping paperwork and the cooler did not share a source of truth.',
-    'Floor hardware was not part of the same workflow as the record.',
-    'When the packing shed changed how a job ran, the answer was a custom code change.',
+    'Floor hardware was not part of the digital workflow.',
   ],
   builtIntro:
     'FarmBridge is the product that came out of that problem. It is one record from the field to the customer’s dock, plus an automation layer so the operation can author how floor work runs. Rempel Automation implements, customizes, trains, and supports it.',
@@ -149,22 +148,22 @@ export const farmBridgeStudy = {
     {
       heading: 'Core operations',
       items: [
-        'Receiving, inventory, processing, shipping, grower settlement, and live reporting on one trail.',
-        'Identity stays with the product so a load can still answer what went in.',
+        'Receiving, inventory, processing, shipping, grower settlement, customer settlement, and live reporting.',
+        'Grower, planting, lot, and container history stay with the product from receiving through shipping, so shipped product is linked to the coolers, processes, lots, and plantings it came from or passed through.',
       ],
     },
     {
       heading: 'Floor and hardware',
       items: [
-        'Handheld scanning with destination-first flows.',
-        'Scales, cameras, and printers attached to the same record the office sees.',
+        'Handheld scanning (RFID, QR, barcode) to keep track of product locations, processes and shipments.',
+        'Scales, cameras, and printers read and feed the same record the office and operation sees.',
       ],
     },
     {
       heading: 'Automation',
       items: [
-        'Floor automations authored and published without a rewrite of the core product.',
-        'Site rules such as tare and yield stay with the site.',
+        'Floor automations authored, enabling highly customizable tracked and controlled floor processes.',
+        'Calculations, data entry, and validation rules run in the system, according to the operation’s own rules.',
         'Recall window can be tuned to balance productivity and risk.',
       ],
     },
@@ -180,11 +179,11 @@ export const farmBridgeStudy = {
     },
     {
       before: 'Every SOP change needed custom code',
-      after: 'Floor automations authored in automation, then published',
+      after: 'Floor automations authored in automation',
     },
   ],
   closer:
-    'Operators still drive forklifts. The office still settles growers and customers. They are no longer reconciling three versions of the truth.',
+    'Operators still drive forklifts. The office still settles growers and customers. They now automatically share the same record of truth, and many processes are automated.',
   externalProduct: { label: 'FarmBridge on froveg.ca', href: 'https://froveg.ca/farmbridge.html' },
   screens: [farmbridgeOffice, farmbridgeReceivingReport, farmbridgeContracts],
 } satisfies CaseStudyPageContent
@@ -193,18 +192,18 @@ export const fieldJobsStudy = {
   slug: 'field-jobs',
   title: 'Roofing company',
   subtitle: 'Crew time, job cost, field issues, and accounting.',
-  unnamedNotice: 'The client is not named. What remains is the operational problem and the solution.',
   operation: [
-    'A roofing contractor. Quotes go out from an estimating tool the crew already knows. Jobs change once the roof is open. Crews work across sites. Trailer stock and equipment service matter to margin.',
+    'Jobs are quoted using an industry-specific estimating tool. Crews move between job sites. Once work starts, the crew often finds damage or scope the quote did not cover. Extra labour, materials pulled from the trailer, and equipment downtime decide whether the job still makes money.',
   ],
-  problemIntro: 'Once the roof is open, the job changes.',
+  problemIntro: 'Once work starts, the job often costs more than the quote. Reconciling the numbers is a tedious manual process.',
   problem: [
     'Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     'The books get the numbers late, so job cost arrives after the crew has moved on.',
     'The owner cannot see open jobs, unpaid invoices, or field issues while away.',
+    'Material orders, packing slips, and invoices are manually reconciled.',
   ],
   builtIntro:
-    'Keep the estimating tool. Connect the rest of the job so the office and the field share one view.',
+    'Keep the estimating tool. Connect the rest of the job so the office and the field share one view, updated once. Reconcile the numbers automatically.',
   built: [
     {
       heading: 'Solution',
@@ -212,9 +211,9 @@ export const fieldJobsStudy = {
         'Crew time against the job, with a mobile path for supervisors.',
         'Job cost that combines labour and material as the work happens.',
         'Field issues with photos, instead of group texts.',
-        'Trailer inventory and equipment service logs.',
+        'Trailer inventory and equipment service logs entered in real-time.',
         'An accounting sync so invoices are not re-typed.',
-        'One owner view of open work, receivables, and exceptions.',
+        'One owner view of open work, receivables, and exceptions to aid in reconciliation.',
       ],
     },
   ],
@@ -225,7 +224,6 @@ export const plantTimeStudy = {
   slug: 'plant-time',
   title: 'Manufacturer',
   subtitle: 'Time clock, ERP, and benefits.',
-  unnamedNotice: 'The client is not named. What remains is the operational problem and the solution.',
   operation: [
     'A manufacturer with a time clock for attendance and an ERP for payroll and job records. Office staff close payroll on a fixed cycle. Benefits and allowances are tracked outside the ERP today.',
   ],
@@ -260,7 +258,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyPageContent> = {
 }
 
 export const caseStudyCta = {
-  title: 'If the same number still lives in three places, talk with us.',
+  title: 'If the same number still lives in three places, let\'s talk.',
   actionLabel: 'Contact us',
   to: '/contact/',
 } satisfies CtaContent
