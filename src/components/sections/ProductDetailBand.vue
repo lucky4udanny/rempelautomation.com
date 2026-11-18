@@ -2,7 +2,6 @@
 import AppButton from '@/components/primitives/AppButton.vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
-import AppLink from '@/components/primitives/AppLink.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
 import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import MediaSlider from '@/components/sections/MediaSlider.vue'
@@ -39,13 +38,16 @@ const { content } = defineProps<Props>()
       </div>
 
       <div v-if="content.domains?.length" class="mt-12 space-y-10">
-        <h3 class="font-display text-lg font-semibold text-ink">What it covers</h3>
+        <h3 class="font-display text-lg font-semibold text-ink">Features</h3>
         <div v-for="domain in content.domains" :key="domain.title" class="max-w-3xl">
           <h4 class="font-display text-base font-semibold text-ink">{{ domain.title }}</h4>
           <p v-if="domain.purpose" class="mt-2 text-sm leading-6 text-ink-muted sm:text-base">
             <LinkedProse :text="domain.purpose" />
           </p>
-          <ul class="mt-3 space-y-2 text-sm leading-6 text-ink-muted sm:text-base">
+          <ul
+            v-if="domain.benefits.length"
+            class="mt-3 space-y-2 text-sm leading-6 text-ink-muted sm:text-base"
+          >
             <li v-for="benefit in domain.benefits" :key="benefit" class="flex gap-3">
               <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
               <span><LinkedProse :text="benefit" /></span>
@@ -62,9 +64,14 @@ const { content } = defineProps<Props>()
         <AppButton v-if="content.caseStudyTo" :to="content.caseStudyTo" variant="secondary">
           {{ content.caseStudyLabel ?? 'Read the case study' }}
         </AppButton>
-        <AppLink v-if="content.externalHref" :href="content.externalHref">
+        <AppButton
+          v-if="content.externalHref"
+          :href="content.externalHref"
+          variant="secondary"
+          :external-icon="true"
+        >
           {{ content.externalLabel ?? 'Product site' }}
-        </AppLink>
+        </AppButton>
       </div>
 
       <div v-if="content.screens?.length" class="mt-12">

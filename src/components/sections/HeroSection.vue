@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
           :eyebrow="content.kicker"
           :tone="content.tone === 'photo' ? 'inverse' : 'default'"
         >
-          {{ content.title }}
+          <LinkedProse :text="content.title" />
         </AppHeading>
         <div
           class="mt-6 flex flex-col gap-4 text-base leading-7 sm:text-lg"

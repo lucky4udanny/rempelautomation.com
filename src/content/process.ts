@@ -98,7 +98,7 @@ export const processLoop = {
       body: [
         'Support is part of the engagement, not an add-on afterthought.',
         'You get a named contact and upgrades. We work with your IT. We do not displace them.',
-        'Documentation and Conduit in-context support keep people productive. Issue ticketing captures problems in the same place. The installation runs on your terms.',
+        'Documentation and Conduit in-context support keep people productive. Conduit issue ticketing captures software bugs and feature requests with screen and record context attached. The installation runs on your terms.',
       ],
     },
     {

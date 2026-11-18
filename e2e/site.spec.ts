@@ -36,12 +36,13 @@ test('products page sells products without in-development framing', async ({ pag
   await expect(page.getByRole('heading', { level: 2, name: 'FarmBridge' })).toBeVisible()
   await expect(page.getByRole('heading', { level: 2, name: 'Conduit' })).toBeVisible()
   await expect(page.getByRole('main')).toContainText('Benefits')
-  await expect(page.getByRole('main')).toContainText('What it covers')
-  await expect(page.locator('#farmwork')).toContainText('Electronic hours')
-  await expect(page.locator('#farmbridge')).toContainText('Cooler inventory that matches')
+  await expect(page.getByRole('main')).toContainText('Features')
+  await expect(page.locator('#farmwork')).toContainText('Reviewable electronic clocks')
+  await expect(page.locator('#farmbridge')).toContainText('Inventory transparency from receiving to shipping')
   await expect(page.locator('#conduit')).toContainText('Onboarding')
   await expect(page.locator('#conduit')).toContainText('FarmWork:')
   await expect(page.locator('#conduit')).toContainText('FarmBridge:')
+  await expect(page.locator('#conduit')).toContainText('Third-party (most MCP enabled software):')
   await expect(page.getByRole('main')).toContainText('Read the FVI case study')
   await expect(page.getByRole('main')).not.toContainText('In development')
   await expect(
@@ -51,9 +52,21 @@ test('products page sells products without in-development framing', async ({ pag
 
 test('home product cards link to product anchors', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('main').locator('a[href="/products/#farmwork"]').click()
+  await page.getByRole('main').locator('a.group[href="/products/#farmwork"]').click()
   await expect(page).toHaveURL(/\/products\/#farmwork$/)
   await expect(page.locator('#farmwork')).toBeVisible()
+})
+
+test('product names deep-link to product detail bands', async ({ page }) => {
+  await page.goto('/case-studies/')
+  await page.getByRole('main').getByRole('link', { name: 'FarmBridge', exact: true }).first().click()
+  await expect(page).toHaveURL(/\/products\/#farmbridge$/)
+  await expect(page.locator('#farmbridge')).toBeVisible()
+
+  await page.goto('/about/')
+  await page.getByRole('main').getByRole('link', { name: 'Conduit', exact: true }).first().click()
+  await expect(page).toHaveURL(/\/products\/#conduit$/)
+  await expect(page.locator('#conduit')).toBeVisible()
 })
 
 test('contact form reports success when the function accepts the message', async ({ page }) => {

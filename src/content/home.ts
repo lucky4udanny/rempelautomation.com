@@ -86,7 +86,7 @@ export const homeIndustries = {
     },
     {
       title: 'Trades',
-      body: 'Electricians, plumbers, roofers, concrete, drywall, masonry, and any other trade. Crew time, materials, and job cost show up in your accounting while the work is underway. Conduit ticketing and in-context support keep field issues and answers in the same place.',
+      body: 'Electricians, plumbers, roofers, concrete, drywall, masonry, and any other trade. Crew time, materials, and job cost show up in your accounting while the work is underway. Conduit in-context support and day-to-day work keep answers and next steps inside the software.',
     },
   ],
 } satisfies FeatureGridContent
@@ -114,7 +114,7 @@ export const homeProducts = {
       id: 'farmbridge',
       owner: 'Receiving through shipping',
       summary:
-        'Receiving through shipping with sensors, controllers, printers, scanners, and floor sequences in the same workflow as the office.',
+        'Receiving through shipping with sensors, controllers, printers, scanners, and floor automations in the same workflow as the office.',
       points: [
         'Live cooler inventory, settlement proof, and dock scans that agree with the cooler.',
         'Flows and devices authored for your shed, not one standard line.',

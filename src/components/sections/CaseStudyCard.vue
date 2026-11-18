@@ -16,7 +16,9 @@ defineProps<Props>()
   >
     <div class="flex flex-1 flex-col p-6">
       <p class="text-sm font-semibold text-accent-strong">{{ study.title }}</p>
-      <h3 class="mt-2 font-display text-xl font-semibold text-ink">{{ study.subtitle }}</h3>
+      <h3 class="mt-2 font-display text-xl font-semibold text-ink">
+        <LinkedProse :text="study.subtitle" />
+      </h3>
       <p
         v-if="study.statusNote"
         class="mt-3 rounded-md bg-surface px-3 py-2 text-xs font-medium text-ink-muted"

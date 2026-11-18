@@ -18,7 +18,7 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | `AppHeading` | Eyebrow / h1 / h2 / h3; `tone="inverse"` on photo and ink bands |
 | `AppButton` | `primary` / `secondary` / `ghost` / `outline-light`; `to` or external `href` |
 | `AppLink` | Internal RouterLink or external `href` with `noopener` |
-| `LinkedProse` | Plain string that turns every “Conduit” into a link to `/products/#conduit` |
+| `LinkedProse` | Plain string that turns FarmWork, FarmBridge, and Conduit into deep links on `/products/#…` |
 | `AppImage` | Width/height, alt, lazy; optional caption |
 | `AppSection` | Shared band padding and tone (`default` / `raised` / `ink`; `compact` size) |
 

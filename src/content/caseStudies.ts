@@ -50,7 +50,7 @@ export const caseStudyCards = [
     problem:
       'Once the roof is open, the job changes. Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     built:
-      'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting. Conduit ticketing keeps field issues out of group texts.',
+      'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting.',
   },
   {
     slug: 'plant-time',
@@ -136,7 +136,7 @@ export const farmBridgeStudy = {
   title: 'Froese Vegetables Inc.',
   subtitle: 'Receiving through shipping. FarmBridge was the product that followed.',
   operation: [
-    'Froese Vegetables Inc. grows, grades, and ships. Inbound lots come from fields and other growers, then inventory, processing, and outbound loads.',
+    'Froese Vegetables Inc. grows, grades, and ships. Inbound lots come from fields and other growers, then inventory, processing and outbound loads.',
     'Buyers and inspectors ask one-step-back and one-step-forward questions. The dock has scales, cameras, and label printers. The office needs live quantity, age, and location.',
   ],
   problemIntro: 'The product trail was a stack of clipboards.',
@@ -167,7 +167,7 @@ export const farmBridgeStudy = {
     {
       heading: 'Automation',
       items: [
-        'Floor sequences authored and published without a rewrite of the core product.',
+        'Floor automations authored and published without a rewrite of the core product.',
         'Site rules such as tare and yield stay with the site.',
         'Recall window can be tuned to balance productivity and risk.',
       ],
@@ -184,7 +184,7 @@ export const farmBridgeStudy = {
     },
     {
       before: 'Every SOP change needed custom code',
-      after: 'Floor sequences authored in automation, then published',
+      after: 'Floor automations authored in automation, then published',
     },
   ],
   closer:
@@ -215,7 +215,7 @@ export const fieldJobsStudy = {
       items: [
         'Crew time against the job, with a mobile path for supervisors.',
         'Job cost that combines labour and material as the work happens.',
-        'Field issues with photos, instead of group texts. Conduit issue ticketing keeps those items in one place.',
+        'Field issues with photos, instead of group texts.',
         'Trailer inventory and equipment service logs.',
         'An accounting sync so invoices are not re-typed.',
         'One owner view of open work, receivables, and exceptions.',

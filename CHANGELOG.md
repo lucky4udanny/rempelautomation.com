@@ -4,7 +4,13 @@
 
 ### Changed
 
-- Products page: FarmWork, FarmBridge, and Conduit rewritten around positive benefits, capability domains, and honest boundaries. Conduit domains include concrete FarmWork and FarmBridge examples (onboarding through import). Home product cards list benefit points. E2e asserts Benefits / What it covers copy. x2 (heading and bullets say what you get, not “Pain it removes”).
+- froveg.ca product links render as secondary buttons with a filled external-link icon (products and case studies). AppButton icon logic no longer depends on destructured props.
+- FarmBridge products carousel: dropped the last two handheld lots screens.
+- Conduit issue ticketing clarified as software bugs and feature requests with AI-attached context (not field-issue tracking). No per-product examples on that band.
+- Conduit on products: Onboarding is organization setup/imports; Training is new staff/SOPs. Each service band shows FarmWork, FarmBridge, and a third-party MCP-enabled example.
+- LinkedProse deep-links FarmWork, FarmBridge, and Conduit to `/products/#…` sitewide (heroes, grids, FAQs, bios, case studies). Router honors hash scroll for those anchors.
+- Products page: FarmWork, FarmBridge, and Conduit rewritten around positive benefits, capability domains, and honest boundaries. Conduit domains include concrete FarmWork and FarmBridge examples (onboarding through import). Home product cards list benefit points. E2e asserts Benefits / Features copy. x2 (heading and bullets say what you get, not “Pain it removes”).
+- Products e2e: section copy assertions match live `products.ts` strings (`Reviewable electronic clocks`, `Inventory transparency from receiving to shipping`) instead of stale phrases that never rendered.
 - Products page: separate FarmWork, FarmBridge, and Conduit sections (purpose, who it is for, benefits). FarmWork and FarmBridge each have a full-screen contain carousel.
 - Home product cards are whole-card links to `/products/#farmwork` (and siblings), with image scale and darker hover; removed misaligned Product site / Products controls.
 - Products hero uses a handheld FarmBridge receiving confirmation shot instead of trailer row.

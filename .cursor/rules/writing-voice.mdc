@@ -21,14 +21,14 @@ Rempel Automation streamlines and automates **data collection, processing, and r
 
 ## Conduit (locked)
 
-Conduit is a **central offering**, not a side note. FarmWork and FarmBridge are primarily agriculture. Conduit applies across **every sector** and likely **every solution**.
+Conduit is a **central offering**, not a side note. FarmWork and FarmBridge are primarily agriculture. Conduit applies across **every sector** and can sit on **FarmWork, FarmBridge, and other MCP-enabled third-party software** the client already runs.
 
 Seven AI-assisted services (name the relevant ones in context; do not dump all seven every time):
 
-1. Onboarding
-2. Training
+1. Onboarding (organization setup into the software. Imports and mapping from spreadsheets, PDFs, accounting exports, catalogs. Not “new hire week one.”)
+2. Training (new staff and SOPs inside the product. How and why, without a week of shadowing.)
 3. In-context support
-4. Issue ticketing
+4. Issue ticketing (software bugs and feature requests; AI attaches screen and record context to the ticket)
 5. Day-to-day work
 6. Reporting
 7. Business intelligence
@@ -37,8 +37,10 @@ Seven AI-assisted services (name the relevant ones in context; do not dump all s
 
 ```text
 ❌ One vague line: “AI helps your people work.”
+❌ Onboarding = walk a new clerk through first scan (that is Training).
 ✅ Support band: Documentation and Conduit in-context support help manage support costs.
-✅ Process onboarding: Conduit onboarding can read spreadsheets and PDFs, propose a mapping, then import after review.
+✅ Organization setup: Conduit onboarding can read spreadsheets and PDFs, propose a mapping, then import after review.
+✅ New hire: Conduit training walks a supervisor through first crew clock-in and the pay rules behind it.
 ✅ Trades / manufacturing: Conduit reporting and business intelligence answer plain-language questions across the operation.
 ```
 

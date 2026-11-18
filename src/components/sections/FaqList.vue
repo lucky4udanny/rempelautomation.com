@@ -3,6 +3,7 @@ import { useId } from 'vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
+import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import type { FaqItem } from '@/types/content'
 
 interface Props {
@@ -23,8 +24,12 @@ const listId = useId()
       </AppHeading>
       <dl class="mt-10 divide-y divide-line">
         <div v-for="item in items" :key="item.question" class="py-6">
-          <dt class="font-display text-lg font-semibold text-ink">{{ item.question }}</dt>
-          <dd class="mt-3 text-sm leading-6 text-ink-muted">{{ item.answer }}</dd>
+          <dt class="font-display text-lg font-semibold text-ink">
+            <LinkedProse :text="item.question" />
+          </dt>
+          <dd class="mt-3 text-sm leading-6 text-ink-muted">
+            <LinkedProse :text="item.answer" />
+          </dd>
         </div>
       </dl>
     </AppContainer>

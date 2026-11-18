@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import AppButton from '@/components/primitives/AppButton.vue'
 import AppContainer from '@/components/primitives/AppContainer.vue'
 import AppHeading from '@/components/primitives/AppHeading.vue'
-import AppLink from '@/components/primitives/AppLink.vue'
 import AppSection from '@/components/primitives/AppSection.vue'
 import LinkedProse from '@/components/primitives/LinkedProse.vue'
 import BeforeAfterTable from '@/components/sections/BeforeAfterTable.vue'
@@ -19,7 +19,9 @@ defineProps<Props>()
   <AppSection as="article">
     <AppContainer class="max-w-3xl">
       <AppHeading :level="1" eyebrow="Case study">{{ study.title }}</AppHeading>
-      <p class="mt-4 text-lg font-medium text-ink">{{ study.subtitle }}</p>
+      <p class="mt-4 text-lg font-medium text-ink">
+        <LinkedProse :text="study.subtitle" />
+      </p>
       <p
         v-if="study.unnamedNotice"
         class="mt-4 rounded-md border border-line bg-surface-raised px-4 py-3 text-sm text-ink-muted"
@@ -32,9 +34,11 @@ defineProps<Props>()
       >
         {{ study.statusNote }}
       </p>
-      <p v-if="study.externalProduct" class="mt-4 text-sm">
-        <AppLink :href="study.externalProduct.href">{{ study.externalProduct.label }}</AppLink>
-      </p>
+      <div v-if="study.externalProduct" class="mt-4">
+        <AppButton :href="study.externalProduct.href" variant="secondary" :external-icon="true">
+          {{ study.externalProduct.label }}
+        </AppButton>
+      </div>
 
       <section class="mt-12">
         <h2 class="font-display text-2xl font-bold text-ink">The operation</h2>
