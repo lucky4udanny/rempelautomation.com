@@ -12,6 +12,33 @@ test('home states people-first automation and points at contact', async ({ page 
   await expect(page).toHaveURL(/\/contact\/$/)
 })
 
+test('process ring keeps the clicked stage highlighted on desktop', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
+  await page.goto('/process/')
+
+  const clickRing = async (label: string): Promise<void> => {
+    await page.locator('svg text', { hasText: new RegExp(`^${label}$`) }).evaluate((text) => {
+      const circle = text.previousElementSibling
+      if (!(circle instanceof SVGElement)) {
+        throw new Error(`No ring node for ${text.textContent ?? label}`)
+      }
+      circle.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    })
+  }
+
+  await clickRing('Design')
+  await expect(page.locator('article.ring-2 h3')).toHaveText('Process design')
+  await expect
+    .poll(async () => page.locator('article.ring-2 h3').textContent(), { timeout: 2000 })
+    .toBe('Process design')
+
+  await clickRing('Audit')
+  await expect(page.locator('article.ring-2 h3')).toHaveText('Audit and document')
+  await expect
+    .poll(async () => page.locator('article.ring-2 h3').textContent(), { timeout: 2000 })
+    .toBe('Audit and document')
+})
+
 test('FarmWork case study names FVI and links the product', async ({ page }) => {
   await page.goto('/case-studies/farmwork/')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Froese Vegetables Inc.')

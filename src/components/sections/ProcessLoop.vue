@@ -17,12 +17,16 @@ const activeIndex = ref(0)
 const pathIndex = ref(0)
 const hoverIndex = ref<number | null>(null)
 const chapterElements = ref<HTMLElement[]>([])
+/** Ignore scroll-driven highlight updates while a ring click is scrolling a chapter into place. */
+let ignoreObserverUntil = 0
 
 const activeStage = computed(() => content.stages[activeIndex.value] ?? content.stages[0])
 const displayIndex = computed(() => hoverIndex.value ?? activeIndex.value)
 const nodeCount = computed(() => content.stages.length)
 const radius = 118
 const center = 170
+/** Matches sticky ring / scroll-mt-28 so the chapter under the header wins. */
+const chapterFocusY = 112
 
 const nodes = computed(() =>
   content.stages.map((stage, index) => {
@@ -47,12 +51,33 @@ function setChapterRef(el: unknown, index: number): void {
   }
 }
 
+function syncActiveFromScroll(): void {
+  if (Date.now() < ignoreObserverUntil) {
+    return
+  }
+  // Last chapter whose top has reached the sticky header band (classic scrollspy).
+  let bestIndex = 0
+  for (let index = 0; index < chapterElements.value.length; index += 1) {
+    const el = chapterElements.value[index]
+    if (!el) {
+      continue
+    }
+    if (el.getBoundingClientRect().top <= chapterFocusY + 48) {
+      bestIndex = index
+    }
+  }
+  if (bestIndex !== activeIndex.value) {
+    activeIndex.value = bestIndex
+  }
+}
+
 function select(index: number): void {
   activeIndex.value = index
   pathIndex.value = 0
   if (content.compact) {
     return
   }
+  ignoreObserverUntil = Date.now() + 1200
   void nextTick(() => {
     chapterElements.value[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   })
@@ -84,19 +109,10 @@ onMounted(() => {
     return
   }
   observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-      if (!visible?.target) {
-        return
-      }
-      const index = Number((visible.target as HTMLElement).dataset.index)
-      if (!Number.isNaN(index)) {
-        activeIndex.value = index
-      }
+    () => {
+      syncActiveFromScroll()
     },
-    { rootMargin: '-35% 0px -45% 0px', threshold: [0.2, 0.5, 0.8] },
+    { rootMargin: '-20% 0px -40% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
   )
   for (const el of chapterElements.value) {
     if (el) {

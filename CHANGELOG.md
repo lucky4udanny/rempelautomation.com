@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Process loop on wide screens: ring clicks no longer lose highlight to a stale IntersectionObserver pick. Scroll sync uses chapter position under the header and ignores observer updates during programmatic scroll.
+
 ### Changed
 
 - About page: removed Continuity FAQ band and `aboutFaqs` content.

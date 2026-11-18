@@ -26,7 +26,7 @@ Without a catalog, a greenfield Vue marketing site tends to grow a second hero a
 
 Voice: people first, process second, then software and hardware automation as one practice (not software-or-hardware). Productivity, quality, safety. Products sell products; case studies tell client problems. FarmBridge product carousels use lot details / android receiving / inventory. Case-study carousels use office / receiving report / contracts (distinct assets). Visitor copy must not finish a thought then tack on a related phrase after a colon or dash. Write another sentence instead (`writing-content.mdc`).
 
-The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`. Ring nodes use `ringLabel` (Audit, Design, …), not bare numbers; the sticky column does not repeat the stage summary under the ring.
+The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`. Ring nodes use `ringLabel` (Audit, Design, …), not bare numbers; the sticky column does not repeat the stage summary under the ring. Desktop highlight must ignore IntersectionObserver while a ring click scrolls, then use classic scrollspy (last chapter whose top has crossed the sticky header). Distance-to-header and “highest ratio among changed entries” both left Design highlighted when clicking back to Audit.
 
 `FeatureGrid` is static cards only (title + body). Expand overlays were removed. Put the useful sentence in `body`. Do not add a second “marketing” paragraph behind a click.
 
