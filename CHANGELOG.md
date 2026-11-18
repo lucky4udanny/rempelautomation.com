@@ -4,6 +4,9 @@
 
 ### Changed
 
+- FarmWork and FarmBridge case-study carousels now use the former ProductsPage screen sets (ipad/artboards; office/receiving/contracts). ProductsPage took the former case-study sets so assets stay unique per `site-media`.
+- FarmWork case study problem corrected. FVI already had time/production software. Gaps were unreliable field production (paper re-key), complex pay types (better-of, shared crew, year-end stay bonuses), and a weak Sage payment handoff. Solution and before/after rows match. Index card and SEO blurb updated.
+- Case study cards on `/case-studies/`: removed “What changed.” Solution copy now carries the outcome (payroll exceptions/export and floor ownership for FarmWork; one trail through load-out for FarmBridge). Fixed plant-time card object brace so `built` stays inside the card.
 - froveg.ca product links render as secondary buttons with a filled external-link icon (products and case studies). AppButton icon logic no longer depends on destructured props.
 - FarmBridge products carousel: dropped the last two handheld lots screens.
 - Conduit issue ticketing clarified as software bugs and feature requests with AI-attached context (not field-issue tracking). No per-product examples on that band.

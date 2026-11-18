@@ -83,7 +83,6 @@ export interface CaseStudyCardContent {
   subtitle: string
   problem: string
   built: string
-  changed?: string
   statusNote?: string
 }
 

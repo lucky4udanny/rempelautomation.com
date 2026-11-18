@@ -62,7 +62,7 @@ export const publicPages: PublicPageMeta[] = [
     name: 'farmwork',
     title: `Froese Vegetables Inc. workforce | ${companyName}`,
     description:
-      'How complex agricultural pay and double-entry led to FarmWork. One record from clock-in through the pay file.',
+      'FVI already had time and production software. FarmWork replaced paper field counts, complex agricultural pay gaps, and a weak Sage payment handoff.',
     footerLabel: 'FVI workforce',
     footerOrder: 8,
   },

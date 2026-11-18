@@ -19,12 +19,12 @@ Without a catalog, a greenfield Vue marketing site tends to grow a second hero a
 
 `SiteHeader` marks the current nav item in accent green: a light rounded underline on desktop, a left accent bar on mobile. Nested case-study URLs keep Case studies active.
 
-`CaseStudyList` accepts optional `kicker` and `title` so the home page can separate Products (`ProductGrid`) from Case studies without a second one-off section.
+`CaseStudyList` accepts optional `kicker` and `title` so the home page can separate Products (`ProductGrid`) from Case studies without a second one-off section. Index cards show Problem and Solution only. Outcomes that used to sit under “What changed” belong in Solution. The FarmWork FVI study must not claim they had no time system. They had one that failed on field production, complex pay types, and Sage payment.
 
 `ComparisonTable` remains in the catalog for a four-column alternatives grid. Home no longer uses it.
 `ProductDetailBand` owns each product on `/products/` (purpose, audience, **Benefits**, optional **Features** domains, boundary, optional `MediaSlider` with `fit="contain"`). Home `ProductGrid` cards link to those anchors and may list short benefit points.
 
-Voice: people first, process second, then software and hardware automation as one practice (not software-or-hardware). Productivity, quality, safety. Products sell products; case studies tell client problems. FarmBridge product/case screens prefer lot details (scale + cameras on one record) over the old handheld lots list. Visitor copy must not finish a thought then tack on a related phrase after a colon or dash. Write another sentence instead (`writing-content.mdc`).
+Voice: people first, process second, then software and hardware automation as one practice (not software-or-hardware). Productivity, quality, safety. Products sell products; case studies tell client problems. FarmBridge product carousels use lot details / android receiving / inventory. Case-study carousels use office / receiving report / contracts (distinct assets). Visitor copy must not finish a thought then tack on a related phrase after a colon or dash. Write another sentence instead (`writing-content.mdc`).
 
 The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on desktop, previous/next on a phone, full chapters in the HTML for SEO. Compact mode on Home links to `/process/`. Ring nodes use `ringLabel` (Audit, Design, …), not bare numbers; the sticky column does not repeat the stage summary under the ring.
 

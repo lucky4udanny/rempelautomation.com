@@ -1,12 +1,11 @@
 import type { CaseStudyCardContent, CaseStudyPageContent, CtaContent, HeroContent } from '@/types/content'
 import {
-  farmbridgeAndroid1,
-  farmbridgeAndroidInventory,
-  farmbridgeLotDetails,
-  farmworkArtboard16,
-  farmworkArtboard20,
-  farmworkPhoneAngled,
-  farmworkPhoneFlat,
+  farmbridgeContracts,
+  farmbridgeOffice,
+  farmbridgeReceivingReport,
+  farmworkArtboard14,
+  farmworkArtboard25,
+  farmworkIpadFlat,
   opsGraderPhoto,
   opsScalePhoto,
 } from '@/content/media'
@@ -15,7 +14,8 @@ export const caseStudiesHero = {
   kicker: 'Case studies',
   title: 'Operations we worked in. Problems we solved.',
   leads: [
-    'Froese Vegetables Inc. drove FarmWork and FarmBridge. The roofing and manufacturing studies name the problem and the solution without naming the client.',
+    'Froese Vegetables Inc. drove the development of FarmWork and FarmBridge. Froese Vegetables benefited from ownership of software which they license to similar operations.',
+    'We think creatively about problems. Sometimes the right answer is integration with what you already run. Sometimes its an opportunity to build something new.',
   ],
   image: opsScalePhoto,
   tone: 'photo',
@@ -25,23 +25,20 @@ export const caseStudyCards = [
   {
     slug: 'farmwork',
     title: 'Froese Vegetables Inc.',
-    subtitle: 'Seasonal workforce time, piecework, and payroll.',
+    subtitle: 'Seasonal and permanent workforce time and piecework tracking and reporting.',
     problem:
-      'Complex pay rules (conditional bonuses, program deductions, hourly plus piecework on the same task) and double-entry of hours and production. Generic time clocks and HR tools could not model that pay.',
+      'They already had a time and production package, but field production still landed on paper and was re-keyed each day. It could not model better-of minimum wage and piecework, shared crew production, or year-end stay bonuses, and it did not hand off cleanly into Sage for payment.',
     built:
-      'FarmWork was built so time and production are collected once in the field or packing area, pay rules run in the system, and payroll reviews a clean file.',
-    changed: 'Payroll reviews exceptions and exports. Supervisors still own the clock and the count where the work happens.',
+      'FarmWork captures time and production in the field or packing area, including offline. It runs complex pay rules in the system, then exports a reviewable file into Sage. Supervisors still own the clock and the count where the work happens.',
   },
   {
     slug: 'farmbridge',
     title: 'Froese Vegetables Inc.',
     subtitle: 'Receiving through shipping for packing and distribution.',
     problem:
-      'Different forms and flows per product. Receiving, processing, inventory, and shipping had to stay traced. Existing systems covered steps but forced the shed to work for the software.',
+      'Different forms and flows per product. Receiving, processing, inventory, and shipping had to stay traced. Required office employees to work overtime to receive product from growers.',
     built:
-      'FarmBridge was built as a configurable system that fits how the shed already works, including paper processes, sensors, and machines, with a recall window that can be tuned.',
-    changed:
-      'Identity, location, and quantity stay on one trail. Load-out is a move plus an allocation on that same trail.',
+      'FarmBridge was built as a configurable system that fits the existing processes. Scales, cameras, printers, and other devices were automated so the operation can receive product from growers without office overtime. Identity and location are tracked from receiving through shipping.',
   },
   {
     slug: 'field-jobs',
@@ -50,7 +47,7 @@ export const caseStudyCards = [
     problem:
       'Once the roof is open, the job changes. Extra labour, materials from the trailer, and field notes live in texts and memory instead of the job file.',
     built:
-      'Keep the estimating tool. Connect crew time, job cost, field issues with photos, trailer inventory, equipment service, and accounting.',
+      'Keep the estimating tool. Connect estimates, material orders, packing slips and invoices using custom middleware between the estimating tool and the 3rd party ERP.',
   },
   {
     slug: 'plant-time',
@@ -59,7 +56,7 @@ export const caseStudyCards = [
     problem:
       'Hours are re-keyed from the time clock into the ERP on payroll day. Benefits live in spreadsheets.',
     built:
-      'Keep the clock and the ERP. Reviewed hours post on a schedule. Benefits move into a review step instead of a spreadsheet. Conduit reporting helps the office ask for those numbers in plain language.',
+      'Build a platform to connect the time clock software and the ERP payroll system, with an in-between review step for custom benefits and allowances. Enable employees to request benefits and allowances through the product, and provide a report to the office for review.',
   },
 ] as const satisfies readonly CaseStudyCardContent[]
 
@@ -68,35 +65,34 @@ export const farmWorkStudy = {
   title: 'Froese Vegetables Inc.',
   subtitle: 'Seasonal workforce time, piecework, and payroll. FarmWork was the product that followed.',
   operation: [
-    'Froese Vegetables Inc. is a commercial vegetable grower and packing operation with a large seasonal workforce. People are paid in more than one way. That can be hourly, piecework, piecework plus hourly, or the better of the two. Production is often shared across several workers on the same task.',
-    'The employer hires through foreign and seasonal worker programs, including the Seasonal Agricultural Worker Program (SAWP), which brings program deductions and paperwork that a generic time clock does not understand.',
-    'Supervisors work in fields and packing areas where the network drops. The office has to close a pay period, apply bonuses and deductions, and send a clean file into accounting.',
+    'Froese Vegetables Inc. is a commercial vegetable grower, processing and bulk distribution operation with a large seasonal workforce. People are paid in more than one way. That can be hourly, piecework, piecework plus hourly, or the better of minimum wage and piecework. Production is often shared across several workers on the same task, then paid out by the hours each person worked.',
+    'The employer hires through foreign and seasonal worker programs, including the Seasonal Agricultural Worker Program (SAWP), which brings program deductions and paperwork that most time tracking packages do not understand.',
+    'Supervisors work in fields and processing areas where network drops are common. Payroll runs through Sage.',
   ],
-  problemIntro: 'Time and production did not live in one place.',
+  problemIntro:
+    'They already had a time and production tracking system. It still could not run the operation the way pay and field work actually work.',
   problem: [
-    'Hours lived in one process. Piece counts lived in another. Shared production lived in a third conversation, often a spreadsheet.',
-    'Payroll had to reconstruct the week by hand. Who was on which task, how many pieces, who shared a row, which program deduction applied, and which bonus rule fired all had to be rebuilt every period.',
-    'Re-keying the same adjustments every pay run created delay and quiet errors.',
-    'Supervisors needed to clock a crew and enter counts where the work was happening. A browser that only works on Wi-Fi is not a field tool.',
-    'Generic time clocks and HR tools assume one pay type, one worksite, and a reliable network.',
+    'The package did not reliably let supervisors manage production from the field. Counts stayed on paper, and the office re-keyed them at the end of each day.',
+    'Complex pay types were missing. That includes the better of minimum wage and piecework, production shared between crew members, and year-end bonuses for people who stay to the end of the year.',
+    'The handoff into Sage for payment was awkward. The office still rebuilt pay numbers outside the package.',
   ],
   builtIntro:
-    'FarmWork is the product that came out of that problem. It is one system for time on the clock and production in the field, with payroll that matches agricultural pay rules. Rempel Automation implements, customizes, trains, and supports it.',
+    'FarmWork is the product that came out of that gap. Time and production are captured where the work happens. Pay rules match agricultural reality. The office reviews a clean file and sends it into Sage. Rempel Automation implements, customizes, trains, and supports it.',
   built: [
     {
       heading: 'Office (web)',
       items: [
         'Employee records, tasks, rates, crews, and permission-based access.',
-        'Pay configuration covers pay period, overtime, holiday premium, bonuses, and deductions, including program rules.',
-        'Shared production payout that follows hours on the task in that period.',
-        'Pay-period review before the file goes to accounting.',
+        'Pay configuration covers pay period, overtime, holiday premium, deductions including program rules, and year-end stay bonuses.',
+        'Better of minimum wage and piecework, plus shared production payout that follows hours on the task in that period.',
+        'Pay-period review, then a clean export into Sage for payment.',
       ],
     },
     {
       heading: 'Field (native mobile, including offline)',
       items: [
         'Supervisors clock a crew in or out against a task and location, or scan workers as they arrive.',
-        'Piece counts on the job, with a daily history.',
+        'Piece counts and shared production entered on the job, with a daily history, so the office is not re-keying paper at day end.',
         'Essential field work stays available when the network is gone, then syncs when it returns.',
       ],
     },
@@ -109,26 +105,26 @@ export const farmWorkStudy = {
   ],
   changedRows: [
     {
-      before: 'Hours, pieces, and shared production in separate lists',
-      after: 'One record from clock-in through the pay file',
+      before: 'Field production on paper, re-keyed by the office each day',
+      after: 'Counts captured in the field and packing area, then reviewed once',
     },
     {
-      before: 'Program and bonus adjustments re-keyed every run',
-      after: 'Rules applied in the pay calculation, then reviewed',
+      before: 'Better-of pay, shared crew production, and year-end stay bonuses outside the package',
+      after: 'Those pay rules run in FarmWork before the Sage export',
+    },
+    {
+      before: 'Awkward path from the old package into Sage',
+      after: 'Reviewed pay file exports cleanly into Sage for payment',
     },
     {
       before: 'Field work stalled without signal',
       after: 'Clock and count in the field; sync when the network returns',
     },
-    {
-      before: 'Payroll reconstructed the week',
-      after: 'Payroll reviews exceptions and exports',
-    },
   ],
   closer:
-    'The office still owns the pay period. The floor still owns the clock and the count. They finally share the same numbers.',
+    'The office still owns the pay period and the Sage payment step. The floor still owns the clock and the count. They finally share the same numbers.',
   externalProduct: { label: 'FarmWork on froveg.ca', href: 'https://froveg.ca/farmwork.html' },
-  screens: [farmworkPhoneAngled, farmworkPhoneFlat, farmworkArtboard20, farmworkArtboard16],
+  screens: [farmworkIpadFlat, farmworkArtboard25, farmworkArtboard14],
 } satisfies CaseStudyPageContent
 
 export const farmBridgeStudy = {
@@ -190,7 +186,7 @@ export const farmBridgeStudy = {
   closer:
     'Operators still drive forklifts. The office still settles growers and customers. They are no longer reconciling three versions of the truth.',
   externalProduct: { label: 'FarmBridge on froveg.ca', href: 'https://froveg.ca/farmbridge.html' },
-  screens: [farmbridgeLotDetails, farmbridgeAndroid1, farmbridgeAndroidInventory],
+  screens: [farmbridgeOffice, farmbridgeReceivingReport, farmbridgeContracts],
 } satisfies CaseStudyPageContent
 
 export const fieldJobsStudy = {

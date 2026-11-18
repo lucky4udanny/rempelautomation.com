@@ -1,11 +1,12 @@
 import type { CtaContent, HeroContent, ProductDetailContent } from '@/types/content'
 import {
-  farmbridgeContracts,
-  farmbridgeOffice,
-  farmbridgeReceivingReport,
-  farmworkArtboard14,
-  farmworkArtboard25,
-  farmworkIpadFlat,
+  farmbridgeAndroid1,
+  farmbridgeAndroidInventory,
+  farmbridgeLotDetails,
+  farmworkArtboard16,
+  farmworkArtboard20,
+  farmworkPhoneAngled,
+  farmworkPhoneFlat,
   opsReceivingPhoto,
 } from '@/content/media'
 
@@ -99,7 +100,7 @@ export const productDetails: ProductDetailContent[] = [
     ],
     boundary:
       'Pair FarmWork with FarmBridge when you also need inventory, shipping, or plant-floor machine control, and with Conduit to increase efficiency and insight using plain-language AI onboarding, support, and reporting on top.',
-    screens: [farmworkIpadFlat, farmworkArtboard25, farmworkArtboard14],
+    screens: [farmworkPhoneAngled, farmworkPhoneFlat, farmworkArtboard20, farmworkArtboard16],
     caseStudyTo: '/case-studies/farmwork/',
     caseStudyLabel: 'Read the FVI case study',
     externalHref: 'https://froveg.ca/farmwork.html',
@@ -183,7 +184,7 @@ export const productDetails: ProductDetailContent[] = [
     ],
     boundary:
       'FarmBridge is not a field labor time clock or payroll engine. Pair it with FarmWork for people and pay, and with Conduit for plain-language agentic onboarding, support, ticketing, and reporting on top.',
-    screens: [farmbridgeOffice, farmbridgeReceivingReport, farmbridgeContracts],
+    screens: [farmbridgeLotDetails, farmbridgeAndroid1, farmbridgeAndroidInventory],
     caseStudyTo: '/case-studies/farmbridge/',
     caseStudyLabel: 'Read the FVI case study',
     externalHref: 'https://froveg.ca/farmbridge.html',

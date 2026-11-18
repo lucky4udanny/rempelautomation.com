@@ -34,10 +34,6 @@ defineProps<Props>()
           <dt class="font-semibold text-ink">Solution</dt>
           <dd><LinkedProse :text="study.built" /></dd>
         </div>
-        <div v-if="study.changed">
-          <dt class="font-semibold text-ink">What changed</dt>
-          <dd><LinkedProse :text="study.changed" /></dd>
-        </div>
       </dl>
       <div class="mt-6">
         <AppButton :to="`/case-studies/${study.slug}/`" variant="secondary">

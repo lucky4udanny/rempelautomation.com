@@ -34,7 +34,7 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | `ComparisonTable` | Four-column alternatives table (your alternative / get / shortfall / instead) |
 | `PeopleList` | Leadership bios |
 | `MediaSlider` | Product screens with previous/next; `fit="contain"` for full UI shots; `embedded` when nested |
-| `CaseStudyCard` | One engagement: problem, solution, optional result, link |
+| `CaseStudyCard` | One engagement: problem, solution, link |
 | `CaseStudyList` | Optional kicker/title plus grid of `CaseStudyCard` |
 | `CtaBand` | End-of-page ask (contact) |
 | `ContactForm` | Name, company name, email, what you want to improve; posts to the function |
