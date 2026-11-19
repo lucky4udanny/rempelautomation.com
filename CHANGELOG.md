@@ -4,6 +4,7 @@
 
 ### Fixed
 
+- Process ring e2e now samples the highlight through the smooth-scroll / IntersectionObserver window (and a post-ignore scroll nudge) instead of stopping at the first matching `expect.poll` read.
 - Process loop on wide screens: ring clicks no longer lose highlight to a stale IntersectionObserver pick. Scroll sync uses chapter position under the header and ignores observer updates during programmatic scroll.
 
 ### Changed

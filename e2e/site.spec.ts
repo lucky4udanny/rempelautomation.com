@@ -16,6 +16,8 @@ test('process ring keeps the clicked stage highlighted on desktop', async ({ pag
   await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto('/process/')
 
+  const highlightedTitle = page.locator('article.ring-2 h3')
+
   const clickRing = async (label: string): Promise<void> => {
     await page.locator('svg text', { hasText: new RegExp(`^${label}$`) }).evaluate((text) => {
       const circle = text.previousElementSibling
@@ -26,17 +28,30 @@ test('process ring keeps the clicked stage highlighted on desktop', async ({ pag
     })
   }
 
-  await clickRing('Design')
-  await expect(page.locator('article.ring-2 h3')).toHaveText('Process design')
-  await expect
-    .poll(async () => page.locator('article.ring-2 h3').textContent(), { timeout: 2000 })
-    .toBe('Process design')
+  /**
+   * Ring clicks ignore IntersectionObserver for ~1.2s while smooth-scrolling.
+   * Sample through that window so a stale observer pick (snap-back) fails the test.
+   * expect.poll alone is not enough: it passes on the first matching read.
+   */
+  const expectClickHighlightHolds = async (title: string, holdMs = 2000): Promise<void> => {
+    await expect(highlightedTitle).toHaveText(title)
+    const deadline = Date.now() + holdMs
+    while (Date.now() < deadline) {
+      expect(await highlightedTitle.textContent()).toBe(title)
+      await page.waitForTimeout(100)
+    }
+  }
 
+  await clickRing('Design')
+  await expectClickHighlightHolds('Process design')
+
+  // Bug case: Design was active; click Audit. Stale observer used to restore Design mid-scroll.
   await clickRing('Audit')
-  await expect(page.locator('article.ring-2 h3')).toHaveText('Audit and document')
-  await expect
-    .poll(async () => page.locator('article.ring-2 h3').textContent(), { timeout: 2000 })
-    .toBe('Audit and document')
+  await expectClickHighlightHolds('Audit and document')
+
+  // After the ignore window, a small scroll still fires observer callbacks without leaving Audit.
+  await page.evaluate(() => window.scrollBy(0, 40))
+  await expectClickHighlightHolds('Audit and document', 800)
 })
 
 test('FarmWork case study names FVI and links the product', async ({ page }) => {
