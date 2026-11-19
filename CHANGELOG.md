@@ -8,6 +8,7 @@
 
 ### Changed
 
+- Privacy page replaced with a complete, site-scoped privacy policy (contact form, Cloudflare, Turnstile, Resend, retention, rights, contact). `ProseSection` supports headed sections.
 - About page: removed Continuity FAQ band and `aboutFaqs` content.
 - About Innovation value: forward-looking expertise helping clients keep up with change, not reluctant tech adoption.
 - About Excellence value: carefulness covers software and hardware automation, not only a digital copy of paper.

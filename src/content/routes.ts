@@ -118,7 +118,8 @@ export const publicPages: PublicPageMeta[] = [
     path: '/privacy/',
     name: 'privacy',
     title: `Privacy | ${companyName}`,
-    description: 'How Rempel Automation handles information you send through the contact form.',
+    description:
+      'Privacy policy for rempelautomation.com. What Rempel Automation collects through the contact form, how it is used, and how to contact us.',
     footerLabel: 'Privacy',
     footerOrder: 7,
     noindex: true,

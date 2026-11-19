@@ -32,6 +32,8 @@ The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on deskto
 
 `LinkedProse` turns every visitor-facing “Conduit” into a link to `/products/#conduit`. The Conduit product card uses `id="conduit"`. Prefer that helper over hand-coded links in section copy.
 
+`ProseSection` accepts flat `paragraphs` and/or headed `sections` (`ProseSectionBlock`). Privacy uses headed sections.
+
 Case studies use `CaseStudyDetail` and optional `BeforeAfterTable`. Unnamed engagements omit the table and say the work is still in design.
 
 Stacked `py-16` sections on the same background used to double the gap. `AppSection` owns the scale and drops the second band's top padding when `data-section-tone` matches.

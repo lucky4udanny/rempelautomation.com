@@ -24,6 +24,12 @@ export interface HeroContent {
   tone?: 'light' | 'photo'
 }
 
+/** Headed prose blocks for pages such as privacy. */
+export interface ProseSectionBlock {
+  heading: string
+  paragraphs: string[]
+}
+
 export interface FeatureItem {
   title: string
   body: string

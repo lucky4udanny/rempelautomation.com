@@ -42,7 +42,7 @@ Create missing names here. Do not invent aliases (`MainHero`, `BigCta`, `NavBar2
 | `BeforeAfterTable` | Honest before/after rows for live case studies |
 | `CaseStudyDetail` | Case-study body: operation, problem, solution, optional table, screens |
 | `MediaBand` | One operations photo |
-| `ProseSection` | Short page copy (privacy) |
+| `ProseSection` | Prose page copy with optional headed sections (privacy policy) |
 
 ## Content modules (`src/content/`) and types (`src/types/`)
 
