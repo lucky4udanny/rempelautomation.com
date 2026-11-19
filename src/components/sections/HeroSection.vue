@@ -58,12 +58,13 @@ onBeforeUnmount(() => {
           :alt="content.image.alt"
           :width="content.image.width"
           :height="content.image.height"
-          class="h-full w-full object-cover opacity-70"
+          class="h-full w-full object-cover"
           loading="eager"
           decoding="async"
         />
       </div>
-      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/45" />
+      <div class="absolute inset-0 -z-10 bg-black/55" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 via-black/40 to-black/10" />
     </template>
 
     <AppContainer
@@ -76,14 +77,20 @@ onBeforeUnmount(() => {
           :eyebrow="content.kicker"
           :tone="content.tone === 'photo' ? 'inverse' : 'default'"
         >
-          <LinkedProse :text="content.title" />
+          <LinkedProse
+            :text="content.title"
+            :tone="content.tone === 'photo' ? 'inverse' : 'default'"
+          />
         </AppHeading>
         <div
           class="mt-6 flex flex-col gap-4 text-base leading-7 sm:text-lg"
           :class="content.tone === 'photo' ? 'text-surface-raised/90' : 'text-ink-muted'"
         >
           <p v-for="(lead, index) in content.leads" :key="index">
-            <LinkedProse :text="lead" />
+            <LinkedProse
+              :text="lead"
+              :tone="content.tone === 'photo' ? 'inverse' : 'default'"
+            />
           </p>
         </div>
         <div v-if="content.primaryAction || content.secondaryAction" class="mt-8 flex flex-wrap gap-3">

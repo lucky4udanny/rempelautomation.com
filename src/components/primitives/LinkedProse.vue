@@ -5,9 +5,10 @@ import { productAnchorHref } from '@/content/products'
 
 interface Props {
   text: string
+  tone?: 'default' | 'inverse'
 }
 
-const { text } = defineProps<Props>()
+const { text, tone = 'default' } = defineProps<Props>()
 
 interface TextPart {
   type: 'text'
@@ -43,7 +44,7 @@ const parts = computed((): Part[] => {
 
 <template>
   <template v-for="(part, index) in parts" :key="index">
-    <AppLink v-if="part.type === 'link'" :to="part.to">{{ part.value }}</AppLink>
+    <AppLink v-if="part.type === 'link'" :to="part.to" :tone="tone">{{ part.value }}</AppLink>
     <template v-else>{{ part.value }}</template>
   </template>
 </template>

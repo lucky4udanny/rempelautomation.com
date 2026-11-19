@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Photo-hero product links use lighter accent (`AppLink` / `LinkedProse` `tone="inverse"`) so FarmWork, FarmBridge, and Conduit stay readable on dark images.
+- Photo heroes: full-opacity image under a true black wash (`black/55`) plus left-to-right black scrim (not gray `ink`).
 - Process ring e2e now samples the highlight through the smooth-scroll / IntersectionObserver window (and a post-ignore scroll nudge) instead of stopping at the first matching `expect.poll` read.
 - Process loop on wide screens: ring clicks no longer lose highlight to a stale IntersectionObserver pick. Scroll sync uses chapter position under the header and ignores observer updates during programmatic scroll.
 

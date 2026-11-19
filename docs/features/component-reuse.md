@@ -30,7 +30,7 @@ The continuous-improvement story is one `ProcessLoop`: sticky SVG ring on deskto
 
 `FeatureGrid` is static cards only (title + body). Expand overlays were removed. Put the useful sentence in `body`. Do not add a second “marketing” paragraph behind a click.
 
-`LinkedProse` turns every visitor-facing “Conduit” into a link to `/products/#conduit`. The Conduit product card uses `id="conduit"`. Prefer that helper over hand-coded links in section copy.
+`LinkedProse` turns every visitor-facing “Conduit” into a link to `/products/#conduit`. The Conduit product card uses `id="conduit"`. Prefer that helper over hand-coded links in section copy. Pass `tone="inverse"` (same prop on `AppLink`) on photo heroes so links use `text-accent` instead of dark `text-accent-strong`.
 
 `ProseSection` accepts flat `paragraphs` and/or headed `sections` (`ProseSectionBlock`). Privacy uses headed sections.
 
