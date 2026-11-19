@@ -34,3 +34,7 @@ node_modules/.tmp
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+
+# Source video (use stills on the site; GitHub rejects large MOVs)
+*.MOV
+*.mov
